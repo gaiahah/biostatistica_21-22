@@ -1,0 +1,129 @@
+\documentclass[drafts, 10pt]{book}
+\usepackage{graphicx}
+\graphicspath{ {./imgs/} }
+\usepackage{hyperref} % per fare riferimenti ad elementi
+\usepackage[T1]{fontenc}
+\usepackage{kpfonts}
+\usepackage{geometry}
+\geometry{a4paper, total = {150mm, 240mm}}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend} % per addmargin
+\usepackage{amsmath} % simboli matematici
+
+\title{\Huge{\textbf{Appunti di biostatistica}}}
+\author{\Large{Gaia Di Francescantonio}}
+\date{a. a. 2021/2022}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part{Principi, descrizione ed inferenza}
+
+\chapter{Introduzione alla statistica (B1)} \footnote{Capitolo 1, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+
+\section{Statistica}
+
+\section{Popolazione}
+
+\section{Campione e stima}
+
+\section{Stima}
+
+\section{Dati e variabili}
+
+\section{Distribuzioni di frequenza e distribuzioni di probabilità}
+
+\section{Tipi di studi}
+
+
+
+\chapter{Archiviazione dei dati (B1)}
+
+
+
+\chapter{Visualizzazione dei dati (B1)}\footnote{Capitolo 2, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Rappresentare le distribuzioni di frequenza}
+
+\subsection{Visualizzare variabili categoriche}
+
+\subsection{Visualizzare variabili numeriche}
+
+\section{Quantili di una distribuzione di frequenza}
+
+\section{Distribuzione di frequenza cumulativa}
+
+\section{Associazioni tra variabili categoriche}
+
+\section{Confrontare variabili numeriche tra gruppi}
+
+\section{Visualizzare la relazione tra una coppia di variabili numeriche}
+
+
+\chapter{Statistiche descrittive (B2)}\footnote{Capitolo 3, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Misure di tendenza centrale}
+
+\section{Misure di dispersione}
+
+\section{Coefficiente di variazione}
+
+\section{Range ed intervallo}
+
+\section{Confronto tra misure di posizione e dispersione}
+
+\section{Mode lasche}
+
+\section{Distribuzione campionaria}
+
+\section{Errore standard}
+
+
+\chapter{Distribuzione normale (B2)} \footnote{Capitolo 10, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Teorema del limite centrale}
+
+\section{Intervallo di confidenza}
+
+
+\chapter{Probabilità (B3)}\footnote{Capitolo 5, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Istogrammi di frequenza}
+
+\section{Eventi indipendenti}
+
+\section{Eventi incompatibili}
+
+\section{Somma delle probabilità}
+
+\section{Diagrammi di Venn}
+
+\section{Prodotto di probabilità}
+
+\section{Alberi di probabilità}
+
+\section{Probabilità condizionata e teorema della probabilità totale}
+
+\section{Teorema della probabilità composta}
+
+\section{Teorema di Bayes}
+
+
+\chapter{Test delle ipotesi}\footnote{Capitolo 6, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Ragionamento logico}
+
+\section{Metodo scientifico galileiano}
+
+\section{Formulazione delle ipotesi}
+
+\section{Verifica delle ipotesi}
+
+\section{Statistica test}
+
+\section{Livello di significatività di P}
+
+\section{Errori nella verifica delle ipotesi}

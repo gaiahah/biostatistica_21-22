@@ -1,0 +1,1835 @@
+\documentclass[drafts, 10pt]{book}
+\usepackage{graphicx}
+\graphicspath{ {./figs/} }
+\usepackage{hyperref} % per fare riferimenti ad elementi
+\usepackage[T1]{fontenc}
+\usepackage{kpfonts}
+\usepackage{geometry}
+\geometry{a4paper, total = {150mm, 240mm}}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend} % per addmargin
+\usepackage{mathtools, amssymb} % simboli matematici
+\usepackage{tabularx} % per tabelle particolari
+%%inizio blocco esempio
+\usepackage[most]{tcolorbox}
+\usepackage{nicefrac}
+\usepackage{xcolor}
+\definecolor{lyellow}{HTML}{fee9be}
+\definecolor{bluegray}{HTML}{dedce6}
+\usepackage{float}
+\usepackage{makecell}
+\newcounter{example}[section]
+\renewcommand\theexample{\thesection.\alph{example}}
+\NewDocumentEnvironment{example}{ O{} }
+{
+    \refstepcounter{example}
+    \colorlet{colexam}{black} % Global example color
+    \newtcolorbox{examplebox}{%
+        % Example Frame Start
+        empty,% Empty previously set parameters
+        title={Esempio~\theexample: #1},% use \thetcbcounter to access the example counter text
+        % Attaching a box requires an overlay
+        attach boxed title to top left,
+        % Ensures proper line breaking in longer titles
+        minipage boxed title,
+        % (boxed title style requires an overlay)
+        boxed title style={empty,size=minimal,toprule=0pt,top=4pt,left=1em,overlay={}},
+        coltitle=colexam,fonttitle=\bfseries,
+        before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=3mm,right=0mm,top=2pt,breakable,pad at break=0mm,
+        before upper=\csname @totalleftmargin\endcsname0pt, % Use instead of parbox=true. This ensures parskip is inherited by box.
+        % Handles box when it exists on one page only
+        overlay unbroken={\draw[colexam,line width=.5pt] ([xshift=-0pt]title.north west) -- ([xshift=-0pt]frame.south west); },
+        % Handles multipage box: first page
+        overlay first={\draw[colexam,line width=.5pt] ([xshift=-0pt]title.north west) -- ([xshift=-0pt]frame.south west); },
+        % Handles multipage box: middle page
+        overlay middle={\draw[colexam,line width=.5pt] ([xshift=-0pt]frame.north west) -- ([xshift=-0pt]frame.south west); },
+        % Handles multipage box: last page
+        overlay last={\draw[colexam,line width=.5pt] ([xshift=-0pt]frame.north west) -- ([xshift=-0pt]frame.south west); },%
+    }
+    \begin{examplebox}
+}{
+    \end{examplebox}\endlist
+}
+%%fine blocco esempio
+% Autosizing absolute value
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+% Swap the definition of \abs* and \norm*, so that \abs and \norm resizes the
+% size of the brackets, and the starred version does not.
+\makeatletter
+    \let\oldabs\abs
+    \def\abs{\@ifstar{\oldabs}{\oldabs*}}
+    %
+    \let\oldnorm\norm
+    \def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+% fine Autosizing absolute value
+
+\title{\Huge{\textbf{Appunti di biostatistica}}}
+\author{\Large{Gaia Di Francescantonio}}
+\date{a. a. 2021/2022}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part{Principi, descrizione ed inferenza}
+
+\chapter{Introduzione alla statistica (B1)} \footnote{Capitolo 1, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+
+\section{Statistica}
+I biologi studiano le proprietà degli esseri viventi. Misurare queste proprietà è però un compito assai impegnativo, perché non esistono due individui appartenenti alla stessa popolazione biologica che siano esattamente identici. Inoltre, non siamo quasi mai in grado di misurare ogni individuo presente nella popolazione, e siamo quindi vincolati dal tempo e dai fondi disponibili a limitare le misurazioni a un campione di individui estratto dalla popolazione. Ma il campionamento introduce incertezza. Per effetto del caso, le proprietà del campione non sono uguali a quelle della popolazione dalla quale il campione è stato estratto: le misure ottenute da un campione, infatti, sono influenzate dall'inclusione in quel campione di certi individui piuttosto che altri.
+\\
+La \textbf{statistica} è una disciplina che permette di descrivere e misurare diversi aspetti della natura basandosi su campioni. Soprattutto, la statistica consente di quantificare l'incertezza di queste misure, ovvero di determinare la probabile entità del loro scostamento dal valore vero. La statistica si occupa del processo di \textbf{stima}, cioè del processo con cui si inferisce (stima) una grandezza incognita di una popolazione usando i \textbf{dati campionari}, ossia i dati provenienti da un campione. Se applicati correttamente, gli strumenti della stima permettono di approssimare pressoché ogni grandezza tipica di una popolazione usando soltanto campioni.
+\\
+Oltre a stimare grandezze incognite, la statistica permette di valutare le differenze tra gruppi e le relazioni tra variabili.
+\\
+\\
+Tutte le grandezze che descrivono le popolazioni (medie, proporzioni, misure di variazione e misure di relazione) sono dette \textbf{parametri}. La statistica dice come si possono stimare nel modo migliore i parametri usando delle misurazioni relative a un campione. Il parametro è quindi il valore vero e la stima (il risultato del processo di stima) è un'approssimazione del valore vero, soggetta a errore. Se fossimo in grado di misurare ogni membro della popolazione, potremmo conoscere il parametro senza errore, ma ciò è possibile solo molto raramente. Invece, si utilizzano stime su dati incompleti per approssimare questo valore vero. Disponendo di strumenti statistici appropriati, siamo in grado di determinare la bontà delle approssimazioni.
+\\
+\\
+La statistica si occupa anche della verifica delle ipotesi (o test delle ipotesi).
+\\
+\\
+La statistica prevede il susseguirsi di alcuni passaggi standard: raccogliere, organizzare, visualizzare, analizzare, interpretare e presentare dati.
+
+\section{Popolazione}
+La capacità di ottenere misure affidabili delle caratteristiche delle popolazioni e di valutare l'incertezza di queste misure dipende in modo critico da come si campionano le popolazioni stesse.
+\\
+Il primo passo nella raccolta di dati biologici di qualsiasi tipo è decidere quale sia la popolazione da campionare. Una \textbf{popolazione statistica} è l'intero insieme di individui o di unità che interessano a un ricercatore e della quale si vogliono conoscere i parametri. Di solito una popolazione è costituita da un grande numero di individui; nella maggior parte dei casi, si suppone in effetti che la popolazione sia infinitamente grande.
+\\
+Le caratteristiche che si misurano in tale gruppo di elementi devono essere necessariamente variabili (altrimenti la misurazione sarebbe inutile).
+\\
+Si deve essere in grado di identificare un sistema e di identificarne delle caratteristiche, misurare queste caratteristiche ed operare un’inferenza che permetta di estrapolare le informazioni misurate all’intera \textbf{popolazione biologica} (che può coincidere con la popolazione statistica, ma il più delle volte non è così).
+
+\section{Campione e stima}
+Un \textbf{campione statistico} è invece un insieme molto più piccolo di individui selezionati dalla popolazione statistica. Il ricercatore impiega il campione per trarre conclusioni che siano possibilmente valide per l'intera popolazione. 
+\\
+Il campione serve per stimare una caratteristica e la sua variabilità nella popolazione.
+\\
+Si ricorre alla stima quando non è possibile effettuare la misurazione del parametro su tutti gli elementi della popolazione statistica.
+\\
+\\
+Spesso, l'\textbf{unità statistica} di base del campionamento è il singolo individuo. Talvolta, però, l'unità fondamentale di uno studio è un gruppo di individui, nel qual caso un campione è costituito da un sottoinsieme di tali unità. 
+\\
+Un’\textbf{unità campionaria} è il soggetto/individuo/evento/caso/osservazione/ecc. su cui si compiono le misurazioni delle variabili. Il concetto di unità statistica ha un valore più ampio, mentre l’unità campionaria è uno degli elementi che compongono il campione, selezionati all’interno della popolazione statistica.
+\\
+Per designare l'unità di campionamento gli scienziati impiegano diversi termini, quali «unità», «individuo», «soggetto» o «replica».
+\\
+\\
+Il campione deve essere:
+\begin{itemize}
+    \item \textbf{rappresentativo} della popolazione: quanto maggiore è la variabilità del parametro nella popolazione, tanto più ampio dev’essere il campione al fine di rappresentare adeguatamente la popolazione.
+    \item \textbf{casuale}, cioè soddisfa due criteri:
+    \begin{itemize}
+        \item ogni unità nella popolazione deve avere un'uguale probabilità di essere inclusa nel campione, quindi il campione è \textbf{non distorto}.
+        La \textbf{distorsione} (o bias) è una discrepanza sistematica fra le stime e il valore vero della caratteristica della popolazione.
+        \item la selezione delle unità deve essere \textbf{indipendente}, cioè l'inclusione nel campione di un qualsiasi individuo della popolazione non deve influenzare l'inclusione di un altro individuo.
+    \end{itemize}
+    Per ottenere la casualità sono disponibili diversi \textbf{disegni di campionamento}, ossia protocolli che definiscono una serie di regole tramite le quali si selezionano le unità statisctiche che comporranno il campione; un disegno di campionamento può essere:
+    \begin{itemize}
+        \item \textbf{Casuale}. Si appoggia a strumenti che selezionano elementi casuali (es. con GIS si potrebbe selezionare un poligono e, all’interno di tale poligono, richiedere al software di selezionare delle unità in maniera causale, o anche in modo da assecondare determinate richieste). Quando è possibile, randomizzare è un approccio solido e affidabile, ma a volte non fattibile economicamente.
+        \item \textbf{Uniforme}. Si appoggia a strumenti quali una griglia, un intervallo preciso tra le unità, ecc. Un disegno di campionemento \textbf{uniforme stratificato} seleziona dei sottoinsiemi su informazioni già note (es. classi di età) in cui campionare in modo differenziale a seconda delle esigenze di ricerca, al fine di cogliere la variabilità nella categoria di interesse.
+        \item \textbf{Opportunistico}. Si associa a delle necessità, ha il pericolo di esporsi a un bias di campionamento.
+    \end{itemize}
+    Il campionamento casuale riduce al minimo la distorsione e permette di quantificare l'errore di campionamento.
+\end{itemize}
+Un modo per ottenere un campione casuale è quello di generare una lista di tutti gli elementi della popolazione di interesse, assegnare loro un numero ed usare un generatore di numeri casuali per generare n numeri che corrispondano agli elementi della popolazione che verranno scelti come elementi del campione.
+\\
+Tale procedura, tuttavia, è difficilmente attuabile nella maggior parte dei casi, quando si ha a che fare con popolazioni molto numerose, come accade solitamente in biologia.
+\\
+Una possibile soluzione è che l'unità fondamentale di un campionamento non deve essere necessariamente un singolo individuo, ma può anche essere un gruppo.
+\\
+Ad esempio, è più facile usare una mappa per dividere un tratto di foresta in molte aree di uguali dimensioni, dette anche plot, e poi creare una lista numerata di questi plot piuttosto che produrre una lista numerata di ogni albero. Gli alberi contenuti in un campione casuale di plot non costituiscono un campione casuale poiché gli alberi presenti nello stesso plot non sono campionati in modo indipendente; una semplice tecnica consiste nel calcolare la media delle misure di tutti gli individui entro una certa unità e utilizzare questa media come osservazione indipendente per quell'unità.
+\\
+\\
+I dati reali si basano spesso su campioni non casuali. I biologi affrontano questo problema riconoscendone l'esistenza, indicando dove potrebbero sorgere distorsioni nei loro studi e conducendo ulteriori studi per tentare di risolvere gli eventuali problemi di campionamento.
+\\
+\\
+Un'alternativa indesiderabile al campione casuale è il \textbf{campione di convenienza}, basato su individui facilmente disponibili al ricercatore. I ricercatori sono obbligati ad assumere che il campione di convenienza non sia distorto e sia indipendente, come un campione casuale, ma questa assunzione è spesso errata.
+\\
+Il problema principale riguardo al campione di convenienza è la distorsione.
+\\
+Un campione di convenienza potrebbe violare anche l'ipotesi dell' indipendenza, se gli individui presenti nel campione fossero più simili l'uno all'altro di quanto siano gli individui scelti casualmente dall'intera popolazione.
+\\
+\\
+Gli studi umani in particolare devono contemplare la possibilità del \textbf{bias del volontario}, che è una distorsione derivante da una differenza sistematica tra il pool dei volontari (campione di volontari) e la popolazione a cui appartengono. Il problema sorge quando il comportamento dei soggetti influenza la possibilità che vengano campionati.
+
+\section{Stima}
+L'\textbf{errore di campionamento} è la differenza dovuta al caso tra una stima e il parametro della popolazione che viene stimato.
+\\
+La dispersione delle stime dovute all'errore di campionamento indica la \textbf{precisione} di una stima: più piccolo è l'errore di campionamento, più alta è la precisione.
+\\
+\\
+La stima di un parametro è:
+\begin{itemize}
+    \item \textbf{corretta} quando il suo valore medio coincide con il valore medio del parametro;
+    \item \textbf{distorta} quando il suo valore medio non coincide con il valore medio del parametro;
+    \item \textbf{precisa} quando la distribuzione dei suoi valori presenta una bassa variabilità;
+    \item \textbf{imprecisa} quando la distribuzione dei suoi valori presenta un’alta variabilità.
+\end{itemize}
+fig1.2-2 \label{fig1.2-2} %TODO
+\\
+La \textbf{variabilità} della misura di una caratteristica può avere molte fonti:
+\begin{itemize}
+    \item \textbf{naturale}, insita nelle caratteristiche che vogliamo misurare; 
+    \item \textbf{strumentale}, dovuta all’imprecisione degli strumenti; 
+    \item \textbf{metodologica}, insita nell’uso improprio degli strumenti o nell’uso degli strumenti non adeguati; 
+    \item \textbf{dell’operatore}, dovuta all’abilità dell’operatore, che è soggettiva e dipende da esperienza personale e molti altri fattori (stanchezza, stato emotivo, aspettative, autorità, ecc.); data la possibilità di questo tipo di variabilità è utile documentare minuziosamente la misurazione;
+    \item \textbf{campionaria}, dipende dal campione selezionato, che solitamente non rispecchia perfettamente la popolazione statistica ed è comunque generalmente differente dal campione che si sceglierebbe randomicamente in un’alta situazione; ciò genera una variabilità ulteriore, oltre a quella propria della popolazione statistica. Maggiori sono le dimensioni del campione, minore è la variabilità campionaria.
+\end{itemize}
+La \textbf{convergenza della stima al parametro} dipende dalla grandezza dell’N campionario.
+
+\section{Dati e variabili}
+Una volta ottenuto un campione, si può cominciare a misurare le variabili di interesse.
+\\
+Una variabile è una qualsiasi caratteristica quantitativa o qualitativa delle unità statistiche, che si presenta in esse con un certo valore (es. sesso, peso, colore dei capelli, velocità di corsa) e che ha una variabilità intrinseca. Sono variabili anche le stime (es. velocità media di corsa di un campione casuale di 10 individui), perché esse differiscono, per effetto del caso, da campione a campione.
+\\
+\\
+Una variabile latente è una variabile che non può essere misurata direttamente, ma dev’essere estrapolata dalla misura di altre variabili caratterizzabili in maniera quantitativa o qualitativa.
+\\
+Le variabili possono essere qualitative, quantitative, categorie/classi.
+\\
+La variabile può essere una caratteristica/attributo/campo/colonna misurabile.
+\\
+\\
+I dati sono i risultati grezzi delle misurazioni di una o più variabili effettuate su un campione di individui.
+\\
+\\
+A partire dalle misurazioni si caratterizzano le variabili, le quali possono essere:
+\begin{itemize}
+    \item \textbf{Qualitative (categoriche)}. Descrivono caratteristiche che non possono essere misurate con un numero ma che permettono di inserire gli elementi di un campione in una categoria o gruppo (es. modalità di trasmissione di malattie: acqua, aria, vettore animale, contatto diretto).
+    \item \textbf{Quantitative}. Le misure degli individui sono quantitative e ad esse è associato un valore su una scala numerica (es. conteggi, dimensioni, angoli, tassi, percentuali).
+\end{itemize}
+Un altro modo (preferibile) per classificare i tipi di variabili è:
+\begin{itemize}
+    \item \textbf{Nominale}. Sono qualitative, categoriali e le differenti categorie non hanno un ordine intrinseco, ma solo un nome (es. gruppo sanguigno). La variabile nominale risponde solo alla domanda “a che classe l’unità campionaria appartiene”, restituendo, dunque, l’identità degli elementi del campione in base alla variabile misurata.
+    \item \textbf{Ordinale}. Sono quantitative nel senso che i valori corrispondenti possono essere ordinati nonostante non siano rappresentabili su una scala numerica (es. fase biologica: uovo, larva, giovane, adulto; stato di salute; colore dei capelli, a meno di non misurarlo con uno strumento quale un esposimetro che potrebbe rendere questa categoria continua). La variabile ordinale categorizza le unità campionarie (restituisce la loro identità) e le pone in un rango.
+    \item \textbf{Continue}. Sono quantitative. I valori corrispondenti appartengono a categorie continue (es. temperature, peso, lunghezza). La variabile continua categorizza le unità campionare, le inserisce in un rango e definisce degli intervalli (si può conoscere la distanza tra due misurazioni). In alcuni casi (es. peso, lunghezza) si aggiunge l’informazione di rapporto, dato che sono scale assolute (una temperatura di 30°C non è il doppio di una temperatura di 15°C, a meno che le misure non si effettuino in scala Kelvin, che è una scala assoluta).
+    \\
+    Nel caso in cui si tratti di variabili numeriche, queste possono assumere qualsiasi valore numerico reale in un certo intervallo di variazione. Tra due valori qualsiasi di una variabile continua possono esistere infiniti altri valori (es. temperatura corporea, area di un territorio).
+    \item \textbf{Numeriche discrete}. Si presentano in unità indivisibili (es. conteggi, numero di accoppiamenti durante la stagione riproduttiva, numero di aminoacidi in una proteina).
+\end{itemize}
+L’età è effettivamente una variabile continua, ma a seconda delle possibilità di misurazione può anche essere considerata ordinale.
+\\
+La misurazione di una variabile qualitativa permette di suddividere l’unità campionaria in gruppi (es. M/F).
+\\
+Se si passa da una variabile continua ad intervalli si perdono informazioni e la variabile diventa categoriale ordinale. Passare da variabili continue a variabili ordinali può essere utile quando non ci si fida delle misurazioni effettuate (è come concedersi un margine d’errore).
+\\
+Il fatto che una variabile venga indicizzata con un numero non significa che sia una variabile numerica; si potrebbero usare i numeri anche per denominare categorie. I dati numerici possono essere ridotti a dati categorici attraverso un loro raggruppamento (es. in due gruppi: sopra e sotto la media) ma, in questo modo, parte dell'informazione viene persa.
+\\
+Nell'analisi statistica si cerca sempre di prevedere una delle variabili, detta \textbf{variabile risposta}, in base a una seconda variabile, detta \textbf{variabile esplicativa}. Le variabili vengono talvolta classificate come variabili indipendenti o dipendenti; questi termini sono sinonimi di variabili esplicative e risposta, rispettivamente, ma, a rigore, se una di due variabili dipende dall'altra, allora nessuna delle due è indipendente.
+
+\section{Distribuzioni di frequenza e distribuzioni di probabilità}\footnote{non fatto a lezione}
+Gli individui in un campione hanno generalmente diversi valori della grandezza analizzata. Si può osservare questa variabilità considerando una distribuzione di frequenza. La \textbf{frequenza} di una particolare misura in un campione è il numero di osservazioni di un determinato valore della misura. La \textbf{distribuzione di frequenza} rappresenta la frequenza con cui ciascun valore della variabile si presenta nel campione.
+\\
+Si usa la distribuzione di frequenza di un campione per acquisire informazioni sulla distribuzione della variabile nella popolazione dalla quale il campione è stato estratto.
+\\
+\\
+La distribuzione di una variabile in tutta la popolazione è detta \textbf{distribuzione di probabilità}.
+\\
+\\
+Nel caso di una variabile continua (es. spessore del becco nei fringuelli delle Galapagos), la distribuzione nella popolazione viene approssimata spesso con una distribuzione di probabilità teorica, detta distribuzione normale o di Gauss.
+
+\section{Tipi di studi}\footnote{non fatto a lezione}
+In biologia, i dati si ottengono da uno studio sperimentale o da uno studio osservazionale.
+\\
+\\
+In uno \textbf{studio sperimentale}, il ricercatore assegna casualmente differenti gruppi di trattamento o valore di una variabile esplicativa alle singole unità di studio.
+\\
+\\
+In uno \textbf{studio osservazionale}, è la natura ad assegnare gruppi di trattamenti o valori di una variabile esplicativa agli individui, ed il ricercatore non ha alcun controllo su quali unità rientrano in quali gruppi.
+\\
+\\
+Una differenza fondamentale fra studi sperimentali ed osservazionali sta nel fatto che, mentre i primi possono determinare le relazioni di causa ed effetto tra le variabili, i secondi sono in grado soltanto di individuare associazioni.
+(non spiegato a lezione)
+
+\chapter{Archiviazione dei dati (B1)}
+
+Quando si organizzano i dati che si hanno a disposizione si devono considerare due aspetti: quali sono le \textbf{unità campionarie} e quali sono le \textbf{qualità} che sono state misurate (o valutate) su queste unità statistiche. Una volta chiari questi aspetti, si può compilare una \textbf{tabella di dati}, in cui, solitamente, ad ogni colonna corrisponde una variabile, ad ogni riga corrisponde un’unità statistica, e ad ogni cella un dato.
+\\
+È sempre necessaria la presenza di un \textbf{campo chiave} che identifichi univocamente le unità statistiche.
+\\
+È importante mantenere una \textbf{uniformità di formato} in ciascuna colonna (una stessa colonna deve ospitare dati che abbiano sempre uno stesso formato, es. numerico, alfabetico, alfa-numerico).
+\\
+Il modo migliore per identificare un \textbf{valore mancante} è lasciare il campo vuoto (non si usa lo zero, poiché quello è effettivamente un valore) o utilizzare la sintassi specifica richiesta dal programma che si sta utilizzando (es. NA, NULL, -).
+\\
+Una volta scelti dei \textbf{codici} per operare è importanti che questi siano \textbf{uniformi} (es. se per indicare che un individuo è maschio si usa “m” non si può utilizzare anche “M” o “male”, etc.)
+\\
+\\
+\textbf{Excel} è uno strumento di calcolo su fogli elettronici, non un database.
+\\
+In un database, ogni variabile è definita precisamente e non è possibile inserire dati che non siano corrispondenti a una formattazione prefissata, mentre in un foglio di calcolo questo inserimento è possibile. Le righe, inoltre, nei database, rappresentano solo le unità statistiche, mentre la prima riga nei fogli di calcolo solitamente rappresenta le etichette.
+\\
+In un foglio di calcolo è utile creare un foglio di “LUT”, ossia una “\textbf{look-up table}", un foglio di calcolo in cui vengono descritte le variabili che è possibile trovare nel primo foglio. In ogni LUT (una per ciascuna variabile considerata) vanno inseriti (etichetta colonne):
+\begin{itemize}
+    \item codice (i vari dati che è possibile inserire);
+    \item descrizione (la descrizione di ogni possibile dato);
+    \item eventuali note.
+\end{itemize}
+Questo non è necessario nel caso sia presente un’interfaccia grafica che restringe la possibilità di immissione nelle celle ai soli valori della look-up table che faccia scegliere da una lista precisa la codifica corretta (es. i vari form su internet in cui, ad esempio, si inserisce la propria provincia di residenza scegliendola da una lista definita e non inserendo i singoli caratteri autonomamente).
+\\
+La look up table non si usa per le variabili continue, al limite è possibile in alcuni casi definire degli intervalli di valori continui che è possibile inserire, ma generalmente non è necessario.
+\\
+Le colonne di variabili non devono essere ridondanti, ovvero non devono essere presenti due variabili che indichino una stessa caratteristica.
+
+\chapter{Visualizzazione dei dati (B1)}\footnote{Capitolo 2, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+\\
+La visualizzazione dei dati è fondamentale per la divulgazione e la comprensione dei risultati.
+\\
+\\
+Regole basilari:
+\begin{itemize}
+    \item identificare il messaggio;
+    \item essere consapevoli che ciò che si sta presentando è importante;
+    \item non spaventare i destinatari con i numeri;
+    \item massimizzare la risoluzione dell’immagine;
+    \item evitare immagini 3D quando non necessarie (es. barre 3D in istogrammi);
+    \item usare il tipo di rappresentazione idoneo;
+    \item non mischiare tipi di grafico inutilmente;
+    \item non usare gli assi per confondere;
+    \item non fare troppo affidamento al colore e usarlo per trasmettere un significato.
+\end{itemize}
+Differenti tipi di grafici possono essere utilizzati per rappresentare stessi dati; la scelta deve dipendere dal tipo di obiettivo che si ha, poiché grafici differenti sottolineano aspetti differenti.
+
+\section{Rappresentare le distribuzioni di frequenza}
+La frequenza relativa è la frazione di osservazione di una data misura, calcolata com'è il rapporto tra la frequenza (assoluta) è il numero totale di osservazioni. La distribuzione di frequenza relativa mostra la proporzione di occorrenze di ciascun valore nell'insieme dei dati.
+\\
+Sono disponibili diversi metodi per visualizzare graficamente le distribuzioni di frequenza, a seconda che la variabile si è categorica o numerica.
+
+\subsection{Visualizzare variabili categoriche}
+Una \textbf{tabella di frequenza} è una visualizzazione testuale del numero di occorrenze di ciascuna categoria nel dataset.
+\\
+\\
+Un \textbf{diagramma a barre} impiega l'altezza di rettangoli per visualizzare la frequenza (assoluta o relativa) di occorrenza di ciascuna categoria. Sull’asse delle ordinate può essere rappresentata la frequenza assoluta o la frequenza relativa.
+\\
+Quando si trattano variabili nominali, le categorie non hanno un ordine intrinseco, ma si può semplificare il confronto della loro importanza relativa disponendole in ordine di occorrenza dalla più alla meno frequente.
+\\
+Nei diagrammi a barre non si riescono a distinguere le frequenze esatte, ma si ha un quadro chiaro e immediato di come i valori numerici dei crescano rapidamente nelle categorie meno frequenti. 
+\\
+\colorbox{lyellow}{\parbox{\textwidth}{Una variabile nominale si può descrivere con un grafico a barre in cui i valori della variabile nominale sono sulle ascisse mentre sulle ordinate si riporta la percentuale dei casi in cui si sono presentate le singole variabili. Le variabili possono essere elencate in ordine alfabetico o dalla meno alla più frequente, a seconda dell’obiettivo che si ha.}}
+\\
+Per essere efficace, un diagramma a barre dovrebbe seguire alcune regole generali:
+\begin{itemize}
+    \item nel caso di una variabile categorica ordinale (es. grado di gravità del morso di un serpente), i valori lungo l'asse orizzontale dovrebbero essere ordinati in modo naturale;
+    \item nel caso di variabili categoriche nominali, l'ordinamento delle categorie secondo la frequenza con cui si osservano facilita la rappresentazione visiva delle informazioni;
+    \item i rettangoli dovrebbero essere di uguale larghezza e ciascuno di essi dovrebbe poggiare su una linea base di riferimento corrispondente a y = 0, affinché l'area e l'altezza di ciascuno siano direttamente proporzionali alla frequenza; una frequenza base diversa da zero o una larghezza dei rettangoli disuguale fornirebbe una visione distorta dell'importanza relativa di ciascuna categoria;
+    \item i rettangoli dovrebbero essere separati, non addossati tra loro;
+    \item è utile indicare il numero totale di osservazioni (n) nella didascalia della figura.
+\end{itemize}
+Un \textbf{grafico a torta} è una valida alternativa attraverso la quale si possono visualizzare sia la frequenza assoluta che la frequenza relativa (ossia percentuale) dei casi.
+
+\subsection{Visualizzare variabili numeriche}
+Una distribuzione di frequenza per una variabile numerica può essere visualizzata come una tabella di frequenza o con un istogramma.
+\\
+\\
+In un \textbf{istogramma} si rappresentano i valori di una variabile che si può assumere continua; un istogramma differisce da un grafico a barre in quanto l’ascissa non contiene le singole categorie nominali, ma categorie che raggruppano le singole categorie nominali in base ad una loro caratteristica (es. invece di inserire le varie specie sull’asse delle x, si inseriscono categorie di abbondanza, in modo da rappresentare con l’istogramma la frequenza delle specie che hanno una determinata abbondanza). 
+\\
+fig2.1-2\label{fig2.1-2}
+\\
+La somma delle superfici di un grafico rappresentato mediante istogramma è uguale al numero totale di specie. Se invece di rappresentare la frequenza assoluta se ne rappresentasse la frequenza relativa, la somma delle aree dei rettangoli corrisponderebbe ad 1.
+\\
+Un istogramma utilizza l'area di bar rettangolari per visualizzare la frequenza. I valori dei dati vengono suddivisi in intervalli consecutivi (\textbf{bin}) generalmente di uguale ampiezza, e viene rappresentata la frequenza delle osservazioni che cadono in ciascun bin. 
+\\
+Anche se l'asse delle ordinate riporta la frequenza (assoluta o relativa) in un certo intervallo, l'istogramma deve essere inteso come rappresentazione areale: sono le aree dei vari rettangoli che devono essere proporzionali alle frequenze corrispondenti, non le altezze. Quando tutti i bin hanno la stessa ampiezza, comunque, ragionare in termini di altezze o di aree delle barre è indifferente. Se però si decidesse di raggruppare due bin in un solo intervallo, lasciando gli altri inalterati, l'altezza della nuova barra con la base più larga non dovrebbe essere pari alla somma delle frequenze nei due bin, ma alla loro media. Solo in questo modo la rappresentazione della distribuzione di frequenza basata sulle aree delle barre risulterebbe non distorta. Alternativamente si potrebbe rappresentare sull'asse delle ordinate, per ogni intervallo, non la frequenza delle osservazioni ma la densità, cioè la frequenza divisa per l'ampiezza dell'intervallo. In questo modo l'area dei rettangoli sarebbe uguale, non solo proporzionale, alla frequenza, essendo il prodotto della base (l'ampiezza dell'intervallo) per l'altezza (la densità).
+\\
+\\
+L’istogramma di solito si usa per descrivere variabili tipicamente continue. Nel caso delle variabili nominali, l’istogramma dice solo quante sono le specie che hanno diverse classi di abbondanza (le unità statistiche non sono più i singoli uccelli osservati, ma le specie e la proprietà osservata è il numero di specie).
+\\
+\\
+Un intervallo nella distribuzione di frequenza notevolmente più frequenti di quelli circostanti è detto \textbf{picco}.
+\\
+La \textbf{moda} è l'intervallo corrispondente al picco più alto.
+\\
+Un istogramma può assumere diverse forme, che riflettono diversi tipi di distribuzioni:
+\begin{itemize}
+    \item \textbf{uniforme}: la frequenza delle varie categorie è molto simile;
+    \item \textbf{a campana (normale)}: il valore centrale è quello più frequente e a partire da esso si ha un simmetrico decremento della frequenza (spesso, le biometrie presentano questa distribuzione);
+    \item \textbf{a campana asimmetrica}: il decremento rispetto al picco non è uniforme nelle due direzioni (es. livello di infezione da parassiti negli animali: pochi soggetti che portano molti parassiti);
+    \item \textbf{bimodale}: ci sono due modalità di distribuzione che indicano la potenziale presenza di due popolazioni statistiche.
+\end{itemize}
+Una distribuzione di frequenza è detta distribuzione \textbf{simmetrica} se il pattern di frequenze nella metà sinistra del istogramma è l'immagine speculare del pattern nella metà destra. La distribuzione uniforme e la distribuzione a campana sono simmetriche. Una distribuzione di frequenza che non è simmetrica è detta \textbf{asimmetrica}. Una distribuzione di frequenza per una variabile numerica, se non è simmetrica, può essere asimmetrica \textbf{positiva} (a destra) o \textbf{negativa} (a sinistra) a seconda della posizione della coda più lunga.
+\\
+Valori estremi molto distanti dal resto delle osservazioni sono detti \textbf{outlier} (valori anomali). Gli outlier sono comuni nei dati biologici: possono derivare da errori commessi nella registrazione dei dati o possono rappresentare caratteristiche reali della natura. Gli outlier dovrebbero essere sempre analizzati attentamente e si dovrebbe eliminarli dall'insieme dei dati soltanto se si riesce a dimostrare che sono frutto di errori.
+\\
+\\
+L'ampiezza degli intervalli di un istogramma può influenzare le conclusioni tratte dal grafico.
+\\
+L’ampiezza delle classi (bin) ed il loro numero sono legati, e definirli è importante poiché si tratta di fattori che influenzano la risoluzione dei casi (es. una distribuzione bimodale potrebbe sembrare una asimmetrica se i bin venissero allargati).
+\\
+Per definire ampiezza e numero delle classi si può ricorrere a diversi approcci, ad esempio:
+\begin{itemize}
+    \item \textbf{H. Sturgess} (1926):
+    \begin{equation}
+        C = 1 + \frac{10}{3}\ log_{10}(N)
+    \end{equation}
+    In cui C è pari al numero di classi.
+    \item \textbf{D. Scott} (1979):
+    \begin{equation}
+        h = \frac{3.5 \cdot s}{\sqrt{N}}
+    \end{equation}
+    In cui h è l'ampiezza delle classi, ed s è la deviazione standard.
+\end{itemize}
+In entrambi i casi, N è la dimensione campionaria.
+\\
+Non esistono regole rigorose riguardo al numero di intervalli che si devono usare nelle tabelle di frequenza e negli istogrammi; alcuni programmi impiegano la regola empirica di Sturges, in cui il numero di intervalli è 1 + ln(n)/ln(2), in cui n è il numero di osservazioni. Il numero di intervalli che si ottiene con questa formula viene poi arrotondato al numero intero più alto. 
+\\
+In generale, si dovrebbe scegliere il numero di intervalli in modo da far risaltare nella maniera migliore i pattern e le eccezioni nei dati, il che richiede buon senso piuttosto che regole rigorose.
+\\
+\\
+Per costruire un istogramma si dovrebbero seguire alcune semplici regole:
+\begin{itemize}
+    \item il lato inferiore di ogni rettangolo deve giacere sulla linea di base corrispondente a y = 0, affinché le aree siano proporzionali alle frequenze;
+    \item diversamente da quanto accade nei diagrammi a barre, i rettangoli vicini di un istogramma non sono separati, il che rafforza la percezione di una scala numerica, grazie al passaggio graduale da ciascun rettangolo a quello successivo;
+    \item quando si suddividono i dati in intervalli si devono usare numeri facilmente leggibili per i punti di suddivisione tra intervalli (es. 0.5 invece che 0.482);
+    \item è utile indicare il numero totale di individui nella didascalia che accompagna l'istogramma.
+\end{itemize}
+
+\section{Quantili di una distribuzione di frequenza}
+Tutte le informazioni relative alla forma della distribuzione di frequenza di una variabile numerica sono contenute nei suoi percentili e nei quantili strettamente correlati. 
+\\
+\\
+L'x-esimo \textbf{percentile} di una distribuzione è il valore al di sotto del quale è situato l'x\% degli individui; lo stesso valore anche rappresentabile attraverso il \textbf{quantile} x/100.
+
+\section{Distribuzione di frequenza cumulativa}
+La \textbf{distribuzione di frequenza cumulativa} è il diagramma di tutti i quantili di una variabile numerica. Per costruire una distribuzione di frequenza cumulativa dell'abbondanza di tutte le specie di uccelli del deserto dell'Esempio 2.1B, prima sono state ordinate tutte le misure dalla più piccola alla più grande, poi è stata calcolata la frazione di os- servazioni minori o uguali a ciascun valore. Questa frazione, detta frequenza relativa cumulativa, è rappresentata graficamente dall'altezza della curva sopra il corrispondente valore osservato nei dati. Ogni gradino è piatto, ma la curva si innalza di 1/n in corrispondenza di ogni misura osservata, dove n è il numero di osservazioni, fino a un massimo di 1. Possono esservi salti più grandi di 1/n in corrispondenza di una misura se la stessa misura si ripete in più punti. La curva fornisce molti particolari perché illustra ogni singola osservazione.
+\\
+fig2.2-1\label{fig2.2-1}
+
+\section{Associazioni tra variabili categoriche}
+La visualizzazione dei dati è molto utile quando si studiano l'associazione tra variabili e le differenze tra gruppi. I metodi che si usano per presentare graficamente le relazioni dipendono dai tipi di variabili di interesse, cioè dal fatto che esse siano categoriche oppure numeriche.
+\\
+\\
+Le \textbf{tabelle di contingenza} sono tabelle di frequenza per due o più variabili categoriche che mostrano come i valori di una variabile siano associati e valori di una seconda variabile. 
+\\
+Una cella è una combinazione di categorie delle variabili riga e colonna. La variabile esplicativa è presentata nelle colonne, mentre la variabile risposta, quella che viene prevista, è presentata nelle righe. 
+\\
+\\
+Il \textbf{diagramma a barre raggruppate} si rettangoli per rappresentare graficamente la frequenza di tutte le combinazioni di due (o più) variabili categoriche.
+\\
+I diagrammi a barre raggruppate seguono tutte le convenzioni valide per i diagrammi a barre, con la differenza che i gruppi (per esempio, malaria e assenza di malaria) sono indicati con differenti colori o sfumature di colore.  Lo spazio tra i rettangoli dei diversi gruppi della variabile esplicativa (per esempio, controllo e sottrazione di uova) è bene che sia più ampio dello spazio tra i rettangoli della variabile risposta.
+\\
+\\
+Un \textbf{grafico a mosaico} (mosaic plot, diagramma di Marimekko) è simile a un diagramma a barre raggruppate, con la differenza che i rettangoli relativi allo stesso gruppo sono impilati l'uno sull'altro invece di essere disposti fianco a fianco.
+\\
+fig2.3-2\label{fig2.3-2}
+\\
+L'area dei rettangoli in un grafico a mosaico rappresenta la frequenza relativa (ossia la proporzione) entro ciascun gruppo.
+\\
+La larghezza di ciascuna di la verticale è direttamente proporzionale al numero di osservazioni per quel gruppo.
+\\
+L'area di ciascun rettangolo, quindi, è direttamente proporzionale alla frequenza relativa di quella combinazione di variabili nell'intero insieme di dati.
+\\
+L'ordine dei gruppi lungo l'asse orizzontale è predeterminato nel caso dei dati ordinali ed arbitrario nel caso dei dati nominali.
+\\
+Un grafico a mosaico fornisce una panoramica dei dati e consente di riconoscere le relazioni tra variabili considerate. Ad esempio, l'indipendenza viene mostrata quando le caselle nelle categorie hanno tutte le stesse aree. L'area delle tessere, nota anche come dimensione del bin, è proporzionale al numero di osservazioni all'interno di quella categoria.
+\\
+\\
+Il principale vantaggio del diagramma a barre raggruppate, rispetto alla tabella di contingenza, è il fatto che risulta più facile confrontare visivamente l'altezza o l'area dei rettangoli che i numeri.  Questo vantaggio si riduce se le variabili esplicative e le variabili hanno molte categorie, poiché in questo caso aumenta la complessità del diagramma. Il grafico a mosaico, d'altra parte, è più semplice da leggere rispetto al diagramma a barre raggruppate.
+\\
+Per decidere quale tipo di visualizzazione sia più efficace per una data circostanza è meglio sperimentare più metodi e scegliere tra essi sulla base delle informazioni che esprimono, della chiarezza e della semplicità.
+
+\section{Confrontare variabili numeriche tra gruppi}
+Gli istogrammi di frequenza relativa prescindono dalle dimensioni del campione, quindi ci si concentra su posizione e forma dell’istogramma, e non sull’altezza assoluta.
+\\
+\\
+Dunque, un metodo utile per confrontare più distribuzione di frequenza consiste semplicemente nel costruire un istogramma per ciascun gruppo. Se poi gli istogrammi vengono presentati in serie, uno sotto l'altro, facendo attenzione che la scala dell'asse delle x sia la stessa, il confronto risulta più semplice e immediato.
+\\
+\\
+Esempio di applicazione degli istogrammi: livelli di emoglobina in maschi umani a diverse altitudini.
+\\
+fig2.4-1\label{fig2.4-1}
+\\
+Sono tutte distribuzioni discretamente simmetriche. L’ipotesi (aumento della concentrazione di emoglobina nel sangue all’aumentare dell’altitudine) non sembra essere verificata, poiché i valori di tendenza centrale dei primi tre grafici sono molto simili; solo sulle Ande si riscontra una palese differenza.
+\\
+Prendendo tutti i dati assieme si potrebbe ottenere una distribuzione bimodale.
+\\
+Lo stesso confronto si può fare usando delle curve di frequenze cumulate.
+\\
+\\
+Si può esaminare anche l'associazione tra una variabile numerica e una variabile categorica confrontando le distribuzioni di frequenze cumulative. Questo approccio presenta le distribuzioni per più gruppi in una singola visualizzazione compatta.
+\\
+fig2.4-2\label{fig2.4-2}
+
+\section{Visualizzare la relazione tra una coppia di variabili numeriche}
+Ci sono tre metodi per visualizzare la relazione tra due variabili numeriche: diagrammi di dispersione (scatter plot), diagrammi a linee, mappe.
+\\
+\\
+Uno \textbf{scatter plot} (diagramma di dispersione, grafico a punti) visualizza il pattern di associazione tra due variabili numeriche. Ogni osservazione è rappresentata da un punto su un diagramma formato da due assi (diagramma cartesiano). La posizione lungo l'asse orizzontale (l'asse delle ascisse o delle x) indica la misura della variabile esplicativa; la posizione lungo l'asse verticale (l'asse delle ordinate o delle y) indica la misura della variabile risposta. Il pattern, nella risultante nube di punti, indica se un'associazione tra le due variabili sia positiva (nel qual caso i punti tendono a distribuirsi nel diagramma dal basso a sinistra verso l'alto a destra), negativa (i punti tendono a decorrere dall'alto a sinistra verso il basso a destra) o assente (non c'è un pattern distinguibile). Un diagramma di dispersione riesce anche a rivelare se la relazione tra due variabili possa essere rappresentata da una retta oppure da una curva più articolata.
+\\
+Es. in una specie di pesci, la proporzionalità diretta tra ornamentazione del padre con l’attrattività del figlio, le unità statistiche sono le coppie padre-figlio. L’ornamentazione del padre è un proxy per l’attrattività del figlio.
+\\
+\\
+Quando si ha una sequenza temporale dei dati che si stanno rappresentando si possono collegare i vari punti con una linea, ottenendo un diagramma a linee.
+\\
+Un \textbf{diagramma a linee} è uno strumento efficace per visualizzare tendenze nel tempo o rispetto a qualche altra variabile ordinata. Un diagramma a linee è simile a un diagramma di dispersione, eccetto che viene riportato soltanto una misura y per ogni osservazione x. I punti adiacenti lungo l'asse x sono uniti da un segmento.
+\\
+I segmenti di retta che congiungono i punti rendono più visibili le tendenze della popolazione. 
+\\
+L'inclinazione più o meno ripida dei segmenti rispecchia la velocità di variazione della popolazione.
+\\
+Si tratta di una serie temporale.
+\\
+Questi grafici possono mettere in evidenza meccanismi naturali (es. relazione preda-predatore: effetto rimozione, effetto disponibilità risorse per preda, effetto stress da predazione, etc).
+\\
+\\
+Una \textbf{mappa} è l'equivalente spaziale del diagramma a linee: visualizza una misura numerica di risposta in più posizioni su una superficie. La variabile esplicativa è sempre una serie ordinata, costituita da punti nello spazio. Viene visualizzata una misura y per ogni punto o regione sulla superficie.
+\\
+Le mappe possono indicare misure in punti su qualsiasi superficie. La superficie può essere un reticolo spaziale o una regione della superficie terrestre delimitata da confini politici o geologici. Le mappe possono essere usate anche per indicare misure su rappresentazioni di qualsiasi oggetto bidimensionale o tridimensionale.
+\\
+\\
+Le rappresentazioni grafiche e le tabelle hanno un duplice scopo: essere uno strumento per l'analisi dei dati e comunicare e sintetizzare i pattern nei dati a un pubblico più vasto. Questi obiettivi sono ampiamente convergenti, perché le visualizzazioni più informative sono anche quelle più adatte per identificare pattern nei dati e per comunicarli. In tutti i casi, la visualizzazione dei dati deve essere chiara, onesta ed efficiente.
+\\
+\\
+Alcuni consigli generali per aumentare l'efficacia delle rappresentazioni grafiche sono:
+\begin{itemize}
+    \item Mostrare i dati.
+    \item Rappresentare accuratamente le grandezze. Una linea base corrispondente allo zero è essenziale nei diagrammi a barre e negli istogrammi, perché l'occhio interpreta istintivamente l'area dei rettangoli come direttamente proporzionale al valore relativo. Altri diagrammi, come il diagramma a linee, non sempre hanno questo scopo e quindi non sono vincolati a possedere questa caratteristica. L'obiettivo principale di un diagramma di dispersione è visualizzare un'associazione, non un valore numerico o una frequenza, e la scelta della linea base dovrebbe essere fatta tenendo presente questo criterio.
+    \item Cose superflue sono gli effetti tridimensionali, che non soltanto non sono necessari, ma distorcono anche l'altezza e l'area dei rettangoli, ingannando di nuovo l'occhio. Questi abbellimenti inutili e ingannevoli sono noti come «chartjunk» («spazzatura del diagramma»). Gli elementi grafici inessenziali dovrebbero essere eliminati per permettere che i pattern nei dati possano emergere con maggior chiarezza.
+    \item Utilizzare elementi grafici in maniera chiara riducendo la confusione e le ridondanze.
+    \item Fare in modo che la rappresentazione grafica sia di facile interpretazione. Questo avviene attraverso una scelta mirata dei caratteri tipografici e dei colori e attraverso l'indicazione delle unità di misura e l'uso di simboli grafici chiaramente distinguibili per rappresentare differenti gruppi.
+    \item Identificare chiaramente gli assi.
+    \item Inserire didascalie che siano self-explanatory (non deve essere necessario leggere il testo, ad esempio, dell’articolo che contiene il grafico, per interpretarlo) e dunque ridondanti rispetto alle didascalie di altri grafici presenti nello stesso lavoro o al lavoro stesso.
+\end{itemize}
+
+Le tabelle possono avere scopi diversi:
+\begin{itemize}
+    \item immagazzinamento dei dati, ovvero la conservazione dei dati grezzi a scopo di riferimento; tabelle di questo tipo sono spesso grandi e non adatte alla comunicazione dei risultati finali; quando vengono pubblicate, vengono presentate di solito come appendici o allegati.
+    \item visualizzazione di pattern ed eccezioni nei dati (es. tabelle di frequenza). Per produrre tabelle chiare, onesto e deficienti si devono seguire in generale gli stessi criteri già elencati per le rappresentazioni grafiche. Queste tabelle devono essere compatte e presentare il numero minimo di cifre significative necessarie ad evidenziare il pattern. L'organizzazione dei dati in tabella deve facilitare la lettura e l'identificazione delle caratteristiche principali dei dati.
+\end{itemize}
+I diagrammi sono il mezzo migliore per mostrare pattern ed eccezioni, ma forniscono pochi particolari quantitativi; le tabelle, quindi, sono più appropriate quando è importante comunicare anche aspetti quantitativi dei dati.
+\\
+\\
+CONSIDERAZIONE PERSONALE
+\\
+La rappresentatività di un campione non dipende solo dal numero di elementi costituenti il campione, ma anche dalla variabilità del parametro al quale si è interessati (caso estremo: 0 variabilità, anche solo un elemento è rappresentativo; variabilità=2, anche quattro su 100 è più probabile che sia rappresentativo che nel caso in cui ci fosse varietà=10).
+\\
+(ma in effetti vale solo se si è interessati ad avere un’idea della variabilità del parametro e non del rapporto tra le n varietà del parametro).
+
+\chapter{Statistiche descrittive (B2)}\footnote{Capitolo 3, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+\\
+I dati si possono descrivere graficamente o attraverso indici (statistiche) sintetiche.
+\\
+\\
+I parametri delle popolazioni si indicano con lettere greche, mentre per le stime si usa il normale alfabeto.
+\\
+\\
+Utile prima rappresentare i dati graficamente e poi in base ai risultati scegliere le statistiche descrittive adatte.
+\\
+\\
+Una distribuzione può essere:
+\begin{itemize}
+    \item \textbf{uniforme}: tutto il range di variazione della x è rappresentato in maniera uniforme nella popolazione;
+    \item \textbf{a campana}: i valori centrali del range di distribuzione della x sono I più frequenti nella popolazione (molte biometrie hanno tale distribuzione);
+    \item \textbf{asimmetrica}: valori di x più frequenti lontani dai valori centrali;
+    \item \textbf{bimodale}: i valori di x più frequenti corrispondono a due diversi punti del range di distribuzione di x; porta a concludere che nella popolazione ci sono in realtà due popolazioni statistiche.
+\end{itemize}
+Per descrivere numericamente una distribuzione si deve tener conto di due sue caratteristiche:
+\begin{itemize}
+    \item \textbf{tendenza centrale}: la misura che meglio descrive la maggior parte dei dati o che comunque esprime una loro centralità. Indici della tendenza centrale sono: quartili (misure di posizione) e media.
+    \item \textbf{dispersione}: indica come le misure si collocano attorno a quella di tendenza centrale, rappresenta la variabilità della popolazione statistica in relazione alla variabile misurata. Misure di dispersione sono: distanza interquartile (misura di posizione), scarto medio assoluto, varianza, deviazione standard.
+\end{itemize}
+Le misure di posizione misurano la posizione dei valori, non le differenze tra essi in termini numerici.
+
+\section{Misure di tendenza centrale}
+Su una serie di dati ordinati in ordine crescente, i \textbf{quartili} sono i tre valori che dividono la distribuzione in quattro blocchi, ognuno dei quali rappresenta un quarto complessivo dei record (25\%). Il valore centrale è la \textbf{mediana} (o secondo quartile, il valore centrale che divide la sequenza di dati ordinati in due gruppi di eguale numerosità, 50\%), gli altri due sono il primo (il 25-esimo percentile) ed il terzo quartile (il 75-esimo percentile).
+Per calcolare la mediana:
+\begin{itemize}
+    \item se il numero di osservazioni \textbf{($n$) è dispari}, allora la mediana è l'osservazione centrale:
+    \begin{equation}
+        mediana = Y_{\frac{n+1}{2}}
+    \end{equation}
+    \item se il numero di osservazioni \textbf{($n$) è pari}, allora la mediana è la media della coppia centrale di valori:
+    \begin{equation}
+        mediana = \frac{Y_{\frac{n}{2}} + Y_{\frac{n}{2}+1}}{2}
+    \end{equation}
+\end{itemize}
+Primo e terzo quartile non sono necessariamente simmetrici rispetto alla mediana, non si può sapere, solo conoscendo i loro valori, quanto essi siano distanti dalla mediana.
+\\
+\\
+In generale, si parla di \textbf{quantili}, statistiche descrittive che indicano la posizione del valore nella distribuzione.
+\\
+I \textbf{decili} dividono la serie ordinata di numeri in blocchi di 10\%.
+I \textbf{percentili} possono corrispondere ad una percentuale arbitraria.
+\\
+\\
+I \textbf{boxplot} (box \& whiskers) sono grafici che rappresentano la variabilità dei valori rispetto ai quartili.
+\\
+I punti che giacciono al di fuori della distribuzione sono gli \textbf{outliers}. Si usa come criterio l’ampiezza del box: un outlier è considerato tale quando dista dal box (solitamente) più di una volta e mezzo l’ampiezza del box (si possono scegliere anche altre distanze, più o meno permissive, in base ad un ragionamento sensato).
+\\
+I \textbf{baffi} sono i valori estremi misurati (tra inizio distribuzione e primo quartile e tra terzo quartile ed ultimo valore), di solito il minimo ed il massimo, una volta esclusi gli outliers.
+\\
+Il boxplot è, dunque, una rappresentazione grafica che NON assume la simmetria della distribuzione.
+\\
+fig3.2-2\label{fig3.2-2}
+\\
+La \textbf{media} è la somma di tutti i valori osservati diviso il loro numero.
+\\
+La \textbf{media ponderata} tiene conto del “peso” di ciascun valore, si ha quando la variabile continua è riclassificata in una variabile ordinale.
+\\
+Si attribuisce a ciascuna classe un valore, spesso il valore medio dell’intervallo, che si moltiplica per il numero di soggetti che hanno tale valore medio. La media ponderata è meno precisa di quella aritmetica classica.
+\\
+La media non discrimina tra distribuzioni con la stessa tendenza centrale ma diversa dispersione.
+
+\section{Misure di dispersione}
+La \textbf{distanza interquartile} è la misura di variabilità quando si usano statistiche descrittive basate sui quartili.
+\\
+\\
+Per calcolare la dispersione:
+\begin{itemize}
+    \item \textbf{scarto medio assoluto (Sm)}: media di quanto ciascun caso dista dal valore medio. Data la simmetria attorno alla media, i valori positivi e quelli negativi si annullerebbero, per questo è necessario considerare i valori assoluti, per cui si deve calcolare il quadrato e poi fare la radice.
+    \begin{equation}
+        S_m = \frac{\sum{\abs{x_i - \overline{x}}}}{n}
+    \end{equation}
+    \item \textbf{devianza (SQ)}: si sommano le differenze ottenute da ciascun valore, elevate alla seconda per evitare che si ottenga un valore nullo; la devianza non è pesata sul numero di casi, cosa necessaria quando si vogliono confrontare le dispersioni di popolazioni con diverso N.
+    \begin{equation}
+        SQ = \sum{(x_i - \overline{x})^2}
+    \end{equation}
+    \item \textbf{varianza (QM)}: permette di pesare la devianza sul numero di casi considerati. Si usa spesso n-1 al denominatore perché si fa una correzione: più la numerosità è elevata più la varianza campionaria è affidabile e la correzione non ha peso; quando l’N campionario è molto basso, invece, la correzione permette di non rischiare di avere una sottostima della variabilità. Tale correzione ha senso quando si fanno stime della varianza, non quando questa viene calcolata esattamente (ovvero quando si hanno i dati riguardanti tutta la popolazione statistica).
+    \begin{equation}
+        s^2 = \frac{\sum{(x_i - \overline{x})^2}}{n-1}
+    \end{equation}
+    \item \textbf{deviazione standard (o scarto quadratico medio, DS o SD)}: misura più utilizzata nelle statistiche descrittive.
+    \begin{equation}
+        s = \sqrt{\frac{\sum\limits_1^n{(x_i - \overline{x})^2}}{n-1}}
+    \end{equation}
+\end{itemize}
+
+\section{Coefficiente di variazione}
+Più la dimensione campionaria è bassa, più la variabilità misurata è elevata, quindi a volte non è immediato confrontare variabilità di distribuzioni diverse (di stessa natura o di natura diversa); esistono delle statistiche di varibailità che consentono di misurare la variabilità rispetto al valore della media; una di queste è il \textbf{coefficiente di variazione}:
+\begin{equation}
+    CV = \frac{\sigma}{\mu}\ 100
+\end{equation}
+In cui $\sigma$ è la deviazione standard, $\mu$ è la media, ed il loro rapporto viene moltiplicato per 100 perché è comodo usare le percentuali.
+
+\section{Range ed intervallo}
+Altre misure di dispersione sono i range e l’intervallo.
+\\
+Il \textbf{range} è la differenza tra il valore massimo ed il minimo della serie di dati, mentre l’\textbf{intervallo} definisce quali sono il valore massimo e quello minimo.
+
+\section{Confronto tra misure di posizione e dispersione}
+Queste misure alternative di posizione e di dispersione danno informazioni simili quando la frequenza di distribuzione è simmetrica e unimodale, ma la media e la deviazione standard diventano meno informative rispetto alla mediana e alla differenza interquartile quando i dati includono osservazioni estreme.
+\\
+\\
+Alcune condizioni che si verificano quando la distribuzione è normale:
+\begin{itemize}
+    \item somma degli scarti è pari a zero (quindi la media è un punto di equilibrio, mentre la mediana solo di centralità);
+    \item devianza è un minimo (la distanza di tutti i punti da qualunque altro valore che non sia la media è maggiore della devianza);
+    \item media delle medie ponderate è pari alla media (associatività).
+\end{itemize}
+
+\section{Mode lasche}
+La \textbf{moda} è il valore più frequente della distribuzione.
+\\
+\\
+Moda e mediana vengono dette “\textbf{mode lasche}”, perché danno relativamente poche informazioni.
+\\
+\\
+Nelle distribuzioni normali, media, moda e mediana corrispondono.
+
+\section{Distribuzione campionaria}
+La \textbf{stima} è il processo con cui si inferisce un parametro della popolazione a partire dai dati ottenuti da un campione. Si utilizza il termine stima, però, anche per indicare il risultato del processo di stima.
+\\
+La stima non è quasi mai esattamente uguale al valore del parametro della popolazione che viene valutato, perché il campionamento è influenzato dal caso.
+\\
+Per conoscere la precisione della stima si deve conoscere a grandi linee come il processo di campionamento potrebbe influenzare la stima che otteniamo. Si usa a questo scopo la distribuzione campionaria della stima, cioè la distribuzione di probabilità di tutti i valori di una stima che si potrebbero ottenere campionando molte volte la popolazione.
+\\
+\\
+La distribuzione campionaria rappresenta la «popolazione» di valori per una stima. 
+\\
+Non si tratta di una popolazione reale, ma una popolazione immaginaria di valori per una stima.
+\\
+\\
+La dispersione della distribuzione campionaria di una stima dipende dalla dimensione del campione. 
+\\
+Più grande è la dimensione del campione, più stretta è la distribuzione campionaria. 
+\\
+E, più stretta è la distribuzione campionaria, più precisa sarà la stima, visto che una singola stima sarà mediamente più vicina al valore vero.
+\\
+\\
+La distribuzione della media campionaria è normale anche se la distribuzione iniziale non lo è.
+
+\section{Errore standard \label{errst}}
+La distribuzione campionaria si usa per misurare la precisione di una stima.
+\\
+La deviazione standard della distribuzione campionaria di una stima è detta \textbf{errore standard (ES)}. Dato che riflette le differenze tra una stima e il parametro preso in considerazione, l'errore standard misura la precisione della stima. Le stime affette da errori standard più piccoli sono più precise di quelle affette da errori standard più grandi: minore è l'errore standard, minore è l'incertezza riguardo al parametro della popolazione. 
+\begin{equation}
+    ES = \frac{s}{\sqrt{n}}
+\end{equation}
+In cui $s$ è la deviazione standard della stima.
+\\
+Quando si usa la deviazione standard, dato che questa si basa sulla media, si sta assumendo che la distribuzione almeno tenda alla normalità.
+\\
+\\
+Tutte le statistiche parametriche si basano sulla media; nel momento in cui la media non è un buon descrittore, non si possono usare più statistiche parametriche.
+\\
+\\
+Quando si riporta una media, si deve almeno indicare l’errore standard.
+
+\chapter{Distribuzione normale (B2)} \footnote{Capitolo 10, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+\\
+Con $n$ molto alti ci si può permettere di avere bin di ampiezza molto ridotta che, una volta rappresentati, possono essere approssimati da una curva.
+\\
+\\
+La misura di tendenza centrale più informativa nei casi di distribuzione normale è la media aritmetica, che in tali casi corrisponde con moda e mediana.
+\\
+\\
+La distribuzione normale è molto comune in natura (molte biometrie seguono una distribuzione normale), probabilmente perché i processi che si osservano in natura sono il risultato di un processo di selezione.
+\\
+\\
+I parametri che determinano la forma delle curve normali sono media e varianza ($\sigma^2$), mentre gli altri sono costanti.
+\\
+\\
+Le curve \textbf{platicurtiche} sono schiacciate (es. viola), mentre le  \textbf{leptocurtiche} sono appuntite (es. rossa).
+% \begin{figure}[h]\label{normalcurvetypes}
+%     \centering
+%     \includegraphics[scale=0.6]{normalcurvetypes}
+%     \caption{\small{}}
+% \end{figure}
+\\
+Le curve normali sono asintotiche rispetto all’asse delle x.
+\\
+\\
+La \textbf{curva normale standardizzata}, che ha media 0 e varianza 1, si può ottenere a partire da una distribuzione normale qualsiasi di una qualsiasi variabile continua. Considerando una curva normale, si trasforma ogni valore della distribuzione ($y_i$) in unità di deviazione standard ($Z$):
+\begin{equation}
+    Z = \frac{y_i - \overline{y}}{s}
+\end{equation}
+
+In cui $s$ è la deviazione standard osservata per il campione.
+\\
+Il valore ottenuto fa capire se il valore corrispondente sta sopra o sotto la media rispetto ad una misura di variabilità.
+% \begin{figure}[h]\label{standardizednormalcurve}
+%     \centering
+%     \includegraphics[scale=0.6]{standardizednormalcurve}
+%     \caption{\small{no 1.98 ma 1.96 volte $\sigma$}}.
+% \end{figure}
+Con riferimento alla distribuzione standardizzata, il 95\% dei valori ricade all’interno dell’intervallo che si estende tra -1.96 volte la deviazione standard e +1.96 volte la deviazione standard, mentre tra -1 e +1 volta la deviazione standard si ha il 66.27\% dei casi.
+\\
+La curva normale standardizzata ha proprietà definite.
+\\
+\\
+In un boxplot di una distribuzione normale, il 50\% dei casi è racchiuso nel box.
+\\
+\\
+Queste considerazioni valgono anche per la distribuzione campionaria delle medie.
+% \begin{figure}[h]\label{standardizednormalcurve2}
+%     \centering
+%     \includegraphics[scale=0.7]{standardizednormalcurve2}
+%     \caption{\small{}}.
+% \end{figure}
+
+\section{Teorema del limite centrale}
+La sommatoria di molte distribuzioni distribuite in meniera non normale genera una distribuzione normale.
+\\
+\\
+Secondo il \textbf{teorema del limite centrale}, la somma o la media di n misure da una distribuzione quasi o non normale genera una distribuzione normale.
+
+\section{Intervallo di confidenza}
+L’errore standard è la misura della ds nella media campionaria. Siccome, per la media campionaria, l’errore standard è uguale alla ds per una variabile qualsiasi, anche in questo modo si può indicare la precisione della media.
+\\
+\\
+Per la curva normale, se si campiona n volte, nel 95\% dei casi, la media avrà un intervallo di confidenza che ricadrà tra $media-1.96*ES$ e $media+1.96*ES$.
+\\
+\\
+In questo modo gli IC possono essere usati come metodo inferenziale.
+
+\chapter{Probabilità (B3)}\footnote{Capitolo 5, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+\\
+Lo \textbf{spazio campionario} è la lista di tutti i possibili risultati di una prova casuale.
+\\
+Una \textbf{prova} è \textbf{casuale} quando è aleatoria.
+\\
+Un \textbf{evento} è un qualsiasi sottoinsieme potenziale dello spazio campionario. Per esempio, se lanciamo un dado a 6 facce, sono possibili 6 risultati: i numeri da 1 a 6. Questi 6 differenti numeri rappresentano nel loro insieme lo spazio campionario. Possiamo definire molti eventi che potrebbero interessare, quali «il risultato è un numero pari», «il risultato è un numero maggiore di 3» o anche il semplice evento «il risultato è 4». 
+\\
+La \textbf{probabilità} di un evento è la proporzione di tutte le prove casuali in cui si verifica l'evento specificato rispetto a tutti gli eventi possibili, quando la stessa prova casuale viene ripetuta un tot di volte in \underline{condizioni definite}.
+\\
+La proporzione di casi di uno degli eventi dello spazio campionario sul totale degli eventi possibili è la migliore \underline{stima} della probabilità di tale evento.
+\\
+Le probabilità, essendo proporzioni, devono essere sempre comprese tra 0 e 1, estremi inclusi: un evento ha probabilità 0 se non si verifica mai e ha probabilità 1 se si verifica sempre.
+\\
+La sommatoria di tutte le probabilità di tutti gli eventi possibili è pari a 1.
+\\
+\\
+Es. lanciando un dado, ogni lancio (prova casuale) può risultare in una qualsiasi delle sei facce del dado (spazio campionario), e c’è una probabilità di $\frac{1}{6}$ che una determinata faccia esca.
+\\
+\\
+Un evento può essere anche una combinazione di più eventi (es. lanciando il dado due volte, probabilità che esca un 2 ed un 5?), ed è definito da una probabilità (quante volte si osserva un dato evento sul totale delle volte che si compie l’osservazione).
+
+\section{Istogrammi di frequenza}
+Si potrebbe creare un istogramma di frequenza relativa per descrivere la probabilità di un evento.
+% \begin{figure}[h]\label{fig5.4-1}
+%     \centering
+%     \includegraphics[scale=0.7]{fig5.4-1}
+%     \caption{\small{}}.
+% \end{figure}
+
+\section{Eventi indipendenti}
+Due eventi si dicono \textbf{indipendenti} se il verificarsi di uno dei due non influenza in alcun modo la probabilità che si verifichi anche l'altro.
+
+\section{Eventi incompatibili}
+Quando due eventi sono indipendenti e mutualmente esclusivi, ovvero non possono verificarsi simultaneamente, si parla di \textbf{eventi incompatibili}. Per esempio, un singolo dado lanciato una sola volta non può presentare simultaneamente sia 1 che 6: gli eventi «1» e «6» sono incompatibili.
+\\
+In termini matematici, due eventi sono incompatibili se $Pr[A\ e\ B]=0$, in cui $Pr[A\ e\ B]$ significa la probabilità che si verifichi sia A che B.
+
+\section{Somma delle probabilità}
+Se gli eventi che si tenta di combinare sono incompatibili, allora il calcolo della probabilità che si verifichi l'uno o l'altro è semplicemente la somma delle probabilità per ciascuno di quegli eventi considerati separatamente. Ottenere 7 e ottenere 11 lanciando due dadi sono eventi incompatibili, perciò, la probabilità di ottenere 7 o 11 lanciando due dadi è la probabilità che esca 7 più la probabilità che esca 11: Pr[ottenere 7 o ottenere 11] = Pr[ottenere 7] + Pr[ottenere 11].
+\\
+Questa proprietà additiva delle probabilità di eventi incompatibili è detta \textbf{regola della somma} (un caso particolare del teorema della somma delle probabilità). 
+\\
+Dunque, secondo la regola della somma, se due eventi A e B sono incompatibili, allora: 
+\begin{equation}
+    Pr[A\ o\ B] = Pr[A] + Pr[B]
+\end{equation}
+La regola della somma può essere estesa a più di due eventi, purché essi siano tutti incompatibili.
+\\
+\\
+La somma delle probabilità di tutti i possibili risultati incompatibili di una prova casuale deve essere uguale ad 1; ciò significa che la probabilità che un evento non si verifichi è semplicemente 1 meno la probabilità che si verifichi.
+\\
+\\
+Se due eventi non sono incompatibili (non mutualmente esclusivi ma indipendenti), la probabilità che l'uno oppure l'altro evento possa verificarsi viene data dalla \textbf{regola della somma generalizzata}:
+\begin{equation}
+    Pr[A\ o\ B] = Pr[A] + Pr[B] - Pr[A\ e\ B]
+\end{equation}
+% \begin{figure}[h]\label{fig5.5-2}
+%     \centering
+%     \includegraphics[scale=0.7]{fig5.5-2}
+%     \caption{\small{}}.
+% \end{figure}
+Se non si sottraesse la probabilità che si verifichino sia A che B, si conterrebbero due volte i risultati in cui gli eventi si verificano contemporaneamente.
+In realtà, la regola potrebbe essere applicata anche a casi in cui si hanno eventi mutualmente esclusivi, \colorbox{lyellow}{perché}
+
+\section{Diagrammi di Venn}
+Un modo utile per ragionare sulle probabilità degli eventi è usare uno strumento grafico, detto \textbf{diagramma di Venn}. L'area del diagramma di Venn rappresenta tutti i risultati possibili di una prova casuale, e si possono rappresentare vari eventi come aree del diagramma. 
+\\
+Se il box per ciascun risultato ha la stessa area, i risultati sono equiprobabili.
+Es. probabilità che, lanciando due dadi a 6 facce, si ottengano due numeri che, sommati, restituiscono un valore di 7 o di 11.
+\\
+La probabilità di ottenere 7 o 11 è additiva; in questo caso, la funzione di probabilità non è più uniforme, ma segue una curva a campana.
+\\
+Dunque, le probabilità di eventi alternativi ma non incompatibili sono additive.
+% \begin{figure}[h]\label{fig5.5-1}
+%     \centering
+%     \includegraphics[scale=0.7]{fig5.5-1}
+%     \caption{\small{}}.
+% \end{figure}
+% \begin{figure}[h]\label{istogrammaperdiagramma}
+%     \centering
+%     \includegraphics[scale=1]{istogrammaperdiagramma}
+%     \caption{\small{}}.
+% \end{figure}
+
+\section{Prodotto di probabilità\label{secprodottodiprobabilità}}
+Quando due eventi sono indipendenti, la probabilità che si verifichino entrambi è data dal prodotto della probabilità del primo evento per la probabilità del secondo. Questa proprietà degli eventi indipendenti, detta regola del prodotto (un caso particolare del teorema della probabilità composta), è essenziale per l'analisi dei dati perché permette di determinare se due o più variabili siano associate.
+\\
+Secondo la regola del prodotto, se due eventi A e B sono indipendenti, allora:
+\begin{equation}
+    Pr[A\ e\ B] = Pr[A] x Pr[B] 
+\end{equation}
+La regola del prodotto riguarda combinazioni che implicano «e», cioè la probabilità che si verifichino entrambi gli eventi. Volendo conoscere la probabilità che si verifichino questo e quello, e se i due eventi sono indipendenti, possiamo moltiplicare le probabilità di ciascuno di essi per ottenere la probabilità che si verifichino entrambi.
+% \begin{figure}[h]\label{fig5.6-1}
+%     \centering
+%     \includegraphics[scale=1]{fig5.6-1}
+%     \caption{\small{}}.
+% \end{figure}
+\\
+\colorbox{lyellow}{\parbox{\textwidth}{OPPURE
+\\
+La probabilità di ottenere due eventi indipendenti mutualmente esclusivi si ottiene invece calcolando il prodotto delle probabiltà dei singoli eventi.
+\\
+Es. probabilità che su due lanci esca 3 e 3.
+\\
+\\
+Nel caso di eventi indipendenti non mutualmente esclusivi si calcola il prodotto dei due o più eventi per ottenere la probabilità della combinazione degli eventi considerati.}}
+\begin{example}[slot machines]
+    Con una slot machine si vince il 9.8\% delle volte ($Pr[vincita] = 0.098$), indipendentemente dalla giocata precedente.
+    Qual è la probabilità che un giocatore perda 8 volte di seguito?
+    \begin{equation}
+        Pr[perdita] = 1 - Pr[vincita] = 0.902
+    \end{equation}
+    Vincita e perdita sono incompatibili, quindi:
+    \begin{equation}
+        Pr[8\ perdite] = Pr[perdita]^8 = 0.438
+    \end{equation}
+\end{example}
+
+\section{Alberi di probabilità}
+Un \textbf{albero di probabilità}, o albero probabilistico, è un diagramma che può essere utilizzato per calcolare le probabilità di combinazioni di eventi che sono i risultati di più prove casuali.
+
+\section{Probabilità condizionata e teorema della probabilità totale}
+La \textbf{probabilità condizionata} (o subordinata) è la probabilità di un evento condizionata dal verificarsi di un altro evento.
+\\
+La probabilità condizionata si indica come: Pr[evento|condizione] = probabilità.
+Il che indica la probabilità che si verifichi l'evento quando la condizione è soddisfatta.
+\\
+La barra verticale al centro di questa espressione sta per "dato che" o "quando la condizione seguente è soddisfatta".
+\\
+Volendo conoscere la probabilità complessiva di un particolare evento, si devono sommare tutte le sue probabilità per ogni possibile condizione, pesate sulla probabilità di quella condizione. Questa regola è nota come \textbf{teorema della probabilità totale (o globale)}, secondo cui la probabilità di un evento X è:
+\begin{equation}
+    Pr[X] = \sum{Pr[Y_i]\ Pr[X | Y_i]}
+\end{equation}
+
+\section{Teorema della probabilità composta}
+Le probabilità condizionate ci permettono di calcolare la probabilità di una combinazione di due eventi anche se essi non sono indipendenti. In questa situazione, possiamo valutare la probabilità che si verifichino entrambi moltiplicando la probabilità di un evento per la probabilità condizionata dell'altro evento, ovvero per la probabilità dell'altro evento condizionata al verificarsi del primo evento. Si tratta della regola del prodotto generalizzata, detta anche \textbf{teorema della probabilità composta}. 
+\\
+La regola del prodotto generalizzata permette di trovare la probabilità che si verifichino due eventi anche quando sono dipendenti: 
+\begin{equation}
+    Pr[A\ e\ B] = Pr[A] Pr[B|A]
+\end{equation}
+Riflettendo attentamente, possiamo renderci conto di come questa regola sia ragionevole. Affinché due eventi (A e B) si verifichino, deve verificarsi l'evento A. Per definizione, ciò avviene con probabilità Pr[A]. Sapendo che A si è verificato, la probabilità che si verifichi anche B è Pr[B|A]. Moltiplicando tra loro queste probabilità otteniamo la probabilità che si verifichino sia A sia B.
+\\
+Vale anche l'inverso:
+\begin{equation}
+    Pr[A\ e\ B] = Pr[B] Pr[A|B]
+\end{equation}
+Dunque, il teorema della probabilità composta è applicabile anche ad eventi non indipendenti ed è simmetrico.
+
+\begin{example}[\textit{Nasonia vitripennis}]
+    La vespa parassita Nasonia vitripennis depone uova in larve di mosca decidendone il sesso in base a se la larva è già parassitata (90\% maschi perché questi riusciranno a fecondare tutte le uova delle altre femmine competendo bene con i maschi dell’altra parassitazione) o no (soprattutto femmine e pochi maschi perché questi pochi potrebbero fecondare tutte le femmine). In questi casi la probabilità di parassitosi è dello 0.2 (assumendo che questa sia la stessa per larve già parassitate e non). Il problema può essere rappresentato mediante diagramma di Venn (in questo caso molto simile ad un mosaic plot) o albero delle probabilità. 
+    \\
+    Qual è la probabilità che un uovo sia maschio? Sommando le due probabilità relative:
+    \begin{equation}
+        \begin{gathered}
+            Pr[M]=Pr[ospite\ parassitato]\ Pr[M|ospite\ parassitato]\ + \\ +\ Pr[ospite\ non\ parassitato]\ Pr[M|ospite\ non\ parassitato]
+        \end{gathered}
+    \end{equation}
+\end{example}
+% \begin{figure}[h]\label{fig5.8-1}
+%     \centering
+%     \includegraphics[scale=1]{fig5.8-1}
+%     \caption{\small{}}.
+% \end{figure}
+% \begin{figure}[h]\label{alberoprobabilità}
+%     \centering
+%     \includegraphics[scale=1]{alberoprobabilità}
+%     \caption{\small{}}.
+% \end{figure}
+ 
+\section{Teorema di Bayes}
+
+
+\chapter{Test delle ipotesi}\footnote{Capitolo 6, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Ragionamento logico}
+
+\section{Metodo scientifico galileiano}
+
+\section{Formulazione delle ipotesi}
+
+\section{Verifica delle ipotesi}
+
+\section{Statistica test}
+
+\section{Livello di significatività di P}
+
+\section{Errori nella verifica delle ipotesi}
+
+
+\part{Confronti tra gruppi}
+
+
+\chapter{Analisi delle proporzioni (B5)}\footnote{Capitolo 7, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Distribuzione binomiale}
+Una misurazione effettuata su degli individui suddivide questi ultimi in due gruppi mutualmente esclusivi in base ad una certa caratteristica come, ad esempio, "successo" ed "insuccesso".
+\\
+Nella popolazione, una proporzione fissa "p" di individui rientra in uno dei due gruppi, mentre i restanti rientrano nell'altro gruppo.
+\\
+Se si estrae un campione casuale di n individui a partire dalla popolazione, la distribuzione campionaria del numero di individui che rientrano nella categoria "successo" è descritta dalla \textbf{distribuzione binomiale} (binomiale perché esistono soltanto due risultati possibili ed entrambi sono categorie con un certo nome).
+\\
+La distribuzione binomiale fornisce la distribuzione di probabilità di X successi in (1) un numero fisso (n) di prove (2) indipendenti (l'una dalle altre) quando (3) la probabilità di successo (p) è la stessa in ogni prova ed (4) i possibili risultati della prova sono solamente due:
+\begin{equation}
+P[X \ successi] = \binom{n}{X} \ p^X \ (1 - p)^{n-X}
+\end{equation}
+Il termine $\binom{n}{X}$ è detto \textbf{coefficiente binomiale}, e corrisponde al numero di combinazioni semplici di n elementi presi X alla volta; tale termine rappresenta il numero di sequenze ordinate uniche (diverse tra loro) di successi ed insuccessi che portano esattamente ad X successi in n prove, e sta per:
+\begin{equation}
+\binom{n}{X} = \frac{n!}{X!\ (n - X)!}
+\end{equation}
+In cui n! (n fattoriale) sta per:
+\begin{equation}
+n! = n\times (n-1)\times (n-3)\times ...\times 2\times 1
+\end{equation}
+
+\begin{example}[Fiori sinistrorsi]
+In una popolazione di una specie floristica, p = 0.25 ha fiori sinistrorsi e 1-p = 0.75 ha fiori destrorsi. Con questa situazione si può usare la distribuzione binomiale per determinare la probabilità di ogni dato numero di successi (es. X = 6, con n = 27, ovvero con 27 fiori campionati):
+\begin{equation}
+P[6 \ fiori \ sinistrorsi] = \binom{27}{6} \ 0.25^6 \ (0.75)^{27-6} = 0.1719
+\end{equation}
+Dunque, esiste una probabilità di circa il 17\% che 6 fiori su 27 siano sinistrorsi, se la proporzione di fiori sinistrorsi nella popolazione è pari a 0.25.
+\\
+Si possono calcolare le probabilità associate ad ogni possibile numero di successi (in questo caso, da 0 a 27), e la distribuzione di probabilità così ottenuta si può riportare graficamente:
+\\
+fig7.1-1 \label{fig7.1-1} %TODO
+\\
+Una distribuzione estremamente simile si può ottenere estraendo un gran numero di campioni casuali di n fisso (27, in questo caso), anche se la distribuzione binomiale fornisce probabilità più esatte, mentre le simulazioni ne forniscono di approssimate, sopratutto per n insufficienti; per verificare le ipotesi nulle si possono quindi utilizzare le distribuzioni binomiali.
+\end{example}
+
+\subsection{Distribuzione campionaria di una proporzione}
+La proporzione di successi in una popolazione (X/n, X su n) si indica con p, mentre la proporzione di successi in un campione, ovvero la \textbf{proporzione campionaria}, si indica con $\hat{p}$ (p hat).
+\\
+La proporzione di successi in campioni casuali è uguale \textit{in media} alla proporzione di successi nella popolazione: $\hat{p}$ è quindi una stima non distorta della proporzione nella popolazione perché fornisce, in media, la risposta corretta.
+\\
+\\
+Come si nota nella Figura sottostante, la dimensione campionaria influisce sulla larghezza della distribuzione campionaria di $\hat{p}$:
+\\
+fig7.1-2\label{fig7.-2} %TODO
+\\
+Quando n è grande, la distribuzione campionaria è stretta. Questo effetto è quantificato dall'\textbf{errore standard di $\hat{p}$}:
+\begin{equation}
+\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}
+\end{equation}
+\label{devstphat}
+Campioni di grandi dimensioni ottenuti campionando più volte una stessa popolazione avranno proporzioni stimate più vicine tra loro e più vicine alla proporzione nella popolazione, rispetto ai campioni piccoli: i campioni più grandi forniscono dunque stime più precise (\textbf{legge dei grandi numeri}).
+
+\section{Studio di una proporzione: il test binomiale}
+
+Il \textbf{test binomiale} viene usato nella verifica delle ipotesi quando una variabile in una popolazione ha due stati possibili (successo, insuccesso) e si vuole verificare se la frequenza relativa di successi nella popolazione (p) sia pari al valore atteso assumendo vera l'ipotesi nulla ($p_0$).
+\\
+Le ipotesi nulla ed alternativa assumono particolari forme:
+\begin{itemize}
+\item $H_0$: la frequenza relativa di successi nella popolazione è $p_0$;
+\item $H_A$: la frequenza relativa di successi nella popolazione è diversa da $p_=$.
+\end{itemize}
+Il valore atteso sotto l'ipotesi nulla può essere dato da una qualsiasi proporzione compresa tra 0 ed 1, estremi inclusi.
+
+\begin{example}[sesso e cromosoma X]
+    Si vuole provare che i geni legati alla spermatogenesi si trovino preferenzialmente sul cromosoma X.
+    \\
+    Su 25 geni campionati, 10 (40\%) risiedono effettivamente sul cromosoma X.
+    \\
+    Se i geni per la spermatogenesi fossero distribuiti casualmente nel genoma, solo il 6.1\% di essi risiederebbe sul cromosoma X, poiché su tale cromosoma è presente solo il 6.1\% del genoma.
+    \\
+    Definiamo le ipotesi:
+    \begin{itemize}
+    \item $H_0$: la probabilità che un gene per la spermatogenesi risieda sul cromosoma X è pari a 0.061 ($p_0 = 0.061$);
+    \item $H_A$: la probabilità che un gene per la spermatogenesi risieda sul cromosoma X è diversa da 0.061 ($p\ne 0.061$).
+    \end{itemize}
+    In questo caso, dato che è teoricamente possibile che i geni per la spermatogenesi risiedano meno sul cromosoma X che su altre parti del genoma, l'ipotesi alternativa prevede tutti i casi in cui la probabilità è diversa da 0.061, sia quelli in cui la probabilità eccede tale valore, sia quelli in cui essa ne è minore; pertanto, in questo caso, il test è a due code.
+    \\
+    Nel caso del test binomiale, la statistica test utile per confrontare il risultato osservato con quello atteso sotto l'ipotesi nulla è il numero di successi osservato; in questo caso, dunque, la statistica test assume il valore di 10 (10 geni per la spermatogenesi osservati sul cromosoma X). Il valore atteso sotto l'ipotesi nulla è invece $0.061 x 25 = 1.525$. Dunque, nel campione, il numero di geni per la spermatogenesi osservati sul cromosoma X è maggiore di quello atteso sotto l'ipotesi nulla.
+    \\
+    Ciò che è necessario stabilire è quanto sarebbe improbabile osservare un eccesso di geni per la spermatogenesi sul cromosoma X come quello osservato se la distribuzione di tali geni fosse casuale. Per stabilire ciò, si deve ottenere la distribuzione nulla, ovvero la distribuzione campionaria della statistica test assumendo che l'ipotesi nulla sia vera; tale distribuzione è descritta dalla distribuzione binomiale:
+    \begin{equation}
+    Pr[X \ successi] = \binom{25}{X}\ 0.061^X \ (1-0.061)^{25 - X}
+    \end{equation}
+    La distribuzione nulla permette di calcolare il P-value. ovvero la probabilità di ottenere un risultato che sia altrettanto o più estremo di $X = 10$ quando il valore atteso sotto l'ipotesi nulla è 1.525.
+    \\
+    Dal momento che il test è a due code, P è la probabilità di ottenere 10 o più geni per la spermatogenesi sul cromosoma X, più la probabilità di risultati altrettanto o più estremi nell'altra coda della distribuzione nulla, corrispondenti a troppo pochi geni d'interesse sul cromosoma X. Il modo più semplice per includere tutti i risultati estremi è moltiplicare per due la probbailità di ottenere 10 o più geni.
+    \\
+    La probabilità di ottenere 10 o più geni per la spermatogenesi sul cromosoma X, assumendo che l'ipotesi nulla sia vera, è pari alla somma di tutte le singole probabilità corrispondenti ad un numero esatto di successi, da 10 a 25, calcolate con la formula della distribuzione binomiale e mutualmente esclusive. Moltiplicando tale valore per 2 (per includere l'altra coda) si ottiene un P-value pari a $1.98 x 10^{-6}$, che è inferiore al livello convenzionale di significatività $\alpha = 0.05$. Dunque, si rifiuta l'ipotesi nulla e si conclude che sul cromosoma X è presente un numero sproporzionatamente elevato di geni per la spermatogenesi.
+    \\
+    La migliore stima della proporzione di geni per la spermatogenesi localizzati sul cromosoma X è, quindi:
+    \begin{equation}
+    \hat{p} = \frac{10}{25} = 0.40
+    \end{equation}
+\end{example}
+
+\subsection{Approssimazioni del test binomiale}
+Il test binomiale fornisce un P-value esatto e può essere applicato a dati di qualsiasi tipo classificabili in due categorie; tuttavia, per \textit{n} elevati, esistono alternative più rapide che permettono di giungere a valori di P non esatti ma, se sono soddisfatte determinate condizioni, approssimati molto bene; tali alternative sono il test del $\chi^2$ di bontà dell'adattamento (sezione 9.2) ed il test dell'approssimazione normale alla distribuzione binomiale (SEZIONE?).
+
+\section{Stima delle proporzioni}
+
+\begin{example}[figli dei radiologi]
+    Si vuole calcolare la proporzione di maschi tra i discendenti dei radiologi maschi.
+    \\
+    In un campione di 87 figli (da assumere casuale), 30 sono maschi.
+    \\
+    La migliore stima della proporzione di figli maschi nella popolazione è:
+    \begin{equation}
+    \hat{p} = \frac{X}{n} = \frac{30}{87} = 0.345
+    \end{equation}
+
+    \subsection{Stima dell'errore standard per una proporzione}
+    Come visto nella sezione \ref{errst}, la deviazione standard della distribuzione campionaria di una stima costituisce il suo errore standard. Nella sottosezione \ref{devstphat} si è visto che la deviazione standard di $\hat{p}$ (e quindi il suo errore standard) è:
+    \begin{equation}
+    \sigma_{\hat{p}} = \sqrt{\frac{p \ (1-p)}{n}}
+    \end{equation}
+    Tale valore solitamente non si può calcolare, perché non si conosce $p$; tuttavia, si può ottenere l'errore standard, usando la stima della proporzione:
+    \begin{equation}
+    ES_{\hat{p}} = \sqrt{\frac{\hat{p} \ (1-\hat{p})}{n-1}}
+    \end{equation}
+    Nel caso dell'esempio corrente:
+    \begin{equation}
+    ES_{\hat{p}} = \sqrt{\frac{\hat{p} \ (1-\hat{p})}{n-1}} = \sqrt{\frac{0.345 \ (1-0.345)}{87-1}} = 0.051
+    \end{equation}
+    Tale valore indica quando la stima campionaria $\hat{p}$ sia verosimilmente vicina, in media, alla proporzoione della popolazione $p$.
+
+    \subsection{Intervallo di confidenza di una proporzione: metodo Agresti-Coull}
+    Come visto (RIFERIMENTO! libro 4.3), l'intervallo di confidenza comprende i valori più plausibili del parametro da stimare in base ai dati. L'intervallo di confidenza al 95\% di una proporzione comprende il valoe vero della proporzione il 95\% delle volte che lo si calcola sulla base dei nuovi dati.
+    \\
+    Con il \textbf{metodo Agresti-Coull} per calcolare un intervallo di confidenza approssimato per una proporzione si deve inizialmente calcolare una quantità detta $p'$:
+    \begin{equation}
+    p' = \frac{X+2}{n+4}
+    \end{equation}
+    L'intervallo di confidenza per una proporzione è quindi dato da:
+    \begin{equation}
+    p' - Z\sqrt{\frac{p' \ (1-p')}{n+4}} \ < \ p \ < \ p' + Z\sqrt{\frac{p' \ (1-p')}{n+4}}
+    \end{equation}
+    In cui Z è una variabile normale standardizzata che dipende dall'intervallo di confidenza da calcolare (i valori sono tabulati, es. per un intervallo al 95\%, Z = 1.96).
+    Tornando all'esempio, l'intervallo di confidenza al 95\% di $\hat{p}$ usando $X = 30$ ed $n = 87$ con il metodo Agresti-Coull si ottiene calcolando:
+    \begin{equation}
+    p' = \frac{30+2}{87+4} = 0.352
+    \end{equation}
+    \begin{align*}
+    0.352 - 1.96\sqrt{\frac{0.352 \ (1-0.352)}{87+4}} < \ &p \ < 0.352 + 1.96\sqrt{\frac{0.352 \ (1-0.352)}{87+4}}
+    \\ \\
+    \Rightarrow \quad 0.254 < \ &p \ <0.450
+    \end{align*}
+    Tale intervallo non include il valore 0.512, che è la proporzione di figli maschi che si osserva tipicamente nella popolazione umana, dunque si può supportare l'idea che la proporzione di figli maschi dei radiologi sia molto più bassa della media della popolazione, se i dati appartengono effettivamente ad un campione casuale.
+
+    \subsection{Intervallo di confidenza di una proporzione: metodo Wald}
+    Un metodo molto usato per il calcolo degli intervalli di confidenza delle proporzioni è il \textbf{metodo di Wald}, che tuttavia presenta dei limiti: il metodo, infatti, è preciso solo quando $n$ è grande e la proporzione della popolazione $p$ non è vicina a 0 o 1; un intervallo di confidenza al 95\%, però, dovrebbe comprendere il parametro della popolazione nel 95\% dei campioni e, purtroppo, quando $n$ è piccolo o quando p è vicina a 0 o 1, l'intervallo di confidenza determinato dal metodo di Wald contiene il valore vero meno del 95\% delle volte.
+    \\
+    In ogni caso, il metodo di Wald delimita un intervallo intorno alla stima della popolazione $\hat{p}$ attraverso un multiplo del suo errore standard:
+    \begin{equation}
+    \hat{p} - Z \ ES_{\hat{p}} \ < \ p \ < \ \hat{p} + Z \ ES_{\hat{p}}
+    \end{equation}
+    L'intervallo di confidenza al 95\% per i dati relativi all'esempio corrente calcolato con il metodo di Wald corrisponde a $0.244 < \ p \ < 0.445$.
+\end{example}
+
+\section{Ricavare la distribuzione binomiale}
+
+\begin{example}[sesso di tot individui]
+    Si estrae un campione casuale di $n$ individui da una popolazione e si considerano in ordine, uno alla volta, da 1 ad $n$.Si vuole calcolare la probabilità di ottenere $X$ successi. Per prima cosa, si deve determinare il numero di sequenze di successi ed insuccessi che conducono ad $X$ successi in totale.
+    Si campionano 5 persone e si vuole conoscere la probabilità di ottenere 3 maschi e 2 femmine; in questo caso, tutte le possibili sequenze con $n = 5$ prove che contengono 3 maschi sono 10:
+
+    \begin{center}
+    MMMFF MMFMF MMFFM MFMMF MFMFM
+    \\
+    MFFMM FMMMF FMMFM FMFMM FFMMM
+    \end{center}
+    In generale, il numero di sequenze che danno esattamente $X$ successi è dato dal coefficiente binomiale $\binom{n}{X}$.
+    Assumendo che le prove siano indipendenti si può procedere.
+    \\
+    In questo caso, ogni successo si verifica con stessa probabilità $p$, ed ogni insuccesso si verifica con la stessa probabilità $1-p$; dunque, la probabilità di ogni sequenza di successi ed insuccessi è il prodotto di queste probabilità oer ciascun evento (regola del prodotto RIFERIMENTO! libro cap5). Quindi, una singola sequenza che ha $X$ successi ed $n-X$ insuccessi ha probabilità pari a:
+    \begin{equation}
+    p^X \ (1-p)^{n-X}
+    \end{equation}
+    In ultimo, si somma la probabilità di tutte le sequenze che che danno esattamente $X$ successi (regola della somma RIFERIMENTO! libro cap5). Dato che ciascuna delle sequenze è mutualmente esclusiva e ciascuna ha la stessa probabilità, per trovare la probabilità complessiva di $X$ successi in $n$ prove si moltiplica la probabilità di ogni sequenza per il numero delle sequenze possibili:
+    \begin{equation}
+    Pr[X \ successi] = \binom{5}{3}\ p^X \ (1-p)^{n-X}
+    \end{equation}
+    Questa è la formula della distribuzione binomiale introdotta ad inizio capitolo.
+\end{example}
+
+\chapter{Modelli probabilistici per dati di frequenza (B5)}\footnote{Capitolo 8, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Modello proporzionale}
+
+Un modello proporzionale è un modello probabilistico in cui la frequenza cuon cui si verificano i diversi eventi è proporzionale al numero di volte che essi hanno la possibilità di verificarsi.
+
+\begin{example}[borse di studio]
+LEZIONE 15/11
+    \\
+    Definiamo le ipotesi:
+    \begin{itemize}
+    \item $H_0$:
+    \item $H_A$:
+    \end{itemize}
+\end{example}
+
+\begin{example}[nascite nei weekend\label{esnasciteneiweekend}]
+    Sotto il modello proporzionale, ci si aspetta che i bambini nascano con la stessa frequenza tutti i giorni della settimana.
+    \\
+    La tabella sottostante elenca il numero di nascite in ciascun giorno in un campione casuale di 350 nati nel 1999.
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c}
+        \hline
+        \textbf{Giorno} & \textbf{Numero di nati} \\
+        \hline
+        domenica & 33 \\
+        lunedì & 41 \\
+        martedì & 63 \\
+        mercoledì & 63 \\
+        giovedì & 47 \\
+        venerdì & 56 \\
+        sabato & 47 \\
+        \hline
+        \textbf{Totale} & 350 \\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{}
+    \end{table}\noindent
+    I dati mostrano una grande variazione di nascite riespetto ai giorni della settimana.
+    \\
+    Sotto il modello proporzionale, il numero di nascite in un giorno dovrebbe essere direttamente proporzionale al numero di volte in cui tale giorno c'è stato nel 1999, eccettuate le differenze dovute al caso.
+    \\
+    L'adattamento del modello proporzionale ai dati può essere verificato con il test fel $\chi^2$.
+\end{example}
+
+\section{Test del \texorpdfstring{$\chi^2$}{Lg} di bontà dell'adattamento}
+
+Il test del $\chi^2$ di bontà dell'adattamento impiega un indice chiamato $\chi^2$ per misurare la discrepanza tra una distribuzione di frequenza osservata e le frequenze previste da un modello casuale che rappresenta l'ipotesi nulla. Il modello casuale viene rifiutato se la discrepanza è troppo grande.
+\\
+Secondo il modello proporzionale, la probabilità di una nascita dovrebbe essere la stessa per ogni giorno della settimana; dato che quello proporzionale è il modello più semplice possibile, esso coincide con l'ipotesi nulla:
+\begin{itemize}
+\item $H_0$: la probabilità di una nascita è la stessa per ogni giorno della settimana;
+\item $H_A$: la probabilità di una nascita non è la stessa per ogni giorno della settimana.
+\end{itemize}
+Dato che il modello proporzionale è l'ipotesi nulla, lo si usa per calcolare le frequenze attese sotto l'ipotesi nulla: nel 1999, ogni giorno della settimana è occorso 52 volte, eccetto il venerdì, che è occorso 53 volte; dividendo questi numeri per 365, il numero di giorni nel 1999, si ottengono le proporzioni corrispondenti ad ogni giorno della settimana nell'anno di interesse, che si possono usare per calcolare le frequenze attese delle nascite per ogni giorno della settimana, assumendo vero il modello proporzionale:
+\begin{equation}
+frequenza \ attesa \ per \ giorno \ X = n_{nati} \frac{n_X}{365}
+\end{equation}
+Le frequenze attese possono avere componenti frazionarie, anche se nei dati il numero di individui per categoria è ovviamente un intero; ciò avviene perché le frequenze attese sono i valori attesi medi, assumendo il modello nullo. La somma dei valori attesi deve essere uguale alla somma dei valori osservati (350 nell'esempio corrente), fatta eccezione dell'errore per arrotondamento.
+\begin{example}[covid-19\label{escovid}]
+    LEZIONE 15/11
+    Definiamo le ipotesi:
+    \begin{itemize}
+    \item $H_0$:
+    \item $H_A$:
+    \end{itemize}
+\end{example}
+La statistica $\chi^2$ misura la discrepanza tra frequenza osservata ed attesa:
+\begin{equation}
+\chi^2 = \sum_i \frac{(osservato_i - atteso_i)^2}{atteso_i}
+\end{equation}
+In cui $osservato_i$ è la frequenza di individui osservata nella i-esima categoria ed $atteso_i$ è la frequenza attesa in quella categoria sotto l'ipotesi nulla.
+\\
+Il numeratore dell'espressione è una differenza elevata al quadreato affinché le deviazioni positive e negative siano trattate allo stesso modo.
+\\
+La statistica $\chi^2$ impiega le frequenze assolute osservate ed attese, e non le proporzioni, che sono frequenze relative.
+\\
+Riprendendo l'esempio \ref{esnasciteneiweekend}, $i$ può assumere solo valori da 1 a 7. Se le frequenze osservate in tutte le categorie corrispondessero a quelle attese, $\chi^2$ sarebbe pari a 0. Maggiore è il valore del $\chi^2$, maggiore è la discrepanza tra osservato ed atteso.
+\\
+Nell'esempio:
+\begin{equation}
+\chi^2_{domenica} = \frac{(33 - 49.863)^2}{49.863} = 5.70
+\end{equation}
+Ripetendo il calcolo per i giorni restanti e sommando i risultati si ottiene un $\chi^2$ pari a 15.05.
+\\
+Per stabilire se il valore di $\chi^2$ ottenuto è sufficiente per rifiutare l'ipotesi nulla è necessario ottenere la distribuzione campionaria della statistica test $\chi^2$ sotto l'ipotesi nulla.
+\\
+Tale distribuzione si può ottenere mediante simulazioni al computer, oppure attraverso la distribuzione teorica del $\chi^2$, che ha una forma matematica nota e che approssima bene la distribuzione nulla.
+\\
+fig. 8.2-1 \label{fig8.2-1} %TODO
+\\
+Le caratteristiche essenziali della distribuzione teorica del $\chi^2$ (d'ora in avanti semplicemente "distribuzione $\chi^2$") sono state tabulate in tavole statistiche. %\TODO(UTILIZZO?)
+\\
+La distribuzione $\chi^2$ è in realtà una famiglia di distribuzioni, e quella particolare che serve per analizzare i dati sulle nascite è specificata dal numero di \textbf{gradi di libertà} (df, degrees of freedom):
+\begin{equation}
+df = (numero\ di\ categorie) -1 - (numero\ di\ parametri\ stimato\ in\ base\ ai\ dati)
+\end{equation}
+Nell'esempio corrente, l'ultimo termine dell'equazione è pari a zero (successivamente si capirà a cosa si riferisce). I dati sulle nascite hanno 7 categorie, una per giorno della settimana, quindi i gradi di libertà sono $7-1 = 6$, quindi il valore di $\chi^2$ calcolato in base ai dati osservati ($\chi^2 = 15.05$) deve essere confrontato con la distribuzione $\chi^2_6$.
+\\
+Tale distribuzione è rappresentata dalla curva nera nella figura \ref{fig8.2-1}
+
+\subsection{Calcolo del P-value}
+Per il test $\chi^2$ di bontà dell'adattamento, il P-value è la probabilità di ottenere un valore del $\chi^2$ maggiore del valore osservato, ovvero calcolato in base ai dati.
+\\
+Se i dati rispecchiassero esattamente quanto previsto dall'ipotesi nulla, $\chi^2$ sarebbe 0, mentre più è marcata la differenza dai valori attesi, maggiore è il valore di $\chi^2$, per cui per calcolare il P-value si usa solo la coda destra della distribuzione $\chi^2$.
+\\
+La distribuzione $\chi^2$ è una distribuzione di probabilità continua, quindi la probabilità è data dall'area della regione sottesa dalla curva. La probabilità di ottenere un valore del $\chi^2$ maggiore di un singolo valore specificato, necessario per calcolare il P-value, è uguale all'area sotto la curva a destra di tale valore fino all'infinito.
+\\
+Nell'esempio, la probabilità di ottenere un valore uguale o superiore a 15.05 è uguale all'area sottesa dalla curva $\chi^2_6$ oltre 15.05:
+\\
+fig.8.2-2 \label{fig8.2-2} %TODO
+\\
+Per calcolare l'area a destra del valore di $\chi^2$ calcolato a partire dai dati si hanno due opzioni:
+\begin{itemize}
+    \item Utilizzare un programma statistico al computer.
+    \\
+    Il P-value che si ottiene in tale modo è $P = 0.0199$ che, al livello si sigificatività standard $\alpha = 0.05$ induce a rifiutare l'ipotesi nulla. I dati forniscono quindi evidenze del fatto che le nascite non sono distribuite casualmente nei giorni della settimana.
+    \item Utilizzare dei valori critici.
+    \\
+    Un \textbf{valore critico} è il valore di una statistica test che identifica il confine di un'area specificata nella coda (o nelle code) della distribuzione campionaria sotto l'ipotesi nulla; ad esempio, con un $\alpha = 0.05$, il valore di $\chi^2$ per il quale l'area sottesa dalla curva alla sua destra è pari a 0.05 è detto "valore critico corrispondente ad $\alpha = 0.05$".
+    \\
+    I valori critici della distribuzione $\chi^2$ sono tabulati nell'appendice %TODO\ref{appvaloricritici}.
+    %Come usare la tabella: individuare la colonna corrispondente al livello di significatività desiderato ($\alpha&); individuare la riga corrispondente al numero di gradi di libertà ($df$) per la statistica test. Il numero nella casella corrispondente è il valore critico.
+    \\
+    Nell'esempio, il valore critico è pari a 12.59, quindi, sotto l'ipotesi nulla, la probabilità di ottenere un valore di $\chi^2$ altrettanto o più estremo di 12.59 è pari a 0.05:
+    \begin{equation}
+    Pr[\chi^2_6 \ge 15.05] = 0.05
+    \end{equation}
+    e si rifiuta quindi l'ipotesi nulla.
+\end{itemize}
+
+\subsection{Assunzioni del test \texorpdfstring{$\chi^2$}{Lg} di bontà dell'adattamento}
+
+Il test $\chi^2$ di bontà dell'adattamento assume che gli individui nell'insieme dei dati siano un campione casuale estratto dall'intera popolazione, ovvero che ogni individuo sia stato scelto indipendentemente da tutti gli altrie che ogni individuo della popolazione ha avuto la stessa probabilità di essere incluso.
+\\
+La distribuzione campionaria della statistica $\chi^2$ segue una distribuzione $\chi^2$ solo approssimativamente, anche se l'approssimaizone è molto buona quando si seguono due regole:
+\begin{itemize}
+    \item nessuna delle categorie deve avere una frequenza attesa minore di 1;
+    \item non più del 20\% delle categorie deve avere frequenze attese minori di 5.
+\end{itemize}
+Queste restrizioni si riferiscono alle frequenze attese e non a quelle osservate; se tali condizioni non sono soddisfatte, il test diventa inaffidabile.
+\\
+Se una delle condizioni non è soddisfatta, si hanno due opzioni:
+\begin{itemize}
+    \item raggruppare, se possibilie, alcune delle categorie con frequenze attese piccole, per ottenere meno categorie, che abiano però frequenze attese maggiori (si devono cambiare di conseguenza i gradi di libertà);
+    \item trovare un alternativa al test del $\chi^2$ (es. simulaizoni al computer).
+\end{itemize}
+
+\subsection{Test del \texorpdfstring{$\chi^2$}{Lg} con due sole categorie}
+
+Il test del $\chi^2$ funziona anche quando vi sono solo due categorie, per cui si può usare anche in sostituzione del test binomiale, purché siano soddisfatte le relative assunzioni. I calcoli sono più rapidi ma meno esatti di quelli di un test binomiale.
+
+\begin{example}[contenuto genico del cromosoma X umano]
+    Ad ora sappiamo che il cromosoma X dell'uomo contiene 781 dei 20290 geni trovati finora, e che il cromosoma X contiene circa il 5.2\% del DNA totale.
+    \\
+    Assumendo il modello proporzionale, ci si aspetterebbe che il 5.2\% dei geni fosse localizzato su tale cromosoma. È così?
+    \\
+    Definiamo le ipotesi:
+    \begin{itemize}
+        \item $H_0$: la percentuale dei geni umani sul cromosoma X è 5.2\%;
+        \item $H_A$: la percentuale dei geni umani sul cromosoma X non è 5.2\%
+    \end{itemize}
+    Il numero atteso di geni sul cromosoma X umano è $20290 x 0.052 = 1055$, quindi un numero molto maggiore rispetto a quello dei geni osservati (781).
+    \\
+    Si vuole stabilire qual è la probabilità di un risultato altrettanto o più estremo di quello osservato se fosse vera l'ipotesi nulla.
+    \\
+    Calcolare il P-value con il test binomiale sarebbe impegnativo, poiché il numero di prove (geni) è $n = 20290$ e la probabilità che un gene sia presente sul cromosoma X  è $p = 0.052$. Quindi, il valore di P si calcolerebbe come:
+    \begin{equation}
+    P =\ 2\ x\ Pr[X\le781]\ =\ 2\ x\ (Pr[X=0] + Pr[X=1] + Pr[X = 2] +\ ...\ + Pr[X = 781])
+    \end{equation}
+    Usando il test $\chi^2$, invece:
+    \begin{equation}
+    \chi^2 = \frac{(781-1055)^2}{1055}+\frac{(19509-19235)^2}{19235} = 75.1
+    \end{equation}
+    Questa statistica ha due categorie, e quindi un solo grado di libertà ($df = 2-1 = 1$).
+    Dall'appendice %\ref{appvaloricritici}
+    si vede che il valore critico per $\chi^2_1$ per un $\alpha=0.05$ è pari a 3.84 e, poiché il $\chi^2$ osservato, 75.1, è maggiore di 3.84, si può dire che $P\ <\ 0.05$ e rifiutare l'ipotesi nulla.
+    \\
+    In realtà, dal momento che il $\chi^2$ calcolato è maggiore anche del più grande valore critico tabulato per un $df[\chi^2_{1,(0.001)} = 10.83]$, si può dire che $P\ <\ 0.001$, e dunque che, nella specie umana, il numero di geni sul cromosoma X è significativamente minore di quello che ci si aspetterebbe in base alle dimensioni di tale cromosoma.
+\end{example}
+Dunque, nel caso di due sole categorie, il test binomiale è l'opzione migliore per $n$ piccoli e quando le frequenze attese sono troppo basse per soddisfare le assunzioni del test $\chi^2$; inoltre, tale test è preferibile anche per $n$ grandi quando si dispone di un computer, poiché fornisce un P-value esatto.
+
+\section{Adattamento della distribuzione binomiale}
+
+La distribuzione binomiale descrive la probabilità di ottenere $X$ successi in $n$ prove indipendenti.
+
+\begin{example}[famiglie pianificate]
+Ci si aspetta che il numero di maschi e di femmine nati in famiglie con 2 figli siano conformi ad una distribuzione binomiale, con $n =2$ e $p$ uguale alla probabilità di avere un maschio in ogni singola prova.
+\\
+È questo ciò che si osserva?
+\\
+Per le famiglie con 2 figli sono possibili 3 risultati: 0, 1 o 2 maschi; la tabella \ref{tabmaschi} riporta i dati raccolti per 244 famiglie:
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c}
+        \hline
+        \textbf{Numero maschi} & \textbf{Numero osservato di famiglie} \\
+        \hline
+        0 & 530 \\
+        1 & 1332 \\
+        2 & 582 \\
+        \hline
+        \textbf{Totale} & 2444 \\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabmaschi}
+    \end{table}\noindent
+    L'adattamento della distribuzione binomiale ai dati si può verificare con il test del $\chi^2$.
+    \\
+Definiamo le ipotesi:
+    \begin{itemize}
+    \item $H_0$: il numero di maschi nella famiglie con 2 figli ha una distribuzione binomiale;
+    \item $H_A$: il numero di maschi nella famiglie con 2 figli non ha una distribuzione binomiale.
+    \end{itemize}
+    Si sta quindi verificando l'adattamento di una distribuzione ai dati osservati in più famiglie, non un'ipotesi sulla proporzione media di maschi.
+    \\
+    Quando si testa l'adattamento ad una distribuzione binomiale, si studiano i risultati ottenuti in più set di prove, confrontando un set di frequenze con i corrispondenti valori previsti dalla distribuzione. Tale procedura è diversa dall'impiego della distribuzione binomiale per verificare un'ipotesi nulla su una singola proporzione: in un test binomiale si ha un solo set di prove.
+    \\
+    In questo caso, l'ipotesi nulla non specifica $p$, la probabilità che un singolo figlio sia maschio, quindi si deve stimare $p$ in base ai dati prima di poter calcolare le frequenze attese.
+    \\
+    Nello studio ci sono 4888 figli; il numero totale di maschi è $(2 x 582) + 1332 = 2496$, perciò, la probabilità che un figlio sia maschio è:
+    \begin{equation}
+    \hat{p} = \frac{2496}{4888} = 0.5106
+    \end{equation}
+    Tale stima, assieme alla distribuzione binomiale con $n = 2$, si usano per calcolare le frequenze attese sott l'ipotesi nulla; ad esempio, la frazione attesa di famiglie con 2 figli che hanno 1 solo maschio è:
+    \begin{equation}
+    Pr[1\ maschio] = \binom{2}{1}\ (0.5106)^1\ (1-0.5106)^1 = 0.49977
+    \end{equation}
+    Quindi, la frequenza attesa di 2444 famiglie con 2 figli ed 1 solo maschio è:
+    \begin{equation}
+    Atteso\ (1\ maschio) = 2444 < 0.49977 = 1221.4
+    \end{equation}
+    Le frequenze attese per tutti i risultati possibili sono riportate in tabella \ref{tabmaschi2}:
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c}
+        \hline
+        \textbf{Numero maschi} & \textbf{Numero osservato di famiglie} & \textbf{Numero atteso di famiglie}\\
+        \hline
+        0 & 530 & 585.3\\
+        1 & 1332 & 1221.4\\
+        2 & 582 & 637.3\\
+        \hline
+        \textbf{Totale} & 2444 & 2444.0\\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabmaschi2}
+    \end{table}\noindent
+    E i valori attesi assieme ai dati osservati sono rappresentati nella figura \ref{fig8.5-1}:
+    \\
+    fig.8.5-1\label{fig8.5-1} %TODO
+    \\
+    Nell'esempio corrente, le frequenze osservate non sono uguali a quelle attese; esiste infatti un eccesso di famiglie con 2 figli ed 1 solo figlio maschio, rispetto alle altre due tipologie.
+    \\
+    Si vuole stabilire se tale differenza sia attribuibile al caso o se sia motivo di rifiuto dell'ipotesi nulla.
+    \\
+    Si calcola il $\chi^2$:
+    \begin{equation}
+    \chi^2 = \frac{(530-585.3)^2}{585.3}+\frac{(1332-1221.4)^2}{1221.4}+\frac{(582-637.3)^2}{637.3}
+    \end{equation}
+    Per calcolare il numero di gradi di libertà si considera che si hanno 3 categorie; di norma, dunque, i gradi sarebber 2; tuttavia, in questo caso si è dovuto stimare un parametro a partire dai dati per calcolare le frequenze attese ($p$), quindi:
+    \begin{equation}
+    df = 3-1-1 = 1
+    \end{equation}
+    Il valore critico per la distribuzione $\chi^2_1$ con un grado di libertà ed $\alpha= 0.05$ è pari a 3.84. Poiché 20.04 è localizzato verso destra nella coda della distribuzione rispetto a 3.84, $P < 0.05$, quindi si rifiuta l'ipotesi nulla.
+    \\
+    Dunque, la distribuzione di frequenza del numero di maschi e femmine nelle famiglie con 2 figli non è governata dalla distribuzione binomiale, quindi in questi dati una delle assunzioni della distribuzione binomiale deve essere rifiutata: la probabilità di avere un maschio varia da famiglia a famiglia e/o gli individui nella stessa famiglia non sono indipendenti l'uno dall'altro.
+    \\
+    Una probabile spiegazione è che le famiglie con 2 senza maschi o senza femmine siano insoddisfatte e decidano di avere un terzo figlio, rimuovendosi dall'insieme di famiglie con 2 soli figli.
+\end{example}
+
+\subsection{Test binomiale per \textit{n} grandi}\footnote{da spiegazione del prof. Massolo, fine della lezione 20211115}
+\\
+Una distribuzione di casi con $p$ vicini allo 0.5 ed $n$ vicini al 40 tende ad assumere la forma di una curva normale; quindi quando si hanno distribuzioni più o meno binomiali, invece di usare la distribuzione binomiale si può, usando i parametri:
+\begin{itemize}
+    \item $\mu = np$;
+    \item $\sigma = \sqrt{np\ (1-p)}$.
+\end{itemize}
+stimare il valore $z$:
+\begin{equation}
+z = \frac{x_i-\mu}{\sigma}
+\end{equation}
+Se il valore di $z$ che si ottiene è superiore ad 1.96, si può rifiutare l'ipotesi nulla.
+
+\section{Distribuzione di Poisson}
+
+La \textbf{distribuzione di Poisson} indica la probabilità di ottenere $X$ successi in un certo intervallo di tempo o in una certa porzione di spazio, quando ogni successo si verifica indipendentemente e con uguale probabilità in ogni punto del tempo e dello spazio.
+
+\begin{example}[Esempio: ragni dopo l'eruzione]
+Dopo un'eruzione, i ragni sono i primi animali a ricolonizzare il territorio, trasportati dai venti.
+\\
+Come sarebbe la distribuzione dei ragni, se l'atterraggio fosse casuale nello spazio?
+\\
+Si fanno due assunzioni:
+\begin{itemize}
+    \item la probabilità che un ragno atterri in un dato punto è la stessa in ogni punto del territorio considerato;
+    \item il fatto che un ragno atterri in un dato punto è indipendente dagli atterraggi in ogni altro punto (quindi i ragni non si raggruppano né si respingono tra loro).
+\end{itemize}
+Per contare i ragni, si suddivide il territorio d'interesse in tante porzioni di uguale dimensione, grandi a sufficienza da contenere molti potenziali siti di atterraggio.
+\\
+Se entrambi gli assunti sono soddisfatti, la distribuzione di frequenza del numero di ragni che atterrano nelle porzioni di suolo seguirà una distribuzione di Poisson.
+\end{example}
+È lecito aspettarsi una distribuzione di Poisson per certi conteggi in biologia (es. numero di mutazioni in ogni individuo di una popolazione, numero di salmoni catturati inun giorno da un predatore, numero di semi germinanti per ogni pianta). Un fenomeno diventa interessante quando non segue il modello semplice di partenza, perché in tal caso si scopre che alcune delle assunzioni fatte sono false, il che suggerisce l'esistenza di processi particolari (es. alcuni individui possono essere effettivamente più inclini alle mutazioni di altri, alcuni predatori più bravi nella cattura di altri, alcune piante produrre semi di maggior successo).
+\\
+Dunque, mentre la distribuzione di poisson prevede una distribuzione \textbf{casuale} dei successi, le alternative ad essa prevedono distribuzioni non casuali nel tempo e nello spazio; i successi, ad esempio, possono essere:
+\begin{itemize}
+    \item \textbf{raggruppati} (o agglomerati), ovvero possono avvenire più vicini l'uno a l'altro di quanto ci si aspetterebbe per effetto del caso, come potrebbe succedere, ad esempio, quando la presenza di un successo aumenta la probabilità che si verifichino altri successi in prossimità (es. epidemie di malattie contagiiose);
+    \item \textbf{dispersi}, ovvero possono avere una distribuzione più uniforme di quella attesa per effetto del caso, come può accedere quando la presenza di un successo diminuisce la probabilità che ci siano altri successi in prossimità (es. distribuzione degli animali territoriali).
+\end{itemize}
+fig.8.6-1\label{fig8.6-1} %TODO
+\\
+Le deviazioni da pattern casuali possono quindi evidenziare processi biologici interessanti.
+\\
+La formula matematica della distribuzione di Poisson descrive la probabilità che si verifichino $X$ successi in qualsiasi intervallo di tempo o porzioni di spazio:
+\begin{equation}
+Pr[X\ successi] = \frac{e^{-\mu}\mu^X}{X!}
+\end{equation}
+In cui:
+\begin{itemize}
+    \item \textbf{$\mu$} è il numero medio di successi indipendenti nello spazio e nel tempo, espressi come conteggio riferito all'unità di tempo o di spazio;
+    \item \textbf{$e$} è la base dei logaritmi naturali (2.718...).
+\end{itemize}
+Se si immagina di dividere un intervallo di tempo in moltissimi intervalli più brevi (stesso ragionamento si potrebbe applicare alla dimensione spaziale), la probabilità che ha un evento di verificarsi in ognuno di essi sarà prossima a zero, quindi per ciascuno di tali intervalli potranno esserci due possibili situazioni:
+\begin{itemize}
+    \item l'evento di verifica una volta, con probabilità molto piccola;
+    \item l'evento non si verifica, con probabilità molto grande.
+\end{itemize}
+Non potranno quindi esistere intervalli in cui un evento si verifica più di una volta. In questo modo, si riconduce la distribuzione di Poisson del numero di eventi che possono avvenire in un certo intervallo di tempo (o in una certa area) ad una distribuzione binomiale; ci sono infatti due soli eventi possibili nella singola prova, successo o insuccesso, ma in questo caso il numero di prove (numero di potenziali successi, es. potenziali siti di atterraggio dei ragni in ogni plot) è enorme, e la probabilità di successo della singola prova (un ragno che atterra in un punto specifico) tende a zero. Si può in effetti dimostrare che la distribuzione di Poisson si può ottenere come limite della distribuzione binomiale per $p$ che tende a zero ed $n$ che tende ad infinito. Il prodotto $np$ corrisponde al numero medio di eventi per intervallo (o area), ovvero al parametro $\mu$ della distribuzione di Poisson.
+
+\subsection{Verifica della casualità con la distribuzione di Poisson}
+In biologia, la distribuzione di Poisson si impiega principalmente per formulare ipotesi nulle e verificare se i successi siano distribuiti casualmente nel tempo e nello spazio.
+\\
+Di solito nnon si conosce il tasso esatto con cui si verificano i successi, quindi per poter fare previsioni sulla probabilità di diversi risultati in base ad una distribuzione di Poisson si deve prima stimare il tasso di successi in base ai dati.
+\begin{example}[estinzioni di massa\label{esestinzioni}]
+La tabella \ref{tabestinzioni} riporta il numero di estinzioni di famiglie di invertebrati marini registrate in 76 intervalli di tempo di durata simile, stimate sulla base di testimonianze fossili.
+\begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c}
+        \hline
+        \textbf{Numero estinzioni ($X$)} & \textbf{Frequenza}\\
+        \hline
+        0 & 0 \\
+        1 & 13 \\
+        2 & 15 \\
+        3 & 16 \\
+        4 & 7 \\
+        5 & 10 \\
+        6 & 4 \\
+        7 & 2 \\
+        8 & 1 \\
+        9 & 2 \\
+        10 & 1 \\
+        11 & 1 \\
+        12 & 0 \\
+        13 & 0 \\
+        14 & 1 \\
+        15 & 0 \\
+        16 & 2 \\
+        17 & 0 \\
+        18 & 0 \\
+        19 & 0 \\
+        20 & 1 \\
+        >20 & 0 \\
+        \hline
+        \textbf{Totale} & 76 \\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabestinzioni}
+\end{table}\noindent
+Le estinzioni si verificano casualmente, o ci sono periodi in cui i tassi di estinzione sono insolitamente elevati (estinzioni di massa)?
+\\
+Se l'estinzione delle famiglie fosse casuale nel tempo, il numero di estinzioni in ogni intervallo dovrebbe seguire una distribuzione di Poisson; le alternative sono (1) che le estinzioni siano raggruppate nel tempo e che avvengano dunque delle estinzioni di massa, oppure (2) che le estinzioni avvengano più uniformemente nel tempo di quanto ci si aspetterebbe casualmente.
+\\
+Per capire quale dei tre sia il caso, si confronta la distribuzione di frequenza delle estinzioni delle famiglie con quella prevista da una distribuzione di Poisson usando il test del $\chi^2$.
+\\
+Le ipotesi sono:
+\begin{itemize}
+    \item $H_0$: il numero di estinzioni per ogni intervallo di tempo ha una distribuzione di Poisson;
+    \item $H_A$: il numero di estinzioni per ogni intervallo di tempo non ha una distribuzione di Poisson.
+\end{itemize}
+Prima di effettuare il test, si calcola $\mu$, che in questo caso corrisponde al numero medio di di estinzioni per ogni intervallo di tempo, attraverso la media campionaria:
+\begin{equation}
+\overline{X} = \frac{(0x0)+(13x1)+(15x2)+...}{76} = 4.21
+\end{equation}
+Tale media campionaria è usata al posto di $\mu$ nella formula per la distribuzione di Poisson per generare le frequenze attese.
+\\
+L'istogramma in figura \ref{fig8.6-2} rappresenta la distribuzione di frequenza osservata del numero di estinzioni per intervallo di tempo, mentre il diagramma a segmenti congiunge le frequenze previste dell'ipotesi nulla (distribuzione di Poisson).
+\\
+fig8.6-2 \label{fig8.6-2}
+\\
+Si nota una discrepanza: rispetto alla distribuzione di Poisson, le testimonianze fossili presentano troppi intervalli di tempo con moltissime estinzioni e troppi intervalli di tempo con pochissime estinzioni.
+\\
+Il divario che si osserva è maggiore di quello che ci si aspetterebbe per effetto del caso? Per stabilirlo si usa il test del $\chi^2$.
+\\
+Per calcolare le frequenze attese nelle diverse categorie di estinzioni, tranne l'ultima, si applica la formula della distribuzione di Poisson per il calcolo delle probabilità attese, che poi vanno moltiplicate per il numero totale di intervalli di tempo (76); ad esempio, la probabilità attesa e poi la frequenza attesa degli intervalli di tempo con tre estinzioni sono:
+\begin{equation}
+Pr[3\ estinzioni] = \frac{e^{-\mu}\mu^3}{3!} = \frac{e^{-4.21}4.21^3}{3!} = 0.1846
+\end{equation}
+\begin{equation}
+Frequenza\ attesa[3\ estinzioni] = 76 x 0.1846 = 14.03
+\end{equation}
+Nell'ultima categoria si raggruppano tutte le $X \ge 10$ estinzioni perché la frequenza attesa dei numeri più grandi diventa molto piccola; per calcolarla, si sottrae la somma di tutti i valori attesi precedenti da 76, ovvero il numero totale di intervalli di tempo.
+\\
+Le frequenze attese non soddisfano gli assunti del test del $\chi^2$, dato che una di esse è minore di 1 e più del 20\% sono minori di 5; in questi casi, si possono raggruppare le categorie e tentare nuovamente, ad esempio, si possono riunire in un'unica categoria $X = 0$ ed $X = 1$, ed in un'altre tutte le categorie con $X \ge 8$, dato che le categorie raggruppate sono simili. I dati che si ottengono hanno 8 categorie, riportate nella tabella \ref{tabestinzioni2}:
+\begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c}
+        \hline
+        \textbf{Numero estinzioni ($X$)} & \textbf{\makecell{Frequenza osservata\\di intervalli di tempo}} & \textbf{\makecell{Frequenza attesa\\di intervalli di tempo}}\\
+        \hline
+        0 o 1 & 13 & 5.88 \\
+        2 & 15 & 10.00\\
+        3 & 16 & 14.03\\
+        4 & 7 & 14.77\\
+        5 & 10 & 12.44\\
+        6 & 4 & 8.72\\
+        7 & 2 & 5.24 \\
+        >8 & 9&4.91 \\
+        \hline
+        \textbf{Totale} & 76 & 76\\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabestinzioni2}
+\end{table}\noindent
+Usando la formula standard per la statistica $\chi^2$ si ottiene:
+\begin{equation}
+\chi^2 = \frac{(13-5,88)^2}{5.88}+\frac{(15-10)^2}{10}+\frac{(16-14.03)^2}{14.03}+... = 23.93
+\end{equation}
+Per il test si hanno 6 gradi di libertà, dato che si deve tener conto del parametro $\mu$ che è stato calcolato a partire dai dati, e quindi $df = 8-1-1=6$.
+\\
+Il valore critico per la $\chi^2_{6,(0.05)}$ è 12.59. Dato che la statistica $\chi^2$ è interna alla coda della distribuzione rispetto al valore critico, il P-value è minore di 0.05 (ed anche di 0.001, dato che 23.93 è anche maggiore di 22.46, che è il valore critico per $\alpha = 0.001$). Si rifiuta quindi l'ipotesi nulla e si conclude che le estinzioni d'interesse non si adattano ad una distribuzione di Poisson.
+\end{example}
+
+%%%%%LIBRO FINE CAPITOLO 8, CONTROINTUITIVO E OPPOSTO A QUELLO CHE DICE IL PROF, NELLA PROSSIMA SOTTOSEZIONE
+% \subsection{Confronto tra media e varianza per descrivere il discostamento dalla distribuzione di Poisson}
+% Una proprietà della distribuzione di Poisson è che la varianza del numero di successi per ogni intervallo di tempo (il quadrato della deviazione standard) è uguale alla media ($\mu$). Se la varianza è maggiore della media, allora la distribuzione è raggruppata, mentre, se è minore, la distribuzione è dispersa.
+% \\
+% Nell'esempio \ref{esestinzioni}, la media campionaria di estinzioni è 4.21. La varianza campionaria del numero di estinzioni è:
+% \begin{equation}
+% s^2 = \frac{(0-4.21)^2(0)+(1-4.21)^2(13)+(2-4.21)^2(15)+...}{76-1} = 13.72
+% \end{equation}
+% Quindi, dato che la varianza è molto maggiore della media, la distribuzione degli eventi di estinzione nel tempo è molto raggruppata.
+
+\subsection{Indice di dispersione per descrivere il discostamento dalla distribuzione di Poisson}\footnote{da spiegazione del prof. Massolo, lezione 20211117 (1:17:00)}
+\\
+L'\textbf{indice di dispersione} ($D$, o variance to mean ratio, $VMR$) esprime il rapporto tra varianza e media:
+\begin{equation}
+VMR = \frac{\sigma^2}{\mu}
+\end{equation}
+Nella distribuzione di Poisson, varianza e media sono uguali, quindi il $VMR$ è pari ad 1.
+\\
+Se i due valori differiscono si possono avere due casi:
+\begin{itemize}
+    \item $VMR > 1$ ($\sigma^2 > \mu$): la distribuzione è dispersa (come nella distribuzione binomiale negativa);
+    \item $VMR < 1$ ($\sigma^2 < \mu$): la distribuzione è sotto-dispersa, quindi raggruppata (nella distribuzione è binomiale $0 < VMR < 1$).
+\end{itemize}
+
+\chapter{Analisi dell'associazione tra variabili categoriche (B5)}\footnote{Capitolo 9, Whitlock and Schluter, Analisi statistica dei dati biologici (2010)}
+
+\section{Associazione tra due variabili categoriche}
+L'esistenza di un'associazione tra due variabili categoriche implica che esse non siano indipendenti.
+\\
+Se le due variabili fossero indipendenti, la probabilità attesa di osservare una combinazione qualsiasi delle categorie appartenenti alle due variabili (es. categoria A per la variabile 1 e categoria C per la variabile 2) sarebbe:
+\begin{equation}
+Pr[A\ e C] = Pr[A] Pr[C]
+\end{equation}
+Se invece non sono indipendenti, la probabilità di ottenere la combinazione è diversa dal semplice prodotto.
+\begin{example}[naufragio del Titanic\label{estitanic}]
+    Durante in naufragio del Titanic, sono morte meno donne che uomini, anche tenendo conto delle abbondanze relative delle due categorie.
+    \\
+    Per stabilire se la differenza osservata può essere attribuibile al caso o se ci sia stata un'associazione tra sesso e mortalità si può ricorrere al test del $\chi^2$, dal momento che si vogliono confrontare frequenze assolute.
+    \\
+    Nel caso dell'esempio corrente, sesso e mortalità non sono indipendenti.
+    \\
+    I dati sono riportati nella tabella \ref{tabtitanic}, mentre i mosaic plots \ref{fig9.1-1} mostrano la relazione tra sesso e mortalità osservata (a sinistra) ed attesa nel caso di variabili indipendenti (destra).
+\begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c|c}
+        \hline
+         & \textbf{Deceduti (D)} & \textbf{Sopravvissuti (S)} & \\
+        \hline
+        \textbf{M} & 1364 & 367 & 1731 \\
+        \hline
+        \textbf{F} & 126 & 344 & 470\\
+        \hline
+         & 1490 & 711 & \textbf{2201}\\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabtitanic}
+\end{table}\noindent
+    fig.9.1-1 \label{fig9.1-1}%\TODO
+    \\
+\end{example}
+
+\section{Stima dell'associazione in tabelle \texorpdfstring{$2 x 2$}{Lg}: odds ratio}
+
+L'\textbf{odds ratio} misura l'entità dell'associazione tra due variabili categoriche quando ciascuna di esse ha solo due categorie; una delle due variabili è la \textbf{variabile risposta}, che ha le due categorie "successo" ed "insuccesso", mentre l'altra è la \textbf{variabile esplicativa}, le cui due categorie identificano i due gruppi all'interno dei quali le probabilità di successo vengono calcolate e confrontate.
+\\
+Nell'esempio \ref{estitanic}, la categoria variabile è "morte", con categorie "successo" ed "insuccesso", mentre la variabile esplicativa è "sesso", che può assumere i valori "maschio" e "femmina".
+\\
+L'odds ratio confronta la proporzione di successi ed insuccessi tra i due gruppi.
+\\
+L'\textbf{odds} ($O$) di un successo è dato da:
+\begin{equation}
+O = \frac{p}{1-p}
+\end{equation}
+In cui $p$ è la probabilità di successo, e $1-p$ è la probabilità di insuccesso.
+\\
+Se $O = 1$, si verifica un successo per ogni insuccesso.
+\\
+Nell'esempio \ref{estitanic}, la probabilità di morire se si è maschi o femmine è data da:
+\begin{equation}
+O_M = \frac{p_{D|M}}{1-p_{D|M}}
+\end{equation}
+\begin{equation}
+O_F = \frac{p_{D|F}}{1-p_{D|F}}
+\end{equation}
+In cui $p_{D|M}$ e $p_{D|F}$ corrispondono al rapporto tra deceduti maschi o femmine ed il totale di maschi o femmine.
+\\
+L'odds ratio è il rapporto tra i due odds (conviene mettere al denominatore la categoria della variabile esplicativa che si pensa possa avere più successo):
+\begin{equation}
+OR = \frac{\frac{p_{D|M}}{1-p_{D|M}}}{\frac{p_{D|F}}{1-p_{D|F}}}
+\end{equation}
+Le situazioni possono essere due:
+\begin{itemize}
+    \item odds ratio = 1 (quindi odds dei maschi ed odds delle femmine sono uguali), quindi tra le due variabili considerate non c'è nessuna associazione;
+    \item odds ratio $\neq$ 1, quindi tra le due variabili considerate c'è un'associazione.
+\end{itemize}
+Ovviamente, la differenza da 1 dev'essere statisticamente significativa.
+
+\subsection{Errore associato all'odds ratio}
+Quando l'odds ratio si calcola a partire da proporzioni osservate di successi in base ad un campione, sia le proporzioni che l'odds ratio sono stime (e dunque si indicano come $\hat{p}$ e $\hat{OR}$). In tali casi, alla stima dell'odds ratio va accompagnata anche una stima dell'errore ad esso associato, e questo si fa calcolando l'\textbf{intervallo di confidenza dell'odds ratio}.
+\\
+Per ottenere l'intervallo di confidenza dell'odds ratio è necessario calcolare il logaritmo naturale dell'odds ratio ($ln(\hat{OR})$), poiché l'odds ratio ha una distribuzione non normale.
+\\
+L'errore standard del logaritmo naturale dell'odds ratio si calcola come:
+\begin{equation}
+ES[ln(\hat{OR})] = \sqrt{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
+\end{equation}
+In cui $a$, $b$, $c$ e $d$ si riferiscono alle frequenze osservate nelle celle della tabella di ocntingenza (nell'esempio \ref{estitanic}, i quattro valori principali nella tabella \ref{tabtitanic}).
+\\
+L'intervallo di confidenza viene quindi calcolato come:
+\begin{align*}
+    ln(\hat{OR})\ -\ Z\ ES[ln(\hat{OR})]\ <\ ln(\hat{OR})\ <\ ln(\hat{OR})\ +\ Z\ ES[ln(\hat{OR})]
+    \\ \\
+    \Rightarrow e^{ln(\hat{OR})\ -\ Z\ ES[ln(\hat{OR})]}\ <\ \hat{OR}\ <\ e^{ln(\hat{OR})\ +\ Z\ ES[ln(\hat{OR})]}
+\end{align*}
+In cui il valore di $Z$ dipende dal tipo di intervallo di confidenza che si vuole calcolare (es. per un intervallo di confidenza al 95\% $Z = 1.96$).
+\\
+
+
+\begin{example}[Esempio: aspirina]
+29876 donne sono state sottoposte casualmente a due trattamenti diversi: 19934 hanno ricevuto 100 mg di aspirina a giorni alterni, 19942 hanno ricevuto un placebo.
+\\
+Tali donne, ignare riguardo il tipo di trattamento ricevuto, sono state monitorate per 10 anni, durante i quali 1438 che ricevevano aspirina e 1427 che ricevevano il placebo hanno avuto una diagnosi di cancro invasivo.
+\\
+La tabella \ref{tabaspirina} riporta i dati, che sono rappresentati nel mosaic plot nella figura \ref{fig9.2-1}.
+\begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c}
+        \hline
+         & \textbf{Aspirina (A)} & \textbf{Placebo (P)}\\
+        \hline
+        \textbf{Cancro (C)} & a = 1438 & b = 1427 \\
+        \hline
+        \textbf{No cancro (N)} & c = 18496 & d = 18515\\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabaspirina}
+\end{table}\noindent
+    fig.9.2-1 \label{fig9.2-1}%\TODO
+    \\
+    Il rischio di sviluppare cancro invasivo nelle donne è più elevato nelle pazienti che ricevono aspirina?
+    \\
+    RISOLVI QUESITO!
+\end{example}
+
+\begin{example}[covid-19\label{escovid2}]
+LEZIONE 20211124
+\end{example}
+
+\section{Test del \texorpdfstring{$\chi^2$}{Lg} per stabilire la significatività dell'associazione tra due variabili categoriche}
+
+Il test del $\chi^2$ è il test statistico più usato per verificare lì'associazione tra due variabili categoriche; tale test verifica la bontà di adattamento ai dati osservati di un modello nullo che assume l'indipendenza delle variabili.
+
+\begin{example}[parassitosi e predazione\label{esparassitosi}]
+Un trematode parassitizza un pesce, presumibilmente modificandone il comportamento ed inducendolo a nuotare a profondità minori, il che rende il pesce più vulnerabile alla predazione da parte di un uccello, che è un altro ospite del parassita.
+\\
+In una vasca all'aperto vengono posti tre diversi gruppi di pesci: non infestati, lievemente infestati e fortemente infestati; nella tabella \ref{tabparassitosi} è riportato il numero di pesci predati dagli uccelli a seconda del loro livello di infestazione:
+\begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+         & \textbf{\makecell{Non\\infestati}} & \textbf{\makecell{Lievemente\\infestati}} & \textbf{\makecell{Fortemente\\infestati}} & \textbf{\makecell{Totali\\righe}}\\
+        \hline
+        \textbf{Predati} & 1 & 10 & 37 & 48\\
+        \hline
+        \textbf{Non predati} & 49 & 35 & 9 & 93\\
+        \hline
+        \textbf{Totali colonne} & 50 & 45 & 46 & 141\\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabparassitosi}
+\end{table}\noindent
+I dati sono rappresentati nel mosaic plot \ref{fig9.3-1}:
+\\
+fig.9.3-1\label{fig9.3-1} %TODO
+\\
+Dai dati ottenuti risulta che solo il 2\% dei pesci non infestati viene predato, mentre il 22\% e l'80\% dei pesci lievemente e fortemente infestati viene predato.
+\\
+Si vuole verificare se la probabilità che i pesci vengano predati dipenda dal loro stato di infestazione parassitaria.
+\\
+Le ipotesi sono:
+\begin{itemize}
+    \item $H_0$: parassitosi ed essere/non essere predati sono indipendenti;
+    \item $H_A$: parassitosi ed essere/non essere predati non sono indipendenti.
+\end{itemize}
+Per effettuare il test del $\chi^2$ sulla tabella di contingenza si devono calcolare le frequenze attese per ciascuna cella nella tabella \ref{tabparassitosi}, assumendo che sia vera l'ipotesi nulla di indipendenza.
+
+Seconod la regola del prodotto (\ref{secprodottodiprobabilità}), se due eventi sono indipendenti, la probabilità che si verifichino entrambi è pari alla probabilità che si verifichi un evento per la probabilità che si verifichi l'altro; tale regola può essere impiegata per calcolare le proporzioni attese di pesci in ciascuna categoria, e poi le frequenze attese sotto l'ipotesi nulla.
+\\
+Dunque, se l'infestazione e la predazione sono indipendenti, la probabilità che un pesce non infestato venga predato è:
+\begin{equation}\label{for10.7}
+    Pr[non\ infestato\ e\ predato] = Pr[non\ infestato]\ Pr[predato] 
+\end{equation}
+Per calcolare la frequenza attesa di pesci non infestati e predati si deve prima stimare la probabilità che un pesce sia non infestato e la probabilità che un pesce venga predato, valori che si possono stimare in base ai dati della tabella \ref{tabparassitosi}; dunque, la probabilità stimata che un pesce non sia infestato è data dal numero totale di pesci non infestati nel campione (50), diviso il numero totale di pesci (141), e quindi è pari a 0.3546.
+\\
+Stesso ragionamento vale per la probabilità stimata di essere predati, che quindi risulta essere 0.3404.
+\\
+Perciò, assumendo vera lìipotesi nulla di indipendenza, la probabilità stimata che un pesce sia non infestato e predato è pari a 0.1207, calcolata con la formula \ref{for10.7}.
+Dunque, la frequenza attesa di pesci non infestati e predati sotto l'ipotesi nulla è data da tale probabilità (0.1207), moltiplicata per il numero totale di individui dell'insieme di dati (141), ed è quindi pari a 17.
+\\
+Ripetendo tale procedura per tutte le altre celle della tabella \ref{tabparassitosi} si ottengono e frequenze attese per tutte le possibili combinazioni di casi, riportate nella tabella \ref{tabparassitosi2}:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c|c|c}
+    \hline
+     & \textbf{\makecell{Non\\infestati}} & \textbf{\makecell{Lievemente\\infestati}} & \textbf{\makecell{Fortemente\\infestati}} & \textbf{\makecell{Totali\\righe}}\\
+    \hline
+    \textbf{Predati} & 17.0 & 15.3 & 15.7 & 48\\
+    \hline
+    \textbf{Non predati} & 33.0 & 29.7 & 30.3 & 93\\
+    \hline
+    \textbf{Totali colonne} & 50 & 45 & 46 & 141\\
+    \hline
+    \end{tabular}
+    \caption{\small{Frequenze attese di pesci predati e non, in base allo stato di infestazione.}}
+    \label{tabparassitosi2}
+\end{table}\noindent
+I totali di righe e colonne ottenuti sono uguali ai corrispondenti osservati, dal momento che sono state usate le proporzioni relative ai dati per calcolare le frequenze attese.
+
+\subsection{Calcolo del \texorpdfstring{$\chi^2$}{Lg}}
+Per verificare se le discrepanze tra i valori osservati e quelli attesi siano maggiori di quelle che ci si aspetterebbe per effetto del caso, si calcola il $\chi^2$.
+\\
+Indicando con "c" il numero di colonne e con "r" il numero di righe:
+\begin{equation}
+    \chi^2 = \sum^c_1 \sum^r_1 \frac{[osservato(colonna,\ riga)- atteso(colonna,\ riga)]^2}{atteso(colonna,\ riga)}
+\end{equation}
+Inserendo i dati:
+\begin{equation}
+    \chi^2 = \frac{(1-17)^2}{17}+\frac{(49-33)^2}{33}+\frac{(10-15.3)^2}{15.3}+\frac{(35-29.7)^2}{29.7}+\frac{(37-15.7)^2}{15.7}+\frac{(9-30.3)^2}{30.3} = 69.5
+\end{equation}
+La distribuzione del $\chi^2$ sotto l'ipotesi nulla è approssimata dalla distribuzione teorica del $\chi^2$. Per calcolare i gradi di libertà per la distribuzione del $\chi^2$ di interesse, si contano il numero di righe e di colonne nella tabella; il numero di gradi di libertà è dato da:
+\begin{equation}
+    df = (r-1)(c-1)
+\end{equation}
+Nell'esempio corrente, dunque, i gradi di libertà sono (2-1)(3-1) = 2.
+
+\subsection{P-value}
+
+Il valore critico per la distribuzione $\chi^2$ con $df = 2$ ed $\alpha = 0.05$ è pari a 5.99. Il valore osservato (69.5) si colloca verso l'esterno nella coda della distribuzione, essendo molto maggiore del valore critico; si rifiuta quindi l'ipotesi nulla: lo stato di infezione dei pesci influenza la probabilità che questi vengano predati.
+\end{example}
+Esiste anche una formula rapida per il calcolo delle frequenze attese (valore atteso nella cella di una tabella, corrispondente ad una certa riga e ad una certa colonna):
+\begin{equation}
+    atteso[riga\ i,\ colonna\ j] = \frac{(totale\ riga\ i)(totale\ colonna\ i)}{totale\ generale}
+\end{equation}
+Si può calcolare l'ultima cella in una riga o in una colonna anche per sottrazione, perché la somma delle frequenze attese per una data riga o colonna è uguale alla somma dei valori osservati.
+\\
+In una tabella di contingenza, il numero di celle in cui le frequenze non possono essere calcolate per differenza a partire dai totali di riga o colonna corrisponde anche ai gradi di libertà della distribuzione $\chi^2$ che dovrà essere utilizzata nel test; infatti, i gradi di libertà in un test del $\chi^2$ possono essere anche interpretati come il numero di categorie indipendenti, ovvero il numero di categorie sufficiente a calcolare, noti i totali di riga e colonna, tutti i valori nelle altre celle.
+\\
+\\
+Il test del $\chi^2$ che si usa per l'analisi delle tabelle di contingenza è un'applicazione particolare del più generale test di bontà dell'adattamento; in questo caso, il modello probabilistico il cui possibile adattamento ai dati osservati viene verificato con il test è il modello che assume l'indipendenza delle variabili.
+
+\subsection{Assunzioni del test \texorpdfstring{$\chi^2$}{Lg} per l'analisi delle tabelle di contingenza}
+Le assunzioni del test del $\chi^2$ per l'analisi delle tabelle di contingenza sono le stesse del test del $\chi^2$ di bontà dell'adattamento.
+\\
+Se tali assunzioni non sono rispettate, sono disponibili almeno tre soluzioni:
+\begin{itemize}
+    \item se la tabella è più grande di una $2x2$, allora due o più categorie nelle righe (o nelle colonne) possono essere combinate per ottenere frequenze attese maggiori; in tal caso si deve comunque evitare di ottenere categorie prive di significato;
+    \item se la tabella è una $2x2$, si può impiegare il test esatto di Fisher; %TODO \ref{sec}
+    \item si utilizza un test di randomizzazione. %TODO \ref{sec}
+\end{itemize}
+
+\part{Associazioni}
+
+\chapter{}
+
+\section{}
+
+\end{document}
+
+
