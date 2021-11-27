@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.4}Stima}{9}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Dati e variabili}{10}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Distribuzioni di frequenza e distribuzioni di probabilità}{11}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Tipi di studi}{12}{section.1.7}%
+\contentsline {section}{\numberline {1.7}Tipi di studi}{11}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Archiviazione dei dati (B1)}{13}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Visualizzazione dei dati (B1)}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Rappresentare le distribuzioni di frequenza}{15}{section.3.1}%
@@ -45,41 +45,41 @@
 \contentsline {chapter}{\numberline {7}Test delle ipotesi}{33}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Ragionamento logico}{33}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Metodo scientifico galileiano}{33}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Formulazione delle ipotesi}{33}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Verifica delle ipotesi}{33}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Statistica test}{33}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Livello di significatività di P}{33}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Errori nella verifica delle ipotesi}{33}{section.7.7}%
-\contentsline {part}{II\hspace {1em}Confronti tra gruppi}{35}{part.2}%
-\contentsline {chapter}{\numberline {8}Analisi delle proporzioni (B5)}{37}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Distribuzione binomiale}{37}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Distribuzione campionaria di una proporzione}{38}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}Studio di una proporzione: il test binomiale}{38}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Approssimazioni del test binomiale}{39}{subsection.8.2.1}%
-\contentsline {section}{\numberline {8.3}Stima delle proporzioni}{39}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Stima dell'errore standard per una proporzione}{39}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Intervallo di confidenza di una proporzione: metodo Agresti-Coull}{40}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Intervallo di confidenza di una proporzione: metodo Wald}{40}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Ricavare la distribuzione binomiale}{41}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Modelli probabilistici per dati di frequenza (B5)}{43}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Modello proporzionale}{43}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Test del $\chi ^2$ di bontà dell'adattamento}{44}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Calcolo del P-value}{45}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Assunzioni del test $\chi ^2$ di bontà dell'adattamento}{45}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Test del $\chi ^2$ con due sole categorie}{46}{subsection.9.2.3}%
-\contentsline {section}{\numberline {9.3}Adattamento della distribuzione binomiale}{47}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Test binomiale per \textit {n} grandi}{48}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Distribuzione di Poisson}{48}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Verifica della casualità con la distribuzione di Poisson}{50}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Indice di dispersione per descrivere il discostamento dalla distribuzione di Poisson}{52}{subsection.9.4.2}%
-\contentsline {chapter}{\numberline {10}Analisi dell'associazione tra variabili categoriche (B5)}{53}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Associazione tra due variabili categoriche}{53}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Stima dell'associazione in tabelle $2 x 2$: odds ratio}{54}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Errore associato all'odds ratio}{54}{subsection.10.2.1}%
-\contentsline {section}{\numberline {10.3}Test del $\chi ^2$ per stabilire la significatività dell'associazione tra due variabili categoriche}{55}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Calcolo del $\chi ^2$}{56}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}P-value}{57}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Assunzioni del test $\chi ^2$ per l'analisi delle tabelle di contingenza}{57}{subsection.10.3.3}%
-\contentsline {part}{III\hspace {1em}Associazioni}{59}{part.3}%
-\contentsline {chapter}{\numberline {11}}{61}{chapter.11}%
-\contentsline {section}{\numberline {11.1}}{61}{section.11.1}%
+\contentsline {section}{\numberline {7.3}Formulazione delle ipotesi}{34}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Verifica delle ipotesi}{34}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Statistica test}{35}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Livello di significatività di P}{36}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Errori nella verifica delle ipotesi}{37}{section.7.7}%
+\contentsline {part}{II\hspace {1em}Confronti tra gruppi}{39}{part.2}%
+\contentsline {chapter}{\numberline {8}Analisi delle proporzioni (B5)}{41}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Distribuzione binomiale}{41}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Distribuzione campionaria di una proporzione}{42}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Studio di una proporzione: il test binomiale}{42}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Approssimazioni del test binomiale}{43}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Stima delle proporzioni}{43}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Stima dell'errore standard per una proporzione}{43}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Intervallo di confidenza di una proporzione: metodo Agresti-Coull}{44}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Intervallo di confidenza di una proporzione: metodo Wald}{44}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Ricavare la distribuzione binomiale}{45}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Modelli probabilistici per dati di frequenza (B5)}{47}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Modello proporzionale}{47}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Test del $\chi ^2$ di bontà dell'adattamento}{48}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Calcolo del P-value}{49}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Assunzioni del test $\chi ^2$ di bontà dell'adattamento}{49}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Test del $\chi ^2$ con due sole categorie}{50}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Adattamento della distribuzione binomiale}{50}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Test binomiale per \textit {n} grandi}{52}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Distribuzione di Poisson}{52}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Verifica della casualità con la distribuzione di Poisson}{54}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Indice di dispersione per descrivere il discostamento dalla distribuzione di Poisson}{56}{subsection.9.4.2}%
+\contentsline {chapter}{\numberline {10}Analisi dell'associazione tra variabili categoriche (B5)}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Associazione tra due variabili categoriche}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Stima dell'associazione in tabelle $2 x 2$: odds ratio}{57}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Errore associato all'odds ratio}{58}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}Test del $\chi ^2$ per stabilire la significatività dell'associazione tra due variabili categoriche}{59}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Calcolo del $\chi ^2$}{60}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}P-value}{61}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Assunzioni del test $\chi ^2$ per l'analisi delle tabelle di contingenza}{61}{subsection.10.3.3}%
+\contentsline {part}{III\hspace {1em}Associazioni}{63}{part.3}%
+\contentsline {chapter}{\numberline {11}}{65}{chapter.11}%
+\contentsline {section}{\numberline {11.1}}{65}{section.11.1}%
