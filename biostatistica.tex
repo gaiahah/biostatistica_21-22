@@ -2112,9 +2112,217 @@ Le assunzioni del test del $\chi^2$ per l'analisi delle tabelle di contingenza s
 Se tali assunzioni non sono rispettate, sono disponibili almeno tre soluzioni:
 \begin{itemize}
     \item se la tabella è più grande di una $2x2$, allora due o più categorie nelle righe (o nelle colonne) possono essere combinate per ottenere frequenze attese maggiori; in tal caso si deve comunque evitare di ottenere categorie prive di significato;
-    \item se la tabella è una $2x2$, si può impiegare il test esatto di Fisher; %TODO \ref{sec}
+    \item se la tabella è una $2x2$, si può impiegare il \textbf{test esatto di Fisher} (\ref{secfisher});
     \item si utilizza un test di randomizzazione. %TODO \ref{sec}
 \end{itemize}
+
+\section{Test esatto di Fisher}\label{secfisher}\footnote{non integrato con il libro, che ne parla a pagina 132.}
+Il \textbf{test esatto di Fisher} si applica solo alle tabelle $2x2$ (teoricamente anche di dimensioni maggiori, ma molto complesso).
+\begin{equation}
+    p = \frac{}{}
+\end{equation}
+\begin{example}[cancro]\label{escancro}
+    Si hanno 15 casi
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+         & \textbf{Trattamento} & \textbf{No trattamento}\\
+        \hline
+        \textbf{Cancro} & a = 2 & b = 4 & \textbf{6} & 720 \\
+        \hline
+        \textbf{No cancro} & c = 8 & d = 1 & \textbf{9} & 362880\\
+        \hline
+        & \textbf{10} & \textbf{5} & \textbf{15} & \\
+        \hline
+        & 362880 & 120 &  & \\
+        \hline
+        \end{tabular}
+        \caption{}
+        \label{tabcancro}
+    \end{table}\noindent
+    Le frequenze attese corrispondenti sono riportate nella tabella \ref{tabcancro2}(es. calcolo per cella "a": (6*10)/15):
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c}
+        \hline
+        & \textbf{Trattamento} & \textbf{No trattamento}\\
+        \hline
+        \textbf{Cancro} & 4 & 2\\
+        \hline
+        \textbf{No cancro} & 6 & 3\\
+        \hline
+        \end{tabular}
+        \caption{\small{Frequenze attese }}
+        \label{tabcancro2}
+    \end{table}\noindent
+    Se non ci fossero violazioni delle assunzioni del test del $\chi^2$ si potrebbe proseguire con tale statistica; tuttavia, nell'esempio corrente, tre delle quattro celle hanno dei valori attesi inferiori a 5. Si usa dunque il test di Fisher.
+    \\
+    La formulazione del test di Fisher con quattro celle è:
+    \begin{equation}
+        p = \frac{(a+b)!(c+d)!(a+c)!(b+d)!}{n!a!b!c!d!}
+    \end{equation}
+    Il test calcola direttamente la probabilità \colorbox{lyellow}{(QUALE?)}.
+    \\
+    Applicando tale formula al caso d'interesse, si ottiene una probabilità di ottenere per caso la distribuzione osservata par a $1.032 \cdot 10^{-8}$, un valore estremamente basso, per cui si rifiuta l'ipotesi nulla; le due variabili (trattamento e cancro), quindi, non sono indipendenti.
+\end{example}
+Il test di Fisher è uno strumento molto potente, dal momento che non assume nessuna distribuzione (invece con il $\chi^2$ si confronta la distribuzione con quella del $\chi^2$). La probabilità calcolata con Fisher è la reale probabilità di ottenere la combinazione osservata date tutte le combinazioni possibili.
+\\
+L'unica assunzione del test di Fisher è che i campioni siano casuali.
+
+\chapter{Inferenza in una popolazione con distribuzione normale}
+
+\section{Riepilogo sulle relazioni tra variabili e statistiche}
+Una variabile può essere:
+\begin{itemize}
+    \item \textbf{nominale}: può assumere valori che sono categorie;
+    \item \textbf{ordinale}: può assumere valori che sono categorie che non possono essere in un ordine diverso da quello definito;
+    \item \textbf{numerica}.
+\end{itemize}
+I \textbf{conteggi} sono tipo di misura che si può fare sulle variabili di tipo categoriale (nominale ed ordinale); potrebbero essere definiti variabili numeriche discrete.
+\\
+Le variabili si possono studiare in diversi modi: si possono confrontare i valori che una variabile assume in un gruppo, con quelli che assume in un altro, oppure si può valutare l'associazione tra variabili diverse.
+Nella tabella sono riportati i test utilizzabili per fare ciò, in base al tipo di variabili d'interesse:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c}
+    \hline
+    & \textbf{Confronto} & \textbf{Associazione}\\
+    \hline
+    \textbf{Nominali} & binomiale, $\chi^2$, Z & $\chi^2$\\
+    \hline
+    \textbf{Ordinali} & $\chi^2$, ? & ?\\
+    \hline
+    \textbf{Conteggi} & binomiale e poisson e $\chi^2$, ? & ?\\
+    \hline
+    \textbf{Numeriche} & IC, ? & ?\\
+    \hline
+    \end{tabular}
+    \caption{\small{}}
+    \label{tabstrumentivariabili}
+\end{table}\noindent
+
+\section{Distribuzione \texorpdfstring{$t$}{Lg} di Student}
+
+Uno dei problemi dell'approccio che prevede l'utilizzo del valore Z per il confronto tra valori osservati ed attesi è che la deviazione standard non è nota, perché non si conoscono i parametri della popolazione, ma solo le stime legate ai campioni, quindi i valori teorici non descrivono bene la realtà.
+\\
+Man mano che $n$ aumenta, la deviazione standard della media campionaria diminuisce, poiché essa è l'errore standard, ovvero l'errore dovuto al campionamento, e più $n$ è elevato, più tale errore si riduce.
+\\
+Il fatto che la stima dipenda da $n$ è problematico: l'approccio del valore Z è utile solo quando i parametri sono noti:
+\begin{equation}
+    Z = \frac{\overline{Y}-\mu}{\sigma_{\overline{Y}}}
+\end{equation}
+\\
+Se non si conoscono i parametri, c'è bisogno di includere l'incertezza campionaria nei confronti; si introduce quindi l'errore standard della media campionaria, che corrisponde alla deviazione standard della distribuzione campionaria, nella statistica; in questo modo si ottiene la statistica $t$, ovvero lo scarto tra media osservata (campionaria) e media teorica, rapportato all'errore standard della media campionaria:
+\begin{equation}
+    t_{df} = \frac{\overline{Y}-\mu}{ES_{\overline{Y}}}
+\end{equation}
+In cui:
+\begin{equation}
+    ES_{\overline{Y}} = \frac{s}{\sqrt{n}}
+\end{equation}
+In cui $s$ è la deviazione standard osservata nel campione.
+\\
+Utilizzando $t$, lo scarto tra medie non viene più messo in relazione con una deviazione standard che non è nota, ma ad un errore standard noto, calcolabile.
+\\
+La statistica $t$ ha dei gradi di libertà che $Z$ non ha e che sono pari a:
+\begin{equation}
+    df = n-1
+\end{equation}
+Un esempio di una serie di curve di $t$ (più la curva normale, quella tratteggiata) è riportato nella figura \ref{figdistribuzionit}:
+\begin{figure}[H]\label{figdistribuzionit}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figdistribuzionit}
+    \caption{\small{}}
+    \end{figure}
+Il $t$ è quindi una famiglia di curve che variano al variare dei gradi di libertà, ovvero alla numerosità del campione.
+\\
+Quando, con variabili normali, la numerosità del campione aumenta a sufficienza (attorno alle 40-50 unità), il $t$ e la $Z$ restituiscono gli stessi risultati, ovvero il $t$ soglia e la $Z$ soglia tendono a convergere per $n$ elevati (cioè all'aumentare di $n$, $t$ tenderà ad 1.96, per tot gradi di libertà, con un $\alpha$ di 0.05, dato che con $Z$ 1.96 è il valore soglia di $Z$ che taglia a destra e sinistra della curva il 2.5\% della curva sottesa, per un totale del 5\%.).
+\\
+Al diminuire di $n$, il $t$ soglia è più elevato della $Z$ soglia.
+\\
+Il $t$ si basa sulla stima di una media e di una deviazione standard ed assume che vi sia una distribuzione normale (e quindi che la media sia un valore rappresentativo).
+\\
+Dunque, quello del $t$ di Student è un approccio migliore di quello che utilizza $Z$ quando i parametri sono ignoti ed $n$ è relativamente basso ($<$40-50).
+
+\section{Intervalli di confidenza e \texorpdfstring{$t$}{Lg} test per un campione}
+Lo stesso problema che si riscontra nel confronto tra valori attesi ed osservati si ha nella definizione degli intervalli di confidenza: utilizzare $Z$ non permette di tenere conto del fatto che si sta utlizzando un campione e che quindi non si conosce la variabilità teorica.
+\\
+Per cacolare gli intervalli di confidenza si utilizza dunque la $t$, e non la $Z$, che comunque corrispondono per $n$ elevati ($>$40-50, quindi usare $t$ per il calcolo degli IC solo per $n$ inferiori). Dunque, quando opportuno, l'\textbf{intervallo di confidenza della media campionaria} si calcola come:
+\begin{equation}
+    \overline{Y}-t_{\alpha(2),df}ES_{\overline{Y}}\ < \mu <\ \overline{Y}+t_{\alpha(2),df}ES_{\overline{Y}} 
+\end{equation}
+In questo caso, il parametro di riferimento è la media ($\mu$), ed i gradi di libertà sono $n-1$.
+\\
+Le ipotesi sono:
+\begin{itemize}
+    \item $H_O$: la media campionaria non differisce da una media ipotetica;
+    \item $H_A$: la media campionaria differisce da una media ipotetica.
+\end{itemize}
+Il test è a due code, poiché lìipotesi alternativa prevede sia i casi in cui la media campionaria è più grande, sia quelli in cui essa è più piccola della media ipotetica.
+\begin{example}[temperatura corporea]
+    La temperatura corporea dell'uomo è pari a 98.6\textdegree F.
+    Le ipotesi sono:
+    \begin{itemize}
+        \item $H_O$: la temperatura corporea dell'uomo è di 98.6\textdegree F;
+        \item $H_A$: la temperatura corporea dell'uomo non è di 98.6\textdegree F.
+    \end{itemize}
+    Si analizzano 25 soggetti sani e si ottengono $\overline{Y} = 98.524$ ed $s = 0.678$.
+    \\
+    Per prima cosa si dovrebbe plottare la distribuzione di frequenza della temperatura dei 25 soggetti e vedere se questa è grossomodo normale:
+    \begin{figure}[H]\label{fig11.3-1}
+        \centering
+        \includegraphics[width=0.6\textwidth]{fig11.3-1}
+        \caption{\small{Frquenza assoluta, dato che sull'asse delle y è riportato il conteggio}}
+    \end{figure}
+    La media della temperatura osservata differisce significativamente dalla media attesa?
+    \\
+    \colorbox{lyellow}{FAI CON IC95\% E T TEST}
+\end{example}
+\begin{example}[guida distratta]\label{guidadistratta}
+    Dieci persone vengono osservate alla guida in due casi, con il cellulare e dopo aver bevuto due birre. Nella tabella \ref{tabguida} sono riportati l'identificativo di ogni soggetto (il soggetto uno per il cellulare e quello per la birra sono persone diverse, e così via) ed il numero di birilli fatto cadere in entrambi i casi:
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c}
+        \hline
+        \textbf{ID}& \textbf{Cellulare} & \textbf{Birra}\\
+        \hline
+        \textbf{1} & 14 & 28\\
+        \hline
+        \textbf{2} & 44 & 36\\
+        \hline
+        \textbf{3} & 17 & 38\\
+        \hline
+        \textbf{4} & 69 & 42\\
+        \hline
+        \textbf{5} & 77 & 57\\
+        \hline
+        \textbf{6} & 80 & 60\\
+        \hline
+        \textbf{7} & 82 & 80\\
+        \hline
+        \textbf{8} & 86 & 81\\
+        \hline
+        \textbf{9} & 99 & 83\\
+        \hline
+        \textbf{10} & 99 & 91\\
+        \hline
+        \end{tabular}
+        \caption{\small{}}
+        \label{tabguida}
+    \end{table}\noindent
+    Da fare:
+    \begin{itemize}
+        \item calcolare IC95\% per i due risultati dei test;
+        \item confrontare le medie ottneute con quelle attese (usando i valori attesi di $t$);
+        \item se $n = 20$ invece di 10, cambierebbe qualcosa?
+    \end{itemize}
+    
+\end{example}
 
 \part{Associazioni}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.12)  27 NOV 2021 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.12)  30 NOV 2021 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1369,10 +1369,10 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 \tf@toc=\write6
 \openout6 = `biostatistica.toc'.
 
- [4] [5
+ [4] [5] [6
 
 
-] [6]
+] [7] [8]
 Capitolo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--97
@@ -1392,7 +1392,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--97
 
 Underfull \vbox (badness 3291) has occurred while \output is active []
 
- [7
+ [9
 
 
 ]
@@ -1408,7 +1408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--123
 LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 124.
 (/usr/share/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
-) [8]
+) [10]
 Underfull \hbox (badness 10000) in paragraph at lines 139--159
 
  []
@@ -1428,8 +1428,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--167
 
  []
 
-[9]
-<./figs//fig1.2-2.png, id=76, 417.81094pt x 348.55219pt>
+[11]
+<./figs//fig1.2-2.png, id=82, 417.81094pt x 348.55219pt>
 LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 175.
  (/usr/share/texmf-dist/tex/latex/kpfonts/t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
@@ -1448,42 +1448,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--205
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 228--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--238
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
-
- []
-
 [12]
+Underfull \hbox (badness 10000) in paragraph at lines 228--238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--238
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 239--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--251
+
+ []
+
+[14]
 Capitolo 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 254--270
 
  []
 
-[13
+[15
 
 
-] [14
+] [16
 
 
 ]
@@ -1503,8 +1503,8 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 306--318
 [][][][][][] |
  []
 
-[15]
-<./figs//fig2.1-2.png, id=97, 436.63126pt x 315.42844pt>
+[17]
+<./figs//fig2.1-2.png, id=103, 436.63126pt x 315.42844pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 328--352
 
@@ -1520,12 +1520,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--352
 
  []
 
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 358--368
 
  []
 
-[17]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 380--388
 
  []
@@ -1535,11 +1535,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 396--400
 
  []
 
-<./figs//fig2.2-1.png, id=104, 427.5975pt x 316.93407pt>
+<./figs//fig2.2-1.png, id=111, 427.5975pt x 316.93407pt>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//fig2.3-2.png, id=105, 395.22656pt x 272.51813pt>
+<./figs//fig2.3-2.png, id=112, 395.22656pt x 272.51813pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 410--444
 
@@ -1557,56 +1557,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--444
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 410--444
-
- []
-
-[18]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19]
-<./figs//fig2.4-1.png, id=114, 450.9347pt x 574.39594pt>
-<./figs//fig2.4-2.png, id=115, 380.17032pt x 347.04657pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//fig2.5-1.png, id=116, 462.97969pt x 309.40594pt>
-<./figs//fig2.5-2.png, id=117, 486.31688pt x 299.61937pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
 
  []
 
@@ -1614,15 +1564,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--510
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[21]
+<./figs//fig2.4-1.png, id=120, 450.9347pt x 574.39594pt>
+<./figs//fig2.4-2.png, id=121, 380.17032pt x 347.04657pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--471
+
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figs//fig2.5-1.png, id=122, 462.97969pt x 309.40594pt>
+<./figs//fig2.5-2.png, id=123, 486.31688pt x 299.61937pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--510
+
+ []
+
+[22]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23] [24]
 Underfull \hbox (badness 10000) in paragraph at lines 525--533
 
  []
 
-[23] [24]
+[25] [26]
 Capitolo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 534--546
@@ -1639,11 +1639,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--546
 
  []
 
-[25
+[27
 
 
 ]
-<./figs//fig3.2-2.png, id=137, 364.36125pt x 250.68657pt>
+<./figs//fig3.2-2.png, id=143, 364.36125pt x 250.68657pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 572--600
 
@@ -1659,12 +1659,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 602--606
 
  []
 
-[26]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 638--642
 
  []
 
-[27]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 649--656
 
  []
@@ -1699,12 +1699,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 685--695
 
  []
 
-[28] [29] [30
+[30] [31] [32
 
 
 ]
 Capitolo 5.
-<./figs//normalcurvetypes.png, id=155, 359.84438pt x 271.76532pt>
+<./figs//normalcurvetypes.png, id=162, 359.84438pt x 271.76532pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 696--720
 
@@ -1730,9 +1730,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 696--720
 
  []
 
-[31]
-<./figs//standardizednormalcurve.png, id=160, 472.01344pt x 285.31593pt>
-<./figs//standardizednormalcurve2.png, id=161, 295.1025pt x 363.60844pt>
+[33]
+<./figs//standardizednormalcurve.png, id=166, 472.01344pt x 285.31593pt>
+<./figs//standardizednormalcurve2.png, id=167, 295.1025pt x 363.60844pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 724--746
 
@@ -1761,7 +1761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 754--761
 
  []
 
-[32] [33] [34
+[34] [35] [36
 
 
 ]
@@ -1776,11 +1776,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 762--783
 
  []
 
-<./figs//fig5.4-1.png, id=171, 258.21469pt x 170.13562pt>
+<./figs//fig5.4-1.png, id=177, 258.21469pt x 170.13562pt>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 808--816
 
  []
@@ -1790,17 +1790,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 808--816
 
  []
 
-<./figs//fig5.5-2.png, id=175, 322.20375pt x 131.74219pt>
+<./figs//fig5.5-2.png, id=182, 322.20375pt x 131.74219pt>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//fig5.5-1.png, id=176, 180.675pt x 182.18062pt>
-<./figs//istogrammaperdiagramma.png, id=177, 212.29312pt x 128.73094pt>
-[36]
+<./figs//fig5.5-1.png, id=183, 180.675pt x 182.18062pt>
+<./figs//istogrammaperdiagramma.png, id=184, 212.29312pt x 128.73094pt>
+[38]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//fig5.6-1.png, id=181, 404.26031pt x 265.74281pt>
+<./figs//fig5.6-1.png, id=188, 404.26031pt x 265.74281pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 868--868
 
@@ -1814,25 +1814,25 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 853--879
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37]
+[39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
-<./figs//fig5.8-1.png, id=189, 258.21469pt x 310.15875pt>
+ [40]
+<./figs//fig5.8-1.png, id=195, 258.21469pt x 310.15875pt>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//alberoprobabilitÃ .png, id=190, 618.05907pt x 243.15843pt>
+<./figs//alberoprobabilitÃ .png, id=196, 618.05907pt x 243.15843pt>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 951--962
 
  []
 
-[40] [41] [42
+[42] [43] [44
 
 
 ]
@@ -1840,7 +1840,7 @@ Capitolo 7.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 1058--1067
 
  []
@@ -1865,12 +1865,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1040--1067
 
  []
 
-[44]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 1070--1084
 
  []
 
-[45]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 1086--1101
 
  []
@@ -1900,33 +1900,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 1103--1126
 
  []
 
-[46]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 1129--1145
 
  []
 
-[47]
-<./figs//erroriverificaipotesi.png, id=223, 509.65407pt x 252.19218pt>
-<./figs//fig6.4-1.png, id=224, 249.93375pt x 208.52907pt>
+[49]
+<./figs//erroriverificaipotesi.png, id=230, 509.65407pt x 252.19218pt>
+<./figs//fig6.4-1.png, id=231, 249.93375pt x 208.52907pt>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
-<./figs//fig6.5-1.png, id=228, 256.70906pt x 209.28188pt>
+ [50]
+<./figs//fig6.5-1.png, id=235, 256.70906pt x 209.28188pt>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49] [50] [51
+ [51] [52] [53
 
 
-] [52]
+] [54]
 Capitolo 8.
-<./figs//fig7.1-1.png, id=242, 247.67531pt x 177.66376pt>
-[53
+<./figs//fig7.1-1.png, id=248, 247.67531pt x 177.66376pt>
+[55
 
 
 ]
-<./figs//fig7.1-2.png, id=246, 179.92218pt x 264.99pt>
+<./figs//fig7.1-2.png, id=253, 179.92218pt x 264.99pt>
 
 Underfull \hbox (badness 10000) in paragraph at lines 1240--1252
 
@@ -1935,78 +1935,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 1240--1252
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54] [55] [56] [57] [58]
+[56] [57] [58] [59] [60]
 Capitolo 9.
-[59
+[61
 
 
 ]
-<./figs//fig8.2-1.png, id=266, 231.11343pt x 172.39406pt>
+<./figs//fig8.2-1.png, id=273, 231.11343pt x 172.39406pt>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60]
-<./figs//fig8.2-2.png, id=270, 567.11874pt x 403.5075pt>
+[62]
+<./figs//fig8.2-2.png, id=277, 567.11874pt x 403.5075pt>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61] [62]
-<./figs//fig8.5-1.png, id=278, 249.18094pt x 177.66376pt>
- [63] [64] [65]
-<./figs//fig8.6-1.png, id=288, 406.51875pt x 141.52875pt>
- [66]
-<./figs//fig8.6-2.png, id=292, 240.9pt x 174.6525pt>
- [67] [68] [69] [70
+[63] [64]
+<./figs//fig8.5-1.png, id=284, 249.18094pt x 177.66376pt>
+ [65] [66] [67]
+<./figs//fig8.6-1.png, id=295, 406.51875pt x 141.52875pt>
+ [68]
+<./figs//fig8.6-2.png, id=299, 240.9pt x 174.6525pt>
+ [69] [70] [71] [72
 
 
 ]
 Capitolo 10.
-<./figs//fig9.1-1.png, id=306, 404.26031pt x 149.8097pt>
+<./figs//fig9.1-1.png, id=312, 404.26031pt x 149.8097pt>
 
 Underfull \vbox (badness 5475) has occurred while \output is active []
 
- [71] [72]
+ [73] [74]
 Underfull \hbox (badness 10000) in paragraph at lines 1962--1965
 
  []
 
-<./figs//fig9.2-1.png, id=313, 706.64pt x 468.75125pt>
-[73]
-<./figs//fig9.3-1.png, id=318, 235.63031pt x 182.93344pt>
- [74]
+<./figs//fig9.2-1.png, id=320, 706.64pt x 468.75125pt>
+[75]
+<./figs//fig9.3-1.png, id=324, 235.63031pt x 182.93344pt>
+ [76]
 Overfull \hbox (120.72078pt too wide) has occurred while \output is active
-\T1/jkp/m/sl/10 10.3.  TEST DEL $\OML/jkp/m/it/10 ^^_[]$ \T1/jkp/m/sl/10 PER STABILIRE LA SIGNIFICATIVITÀ DELL'ASSOCIAZIONE TRA DUE VARIABILI CATEGORICHE \T1/jkp/m/n/10 75|
+\T1/jkp/m/sl/10 10.3.  TEST DEL $\OML/jkp/m/it/10 ^^_[]$ \T1/jkp/m/sl/10 PER STABILIRE LA SIGNIFICATIVITÀ DELL'ASSOCIAZIONE TRA DUE VARIABILI CATEGORICHE \T1/jkp/m/n/10 77|
  []
 
-[75]
+[77]
 Underfull \hbox (badness 10000) in paragraph at lines 2101--2108
 
  []
 
-[76] [77
+[78] [79] [80
 
 
-] [78]
+]
 Capitolo 11.
-[79
+[81]
+<./figs//figdistribuzionit.png, id=344, 445.665pt x 434.37282pt>
+ [82]
+<./figs//fig11.3-1.png, id=348, 383.93437pt x 250.68657pt>
+ [83] [84] [85
+
+
+] [86]
+Capitolo 12.
+[87
 
 
 ] (/home/gaiahah/latex/biostatistica/biostatistica.aux) ) 
 Here is how much of TeX's memory you used:
- 30559 strings out of 478994
- 574532 string characters out of 5864750
- 950650 words of memory out of 5000000
- 47437 multiletter control sequences out of 15000+600000
+ 30589 strings out of 478994
+ 575086 string characters out of 5864750
+ 951147 words of memory out of 5000000
+ 47466 multiletter control sequences out of 15000+600000
  546015 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  111i,18n,116p,1207b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert-tt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmne.pfb>
-Output written on /home/gaiahah/latex/biostatistica/biostatistica.pdf (79 pages, 278348 bytes).
+Output written on /home/gaiahah/latex/biostatistica/biostatistica.pdf (87 pages, 291514 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
+ 414 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 
