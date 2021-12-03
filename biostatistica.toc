@@ -84,7 +84,15 @@
 \contentsline {chapter}{\numberline {11}Inferenza in una popolazione con distribuzione normale}{81}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Riepilogo sulle relazioni tra variabili e statistiche}{81}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Distribuzione $t$ di Student}{81}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Intervalli di confidenza e $t$ test per un campione}{83}{section.11.3}%
-\contentsline {part}{III\hspace {1em}Associazioni}{85}{part.3}%
-\contentsline {chapter}{\numberline {12}}{87}{chapter.12}%
-\contentsline {section}{\numberline {12.1}}{87}{section.12.1}%
+\contentsline {section}{\numberline {11.3}Intervalli di confidenza e $t$}{84}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}$t$ test per un campione}{84}{subsection.11.3.1}%
+\contentsline {chapter}{\numberline {12}Confronto tra due medie}{89}{chapter.12}%
+\contentsline {section}{\numberline {12.1}}{89}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Disegno sperimentale per dati appaiati o indipendenti}{90}{section.12.2}%
+\contentsline {part}{III\hspace {1em}Associazioni}{93}{part.3}%
+\contentsline {chapter}{\numberline {13}}{95}{chapter.13}%
+\contentsline {section}{\numberline {13.1}}{95}{section.13.1}%
+\contentsline {chapter}{\numberline {14}Appendici}{97}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Come riportare il P-value}{97}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Tavola statistica A: valori critici per $\chi ^2$}{97}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Tavola statistica C: valori critici per $t$}{97}{section.14.3}%

@@ -312,7 +312,7 @@ Quando si trattano variabili nominali, le categorie non hanno un ordine intrinse
 \\
 Nei diagrammi a barre non si riescono a distinguere le frequenze esatte, ma si ha un quadro chiaro e immediato di come i valori numerici dei crescano rapidamente nelle categorie meno frequenti. 
 \\
-\colorbox{lyellow}{\parbox{0.98\textwidth}{Una variabile nominale si può descrivere con un grafico a barre in cui i valori della variabile nominale sono sulle ascisse mentre sulle ordinate si riporta la percentuale dei casi in cui si sono presentate le singole variabili. Le variabili possono essere elencate in ordine alfabetico o dalla meno alla più frequente, a seconda dell’obiettivo che si ha.}}
+\colorbox{lyellow}{\parbox{\textwidth}{Una variabile nominale si può descrivere con un grafico a barre in cui i valori della variabile nominale sono sulle ascisse mentre sulle ordinate si riporta la percentuale dei casi in cui si sono presentate le singole variabili. Le variabili possono essere elencate in ordine alfabetico o dalla meno alla più frequente, a seconda dell’obiettivo che si ha.}}
 \\
 Per essere efficace, un diagramma a barre dovrebbe seguire alcune regole generali:
 \begin{itemize}
@@ -857,7 +857,7 @@ La regola del prodotto riguarda combinazioni che implicano "e", cioè la probabi
     \caption{\small{}}
 \end{figure}
 \\
-\colorbox{lyellow}{\parbox{0.97\textwidth}{OPPURE
+\colorbox{lyellow}{\parbox{\textwidth}{OPPURE
 \\
 La probabilità di ottenere due eventi indipendenti mutualmente esclusivi si ottiene invece calcolando il prodotto delle probabiltà dei singoli eventi.
 \\
@@ -1087,7 +1087,7 @@ II metodo comunemente utilizzato per descrivere il disaccordo tra i dati e un'ip
 Il P-value (o valore P) è la probabilità di ottenere i dati osservati (oppure i dati che hanno una differenza altrettanto grande o ancora maggiore rispetto al valore dell'ipotesi nulla) se l'ipotesi nulla fosse vera (ovvero per caso). In pratica, calcoliamo il P-value in base alla distribuzione nulla della statistica test.
 \\
 \\
-\colorbox{lyellow}{\parbox{0.98\textwidth}{
+\colorbox{lyellow}{\parbox{\textwidth}{
     P, riferito ad una curva di distribuzione di frequenza, rappresenta la probabilità di osservare per caso un valore uguale o più o meno estremo di quello che si osserva (quindi quanto è probabile il valore della statistica test se l’ipotesi nulla è vera). Se $P>0.05$ (test non significativo, la differenza osservata potrebbe essere semplicemente dovuta alla variabilità naturale o campionaria, non si può escludere che siano dovute al caso) non si può rifiutare l’ipotesi nulla e supportare l’ipotesi alternativa. Se $P \le 0.05$ (test significativo *) allora si rifiuta l’ipotesi nulla e si supporta quella alternativa, a maggior ragione se $P \le 0.01$ (test molto significativo **) o 0.001 (test altamente significativo ***); questi tre livelli sono standard internazionali. (la differenza osservata è difficilmente osservabile per caso).}}
 \\
 \\
@@ -2325,8 +2325,7 @@ Si può poi calcolare il P-value per il test confrontando la $t$ osservata con l
     Alla domanda si può rispondere calcolando il P-value al computer, oppure utilizzando la tavola statistica \ref{tavC}.
     \\
     \\
-    \underline{\textit{Con software}}
-    \\
+    Con il P-value
     Il P-value rappresenta la probabilità di ottenere un risultato altrettanto o più estremo di $t=-0.56$, assumendo vera l'ipotesi nulla; tale probabilità è rappresentata dall'area sottesa dalla curva della distribuzione $t$ in figura \ref{fig11.3-2}:
     \begin{figure}[H]\label{fig11.3-2}
         \centering
@@ -2346,33 +2345,13 @@ Si può poi calcolare il P-value per il test confrontando la $t$ osservata con l
     Con un programma si calcola che $P = 0.58$ e, poiché tale valore è maggiore di 0.05, non si rifiuta l'ipotesi nulla.
     \\
     \\
-    \underline{\textit{Con la tavola statistica}}
+    Impiegando la tavola statistica \ref{tavC}.
     \\
-    La probabilità che serve, Pr[t<-0.56 o t>0.56], non è riportata direttamente, ma si possono ricavare i valori critici di $t$ per diversi valori di $\alpha$. 
-    \\
-    Il valore critico di una statistica test identifica il punto o i punti nella sua distribuzione che hanno una certa probabilità $\alpha$ nelle sue code.
-    \\
-    I valori della statistica test più estremi nelle code hanno P-value minori di $\alpha$, quindi, se il valore di $t$ dista da zero più di quanto non disti il valore critico, allora si può rifiutare l'ipotesi nulla, mentre se il valore calcolato di $t$ è più vicino a zero del valore critico, l'ipotesi nulla non si può rifiutare.
-    \\
-    Il valore critico di $t$ corrispondente ad $\alpha(2) = 0.05$ ed a 24 gradi di libertà (dato che $df = n-1$) è:
-    \begin{equation}
-        t_{0,05(2),24} = 2.06
-    \end{equation}
-    Tale valore definisce il 5\% delle probabilità nelle code della distribuzione $t$, con il 2.5\% in ciascuna di esse per un test a due code. Dunque, il 5\% dell'area sottesa dalla curva $t$ con 24 gradi di libertà si trova all'esterno degli estremi -2.06 e 2.06; mentre il valore di $t$ calcolato, 0.56, è interno a tale intervallo, perciò non ricade in una delle due code, e l'ipotesi nulla non può essere rifiutata.
-    \\
-    \\
-    L'intervallo di valori della temperatura corporea media più plausibile in base ai dati si può ottenere calcolando l'intervallo di confidenza al 95\%:
-    \begin{align}
-        \overline{Y}-t_{\alpha(2),df}ES_{\overline{Y}}\ < &\mu_0 <\ \overline{Y}+t_{\alpha(2),df}ES_{\overline{Y}}
-        \\
-        \Rightarrow \quad 98.524-2.06(0.1356)<&\mu_0<98.524+2.06(0.1356)
-        \\
-        \Rightarrow \quad 98.24<&\mu_0<98.80
-    \end{align}
-    Se si avesse a disposizione una dimensione campionaria maggiore, l'errore di campionamento diminuirebbe; quindi, con campioni più grandi, la probabilità di rifiutare un'ipotesi nulla quando essa è falsa è maggiore, e campioni più piccoli potrebbero portare ad errori di tipo II.
+    La probabilità
+    \colorbox{lyellow}{FAI CON IC95\% E T TEST}
 \end{example}
-\begin{example}[guida distratta]\label{esguida}
-    Dieci persone vengono osservate alla guida in due casi, con il cellulare e dopo aver bevuto due birre. La media teorica è 73.8 ($\mu_0$). Nella tabella \ref{tabguida} sono riportati l'identificativo di ogni soggetto (il soggetto uno per il cellulare e quello per la birra sono persone diverse, e così via) ed il numero di birilli fatto cadere in entrambi i casi:
+\begin{example}[guida distratta]\label{guidadistratta}
+    Dieci persone vengono osservate alla guida in due casi, con il cellulare e dopo aver bevuto due birre. Nella tabella \ref{tabguida} sono riportati l'identificativo di ogni soggetto (il soggetto uno per il cellulare e quello per la birra sono persone diverse, e così via) ed il numero di birilli fatto cadere in entrambi i casi:
     \begin{table}[H]
         \centering
         \renewcommand\arraystretch{1.2}
@@ -2406,248 +2385,11 @@ Si può poi calcolare il P-value per il test confrontando la $t$ osservata con l
     \end{table}\noindent
     Da fare:
     \begin{itemize}
-        \item confrontare le medie ottenute con quelle attese (usando i valori attesi di $t$);
         \item calcolare IC95\% per i due risultati dei test;
+        \item confrontare le medie ottenute con quelle attese (usando i valori attesi di $t$);
         \item se $n = 20$ invece di 10, cambierebbe qualcosa?
     \end{itemize}
-    Si calcolano i valori delle medie campionarie rispettive ai due casi (cellulare e birra):
-    \begin{equation}
-        \overline{Y}_{cell} = \frac{14+44+17+69+77+80+82+86+99+99}{10} = 66.7
-    \end{equation}
-    \begin{equation}
-        \overline{Y}_{birra} = \frac{28+36+38+42+57+60+80+81+83+91}{10} = 59.6
-    \end{equation}
-    Si calcolano le deviazioni standard campionarie, necessarie per ottenere gli errori standard, che servono per il calcolo della $t$:
-    \begin{equation}
-        s_{cell} = \sqrt{\frac{\sum\limits_1^n{(Y_i - \overline{Y})^2}}{n-1}} = 
-    \end{equation}
-    \begin{equation}
-        s_{birra} = \sqrt{\frac{\sum\limits_1^n{(Y_i - \overline{Y})^2}}{n-1}} = 
-    \end{equation}
-    Dunque:
-    \begin{equation}
-        ES_{\overline{Y}_{cell}} = \frac{s}{\sqrt{n}} = \frac{}{\sqrt{10}} = 
-    \end{equation}
-    \begin{equation}
-        ES_{\overline{Y}_{birra}} = \frac{s}{\sqrt{n}} = \frac{}{\sqrt{10}} = 
-    \end{equation}
-    Dunque:
-    \begin{equation}
-        t_{cell} = \frac{\overline{Y}-\mu_0}{ES_{\overline{Y}}} = 
-    \end{equation}
-    \begin{equation}
-        t_{birra} = \frac{\overline{Y}-\mu_0}{ES_{\overline{Y}}} = 
-    \end{equation}
-    I risultati dei calcoli prececdenti sono riportati nella tabella \ref{tabguida2}:
-    \begin{table}[H]
-        \centering
-        \renewcommand\arraystretch{1.2}
-        \begin{tabular}{c|c|c}
-        \hline
-        & \textbf{Cellulare} & \textbf{Birra}\\
-        \hline
-        \textbf{$\overline{Y}$} & 66.70 & 59.60\\
-        \hline
-        \textbf{$s$} & 31.17 & 22.96\\
-        \hline
-        \textbf{$ES$} & 9.86 & 7.26\\
-        \hline
-        \textbf{$t$} & -0.720 & -1.955\\
-        \hline
-        \end{tabular}
-        \caption{\small{}}
-        \label{tabguida2}
-    \end{table}\noindent
-    A questo punto, solitamente, si dovrebbe ricavare il valore critico di $t$ per $\alpha(2) = 0.05$ e confrontarlo con i valori di $t$ calcolati; tuttavia, dal momento che il valore minimo che $t$ può assumere con $\alpha = 0.05$ è 1.96, e dato che entrambi i valori di $t$ ottenuti sono inferiori a tale numero, si può direttamente affermare che le differenze tra le medie osservate e quella teorica non sono significative, e quindi non si rifiuta l'ipotesi nulla.
-    \\
-    Gli intervalli di confidenza per i due casi sono:
-    \begin{align}
-        \overline{Y}_{cell}-t_{\alpha(2),df}ES_{\overline{Y}_{cell}}\ < &\mu_0 <\ \overline{Y}_{cell}+t_{\alpha(2),df}ES_{\overline{Y}_{cell}}
-        \\
-        \Rightarrow \quad 66.7-0.720(9.86)<&\mu_0<66.7+0.720(9.86)
-        \\
-        \Rightarrow \quad 59.6<&\mu_0<73.8
-    \end{align}
-    \begin{align}
-        \overline{Y}_{birra}-t_{\alpha(2),df}ES_{\overline{Y}_{birra}}\ < &\mu_0 <\ \overline{Y}_{birra}+t_{\alpha(2),df}ES_{\overline{Y}_{birra}}
-        \\
-        \Rightarrow \quad 59.6-1.955(7.26)<&\mu_0<59.6+1.955(7.26)
-        \\
-        \Rightarrow \quad 45.41<&\mu_0<73.79
-    \end{align}
-    Nel caso in cui $n$ \colorbox{lyellow}{fosse 20}
-\end{example}
-
-\chapter{Confronto tra due medie}
-
-\section{}
-Si riprende l'esempio \ref{esguida}. Se entrambi i test (cellulare e birra) venissero svolti da una stessa persona (ovvero se ciascun ID facesse riferimento ad un unico individuo, che ha svolto il test di guida in entrambe le condizioni), ci si potrebbe chiedere, nonostante le medie osservate non differiscano significativamente dalla media teorica, ciscun individuo mostri una differenza significativa tra le performance rispettive alle due diverse condizioni.
-\\
-Alle due tabelle precedenti si aggiunge il campo "Delta" (tabella \ref{tabguida3}):
-\begin{table}[H]
-    \centering
-    \renewcommand\arraystretch{1.2}
-    \begin{tabular}{c|c|c||c}
-    \hline
-    \textbf{ID}& \textbf{Cellulare} & \textbf{Birra} & \textbf{Delta}\\
-    \hline
-    \textbf{1} & 14 & 28 & 14\\
-    \hline
-    \textbf{2} & 44 & 36 & -8\\
-    \hline
-    \textbf{3} & 17 & 38 & 21\\
-    \hline
-    \textbf{4} & 69 & 42 & -27\\
-    \hline
-    \textbf{5} & 77 & 57 & -20\\
-    \hline
-    \textbf{6} & 80 & 60 & -20\\
-    \hline
-    \textbf{7} & 82 & 80 & -2\\
-    \hline
-    \textbf{8} & 86 & 81 & -5\\
-    \hline
-    \textbf{9} & 99 & 83 & -16\\
-    \hline
-    \textbf{10} & 99 & 91 & -8\\
-    \hline
-    \hline
-    \textbf{$\overline{Y}$} & 66.70 & 59.60 & -7.10\\
-    \hline
-    \textbf{$s$} & 31.17 & 22.96 & 15.18\\
-    \hline
-    \textbf{$ES$} & 9.86 & 7.26 & 4.80\\
-    \hline
-    \textbf{$\mu_0$} & 73.8 & 73.8 & 0\\
-    \hline
-    \textbf{$t$} & -0.720 & -1.955 & -1.479\\
-    \hline
-    \end{tabular}
-    \caption{\small{}}
-    \label{tabguida3}
-\end{table}\noindent
-I valori delta corrispondono alla differenza tra i valori corrispondenti alle due condizioni.
-\\
-Se la performance con il cellulare e quella con la birra fossero uguali, la differenza tra i due valori dovrebbe essere pari a zero, quindi la media teorica è pari a zero.
-\\
-Per rispondere alla domanda si devono quindi confrontare la media osservata ($\overline{Y}_{delta}$), con la media attesa ($\mu_{delta}$), seguendo lo stesso procedimento dell'esempio di riferimento.
-\\
-Il valore di $t$ che si ottiene è nuovamente inferiore ad 1.96, quindi le performance sotto le due possibili condizioni non sono significativamente differenti; questo, almeno, se si considera il test come avente due code. Tuttavia, in questo caso, è ragionevole supporre che il test sia ad una coda, dato che è improbabile che stando al cellulare o bevendo birra la guida addirittura migliori; \colorbox{lyellow}{\parbox{0.98\textwidth}{per questo, l'$\alpha$ da considerare è 0.1 (ovvero 0.05 per ciascuna coda); il $t$ di riferimento sarà dunque più basso rispetto al caso che prevede due code, il che vuol dire che il test è in grado di rilevare anche differenze più piccole tra le due medie che si mettono a confronto, il che è dovuto al fatto che c'è un vincolo in meno imposto dal disegno sperimentale.
-\\
-lezione 20211201}}
-
-\section{Disegno sperimentale per dati appaiati o indipendenti}
-
-Quando si confrontano due gruppi si può organizzare il disegno sperimentale in due modi:
-\begin{itemize}
-    \item \textbf{per dati indipendenti}: si hanno due gruppi di dati indipendenti;
-    \item \textbf{per dati appaiati} (o dipendenti): si ha un gruppo di dati appaiati.
-\end{itemize}
-Un disegno sperimentale per dati appaiati è più robusto, poiché manca la distorsione introdotta dalle differenze tra gli individui; è comunque utile evitare bias da apprendimento, misurando le performance dopo diverse prove di allenamento.
-\\
-In alcuni casi, comunque, è necessario utilizzare un disegno sperimentale per dati indipendenti.
-\\
-Alla differenza tra i due tipi di disegno sperimentale si può pensare anche in senso spaziale:
-\begin{figure}[H]\label{fig12.1-1}
-    \centering
-    \includegraphics[width=0.6\textwidth]{fig12.1-1}
-    \caption{\small{}}
-\end{figure}
-In tal caso, pur essendo appaiati i dati, le unità campionarie che si mettono a confronto sono differenti; l'appaiamento, dunque, non impone che si misuri sulle stesse unità campionarie.
-\begin{example}[merlo alirosse]\label{esmerlo}
-    C'è un'associazione positiva tra livelli di testosterone e fitness riproduttiva, ma il testosterone riduce la risposta immunitaria.
-    \\
-    QUesto è vero anche nel merlo alirosse (ovvero, i merli alirosse maschi che hanno più fitness hanno anche una ridotta risposta immunitaria)?
-    \\
-    A 13 maschi si somministra testosterone e se ne controllano gli anticorpi prima e dopo la somministrazione.
-    \\
-    Le ipotesi sono:
-    \begin{itemize}
-        \item $H_0$: la produzione di anticorpi non cambia dopo la somministrazione di testosterone;
-        \item $H_A$: la produzione di anticorpi cambia dopo la somministrazione di testosterone.
-    \end{itemize}
-    Nell'esempio, i dati sono appaiati, e si effettuano misure sulle stesse unità campionarie (stesso individuo, prima e dopo la somministrazione).
-    \\
-    I risultati sono rappresentati nello scatterplot in figura \ref{fig12.2-1}:
-    \begin{figure}[H]\label{fig12.2-1}
-        \centering
-        \includegraphics[width=0.6\textwidth]{fig12.2-1}
-        \caption{\small{}}
-    \end{figure}
-    Si devono calcolare le differenze tra le coppie di dati, stimare media e varianza delle differenze e stimare l'IC 95\%.
-    \\
-    Gli intervalli di confidenza per le differenze medie tra dati appaiati si calcolano come:
-    \begin{equation}
-        \overline{d}-t_{\alpha(2),df}ES_{\overline{d}}<\mu_d<\overline{d}+t_{\alpha(2),df}ES_{\overline{d}}
-    \end{equation}
-    In cui:
-    \begin{equation}
-        ES_{\overline{d}} = \frac{s_{\overline{d}}}{\sqrt{n}}
-    \end{equation}
-    È l'errore standard della differenza della media.
-    \\
-    Ciò che bisogna stabilire è se tale intervallo include o meno lo zero; se lo include, l'ipotesi nulla non può essere rifiutata.
-    \\
-    Nell'ipotesi corrente, l'intervallo include lo zero, e dunque non è possibile rifiutare l'ipotesi nulla. I dati disponibili, quindi, non permettono di evidenziare una differenza tra i dati confrontati.
-    \\
-    In alternativa all'impiego dell'IC 95\%, si può effettuare un $t$ test:
-    \begin{equation}
-        t_{df} = \frac{\overline{d}-\mu_{d0}}{ES_{\overline{d}}}
-    \end{equation}
-    In questo caso, il test è a due code e, con un $t$ calcolato pari a -1.27, non si può rifiutare l'ipotesi nulla.
-\end{example}
-\begin{example}[amputazione dei pedipalpi]\label{esamputazione}
-    I dati sulla velocità di ragni prima e dopo l'amputazione dei pedipalpi sono riportati nella tabella \ref{tabamputazione}:
-    \begin{table}[H]
-        \centering
-        \renewcommand\arraystretch{1.2}
-        \begin{tabular}{c|c|c}
-        \hline
-        \textbf{ID} & \textbf{prima} & \textbf{dopo}\\ 
-        \hline
-        \textbf{1} & 1.25 & 2.40\\
-        \hline
-        \textbf{2} & 1.64 & 5.06\\
-        \hline
-        \textbf{3} & 1.91 & 3.40\\
-        \hline
-        \textbf{4} & 2.31 & 2.32\\
-        \hline
-        \textbf{5} & 2.37 & 5.45\\
-        \hline
-        \textbf{6} & 2.38 & 4.49\\
-        \hline
-        \textbf{7} & 2.84 & 4.94\\
-        \hline
-        \textbf{8} & 2.87 & 3.52\\
-        \hline
-        \textbf{9} & 2.93 & 3.31\\
-        \hline
-        \textbf{10} & 2.94 & 3.50\\
-        \hline
-        \textbf{11} & 2.98 & 3.70\\
-        \hline
-        \textbf{12} & 3.00 & 3.22\\
-        \hline
-        \textbf{13} & 3.09 & 3.17\\
-        \hline
-        \textbf{14} & 3.22 & 3.22\\
-        \hline
-        \textbf{15} & 3.41 & 5.26\\
-        \hline
-        \textbf{16} & 3.55 & 4.70\\
-        \hline
-        \end{tabular}
-        \caption{\small{}}
-        \label{tabamputazione}
-    \end{table}\noindent
-    Da fare:
-    \begin{itemize}
-        \item definire le ipotesi;
-        \item caloclare le differenze tra prima e dopo;
-        \item calcolare IC 95\% della differenza tra prima e dopo;
-        \item calcolare $t$ e livello di significatività.
-    \end{itemize}
+    
 \end{example}
 
 \part{Associazioni}
@@ -2655,30 +2397,6 @@ In tal caso, pur essendo appaiati i dati, le unità campionarie che si mettono a
 \chapter{}
 
 \section{}
-
-\chapter{Appendici}
-
-\section{Come riportare il P-value}
-
-\begin{table}[H]
-    \centering
-    \renewcommand\arraystretch{1.2}
-    \begin{tabular}{c|c|c|c|c}
-    \hline
-    \textbf{P<0.001} & \textbf{P<0.01} & \textbf{0.01<P<0.05} & \textbf{0.05<P<0.1} & \textbf{P>0.1}\\
-    \hline
-    \makecell{altamente\\significativo} & \makecell{molto\\significativo} & significativo & \makecell{non\\significativo (NS)} & \makecell{non\\significativo}\\
-    \hline
-    *** & ** & * & \makecell{riportare valore esatto\\se da interpretare come\\tendenza alla significatività}\\
-    \hline
-    \end{tabular}
-    \caption{\small{}}
-    \label{tabpvalue}
-\end{table}\noindent
-
-\section{Tavola statistica A: valori critici per \texorpdfstring{$\chi^2$}{Lg}}
-
-\section{Tavola statistica C: valori critici per \texorpdfstring{$t$}{Lg}}
 
 \end{document}
 
