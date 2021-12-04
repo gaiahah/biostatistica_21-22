@@ -2650,6 +2650,67 @@ In tal caso, pur essendo appaiati i dati, le unità campionarie che si mettono a
     \end{itemize}
 \end{example}
 
+\section{Test \texorpdfstring{t}{Lg} per due gruppi indipendenti con varianze omogenee}
+Si hanno due gruppi ma nessun modo di appaiare il valore relativo ad un caso di un gruppo con un valore di un caso dell'altro gruppo.
+\begin{example}[funzione delle spine cefaliche dei frinosomi]\label{esfrinosomi}
+    I frinosomi sono rettili con spine cutanee. Tali spine hanno una funzione che riguarda la dimensione intraspecifica o quella interspecifica?
+    \\
+    Le averle sono uccelli che predano anche i frinosomi, impalandoli su spine di piante.
+    \\
+    Nell'area di studio, dei ricercatori hanno raccolto tutte le teste di frinosomi che erano state impalate dalle averle, poi hanno catturato dei frinosomi in vita ed hanno misurato la lunghezza delle spine degli individui vivi e di quelli morti.
+    \\
+    Le ipotesi sono:
+    \begin{itemize}
+        \item $H_0$: le spine degli animali predati e di quelli vivi hanno eguali lunghezze;
+        \item $H_0$: le spine degli animali predati e di quelli vivi non hanno eguali lunghezze;
+    \end{itemize}
+    Sono stati campionati 30 animali predati e 154 vivi; i dati raccolti sono rappresentati nei grafici in figura \ref{fig12.3-1}:
+    \begin{figure}[H]\label{fig12.3-1}
+        \centering
+        \includegraphics[width=0.6\textwidth]{fig12.3-1}
+        \caption{\small{}}
+    \end{figure}
+    Dai grafici, i soggetti vivi sembrano avere spine cefaliche leggermete più lunghe rispetto ai predati.
+    \\
+    Lo sbilanciamento tra $n_{vivi}$ ed $n_{predati}$ potrebbe essere problematico.
+    \\
+    In questo caso, si hanno due gruppi di misurazione, con dati indipendenti.
+    \\
+    Si calcola la statistica $t$:
+    \begin{equation}
+        t = \frac{\overline{Y}_1-\overline{Y}_2}{ES_{\overline{Y}_1-\overline{Y}_2}}
+    \end{equation}
+    In cui:
+    \begin{equation}
+        ES_{\overline{Y}_1-\overline{Y}_2} = \sqrt{s_p^2(\frac{1}{n_1}+\frac{1}{n_2})}
+    \end{equation}
+    La grandezza $s_p^2$ è detta \textbf{varianza campionaria comune} (pooled, in inglese, da cui la p); si tratta della media pesata (o ponderata) delle varianze campionarie nei due gruppi, $s_1^2$ e $s_2^2$:
+    \begin{equation}
+        s_p^2 = \frac{df_1 s_1^2+df_2 s_2^2}{df_1+df_2}
+    \end{equation}
+    In cui:
+    \begin{equation}
+        df_1 = n_1-1
+    \end{equation}
+    E:
+    \begin{equation}
+        df_2 = n_2-1
+    \end{equation}
+    Nell'esempio, il $t$ calcolato è pari a 4.35; dato che il valore critico è $t_{0.05(2),182} = 1.97$, si rifiuta l'ipotesi nulla.
+    \\
+    Il test è a due code perché non si può escludere che gli animali con le spine più grandi vengano predati più degli altri.
+    \\
+    L'intervallo di confidenza relativo alla differenza tra le medie campionarie è:
+    \begin{align*}
+        \overline{Y}_1-\overline{Y}_2-t_{\alpha(2),df}ES_{\overline{Y}_1-\overline{Y}_2}<\ &\mu_1-\mu_2<\overline{Y}_1-\overline{Y}_2+t_{\alpha(2),df}ES_{\overline{Y}_1-\overline{Y}_2}
+        \\
+        \Rightarrow \quad 1.25<\ &\mu_1-\mu_2<3.33
+    \end{align*}
+    Dunque, anche in questo caso si possono usare gli IC, anche se il $t$ test è più potente e preciso.
+\end{example}
+
+\section{Test \texorpdfstring{t}{Lg} per due gruppi indipendenti con varianze non omogenee}
+
 \part{Associazioni}
 
 \chapter{}

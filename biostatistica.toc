@@ -89,10 +89,12 @@
 \contentsline {chapter}{\numberline {12}Confronto tra due medie}{89}{chapter.12}%
 \contentsline {section}{\numberline {12.1}}{89}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Disegno sperimentale per dati appaiati o indipendenti}{90}{section.12.2}%
-\contentsline {part}{III\hspace {1em}Associazioni}{93}{part.3}%
-\contentsline {chapter}{\numberline {13}}{95}{chapter.13}%
-\contentsline {section}{\numberline {13.1}}{95}{section.13.1}%
-\contentsline {chapter}{\numberline {14}Appendici}{97}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Come riportare il P-value}{97}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Tavola statistica A: valori critici per $\chi ^2$}{97}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Tavola statistica C: valori critici per $t$}{97}{section.14.3}%
+\contentsline {section}{\numberline {12.3}Test t per due gruppi indipendenti con varianze omogenee}{92}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Test t per due gruppi indipendenti con varianze non omogenee}{94}{section.12.4}%
+\contentsline {part}{III\hspace {1em}Associazioni}{95}{part.3}%
+\contentsline {chapter}{\numberline {13}}{97}{chapter.13}%
+\contentsline {section}{\numberline {13.1}}{97}{section.13.1}%
+\contentsline {chapter}{\numberline {14}Appendici}{99}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Come riportare il P-value}{99}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Tavola statistica A: valori critici per $\chi ^2$}{99}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Tavola statistica C: valori critici per $t$}{99}{section.14.3}%
