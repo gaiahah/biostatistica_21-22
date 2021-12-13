@@ -2479,9 +2479,7 @@ Si può poi calcolare il P-value per il test confrontando la $t$ osservata con l
 \end{example}
 
 \chapter{Confronto tra due medie}
-
-\section{}
-Si riprende l'esempio \ref{esguida}. Se entrambi i test (cellulare e birra) venissero svolti da una stessa persona (ovvero se ciascun ID facesse riferimento ad un unico individuo, che ha svolto il test di guida in entrambe le condizioni), ci si potrebbe chiedere, nonostante le medie osservate non differiscano significativamente dalla media teorica, ciscun individuo mostri una differenza significativa tra le performance rispettive alle due diverse condizioni.
+Si riprende l'esempio \ref{esguida}. Se entrambi i test (cellulare e birra) venissero svolti da una stessa persona (ovvero se ciascun ID facesse riferimento ad un unico individuo, che ha svolto il test di guida in entrambe le condizioni), ci si potrebbe chiedere se, nonostante le medie osservate non differiscano significativamente dalla media teorica, ciascun individuo mostri una differenza significativa tra le performance rispettive alle due diverse condizioni.
 \\
 Alle due tabelle precedenti si aggiunge il campo "Delta" (tabella \ref{tabguida3}):
 \begin{table}[H]
@@ -2540,24 +2538,22 @@ lezione 20211201}}
 
 Quando si confrontano due gruppi si può organizzare il disegno sperimentale in due modi:
 \begin{itemize}
-    \item \textbf{per dati indipendenti}: si hanno due gruppi di dati indipendenti;
-    \item \textbf{per dati appaiati} (o dipendenti): si ha un gruppo di dati appaiati.
+    \item \textbf{per dati indipendenti}: ogni gruppo di trattamento è costituito da un campione casuale indipendente di unità (si hanno due gruppi di dati indipendenti);
+    \item \textbf{per dati appaiati} (o dipendenti): si applicano entrambi i trattamenti a ciascuna unità campionaria (si ha un gruppo di dati appaiati, si ha uno stesso numero nei due gruppi ed esiste una univocità tra ciascun valore del primo gruppo ed i corrispondenti del secondo).
 \end{itemize}
-Un disegno sperimentale per dati appaiati è più robusto, poiché manca la distorsione introdotta dalle differenze tra gli individui; è comunque utile evitare bias da apprendimento, misurando le performance dopo diverse prove di allenamento.
+Un disegno sperimentale per dati appaiati è più robusto, poiché permette di controllare gli effetti della variabilità tra le unità campionarie che non hanno a che fare con il trattamento d'interesse.
 \\
-In alcuni casi, comunque, è necessario utilizzare un disegno sperimentale per dati indipendenti.
+In alcuni casi, comunque, è impossibile disporre di dati appaiati.
 \\
-Alla differenza tra i due tipi di disegno sperimentale si può pensare anche in senso spaziale:
-\begin{figure}[H]\label{fig12.1-1}
-    \centering
-    \includegraphics[width=0.6\textwidth]{fig12.1-1}
-    \caption{\small{}}
-\end{figure}
+In caso di disegno sperimentale per dati appaiati, da applicare su un campione in cui ogni unità campionaria è un individuo, e ciò che si misura è la performance di ciscuno in una task prima e dopo un trattamento, è necessario evitare bias da apprendimento, misurando le performance dopo diverse prove di allenamento.
+
+\section{Confronto appaiato di medie}
+
 In tal caso, pur essendo appaiati i dati, le unità campionarie che si mettono a confronto sono differenti; l'appaiamento, dunque, non impone che si misuri sulle stesse unità campionarie.
 \begin{example}[merlo alirosse]\label{esmerlo}
     C'è un'associazione positiva tra livelli di testosterone e fitness riproduttiva, ma il testosterone riduce la risposta immunitaria.
     \\
-    QUesto è vero anche nel merlo alirosse (ovvero, i merli alirosse maschi che hanno più fitness hanno anche una ridotta risposta immunitaria)?
+    Questo è vero anche nel merlo alirosse (ovvero, i merli alirosse maschi che hanno più fitness hanno anche una ridotta risposta immunitaria)?
     \\
     A 13 maschi si somministra testosterone e se ne controllano gli anticorpi prima e dopo la somministrazione.
     \\
@@ -2643,14 +2639,87 @@ In tal caso, pur essendo appaiati i dati, le unità campionarie che si mettono a
     \end{table}\noindent
     Da fare:
     \begin{itemize}
-        \item definire le ipotesi;
-        \item caloclare le differenze tra prima e dopo;
         \item calcolare IC 95\% della differenza tra prima e dopo;
         \item calcolare $t$ e livello di significatività.
     \end{itemize}
+    Le ipotesi sono:
+    \begin{itemize}
+        \item $H_0$: l'amputazione dei pedipalpi non influisce sulla velocità dei ragni;
+        \item $H_A$: l'amputazione dei pedipalpi influisce sulla velocità dei ragni.
+    \end{itemize}
+    Per poter ottenere i valori di $t$, si calcolano la media campionaria, la deviazione standard campionaria e l'errore standard campionario relativi ai due casi, prima e dopo, e alla differenza tra essi, delta, che si ottiene sottraendo i valori relativi alla colonna "prima" a quelli della colonna "dopo"; i risultati ottenuti sono riportati nella tabella \ref{tabamputazione2}:
+    \begin{table}[H]
+        \centering
+        \renewcommand\arraystretch{1.2}
+        \begin{tabular}{c|c|c||c}
+        \hline
+        \textbf{ID} & \textbf{prima} & \textbf{dopo} & \textbf{delta}\\ 
+        \hline
+        \textbf{1} & 1.25 & 2.40 & 1.15\\
+        \hline
+        \textbf{2} & 1.64 & 5.06 & 3.42\\
+        \hline
+        \textbf{3} & 1.91 & 3.40 & 1.49\\
+        \hline
+        \textbf{4} & 2.31 & 2.32 & 0.01\\
+        \hline
+        \textbf{5} & 2.37 & 5.45 & 3.08\\
+        \hline
+        \textbf{6} & 2.38 & 4.49 & 2.11\\
+        \hline
+        \textbf{7} & 2.84 & 4.94 & 2.1\\
+        \hline
+        \textbf{8} & 2.87 & 3.52 & 0.65\\
+        \hline
+        \textbf{9} & 2.93 & 3.31 & 0.38\\
+        \hline
+        \textbf{10} & 2.94 & 3.50 & 0.56\\
+        \hline
+        \textbf{11} & 2.98 & 3.70 & 0.72\\
+        \hline
+        \textbf{12} & 3.00 & 3.22 & 0.22\\
+        \hline
+        \textbf{13} & 3.09 & 3.17 & 0.08\\
+        \hline
+        \textbf{14} & 3.22 & 3.22 & 0\\
+        \hline
+        \textbf{15} & 3.41 & 5.26 & 1.85\\
+        \hline
+        \textbf{16} & 3.55 & 4.70 & 1.15\\
+        \hline
+        \hline
+        \textbf{$\overline{Y}$} & 2.67 & 3.85 & 1.19\\
+        \hline
+        \textbf{$s$} & 0.64 & 0.99 & 1.07\\
+        \hline
+        \textbf{$ES$} & 0.160 & 0.248 & 0.268\\
+        \hline
+        \textbf{$\mu_0$} & ? & ? & 0\\
+        \hline
+        \textbf{$t$} & ? & ? & 4.44\\
+        \hline
+        \end{tabular}
+        \caption{\small{}}
+        \label{tabamputazione2}
+    \end{table}\noindent
+    Per determinare il livello di significatività si ricorre alla tavola statistica C (\ref{tavC}); a partire da essa, si ricava il valore critico di $t$ per $\alpha = 0.05$:
+    \begin{equation}
+        t_{0.05(2),15} = 2.13
+    \end{equation}
+    Siccome il $t$ calcolato non ricade nell'intervallo tra -2.13 e 2.13, $P>0.05$, e si può rifiutare l'ipotesi nulla.
+    \\
+    Per quanto riguarda l'intervallo di confidenza, questo si definisce utilizzando il valore $t_{0.05(2),15}$:
+    \begin{align*}
+        \overline{d}-t_{\alpha(2),df}ES_{\overline{d}}<\ &\mu_d<\overline{d}+t_{\alpha(2),df}ES_{\overline{d}}
+        \\
+        \Rightarrow \quad 0.62<\ &\mu_d<1.76
+    \end{align*}
+    Dato che tale intervallo non include il valore calcolato di $t$, si può affermare che la differenza tra le medie delle velocità misurate prima e dopo l'amputazione risulta significativa, e dunque si può rifiutare l'ipotesi nulla.
+    Tutte le formule utilizzate nell'esercizio sono le stesse impiegate nell'esercizio \ref{esmerlo}.
 \end{example}
 
-\section{Test \texorpdfstring{t}{Lg} per due gruppi indipendenti con varianze omogenee}
+\section{Confronto tra medie di dati indipendenti}
+\subsection{Per due gruppi indipendenti con varianze omogenee}
 Si hanno due gruppi ma nessun modo di appaiare il valore relativo ad un caso di un gruppo con un valore di un caso dell'altro gruppo.
 \begin{example}[funzione delle spine cefaliche dei frinosomi]\label{esfrinosomi}
     I frinosomi sono rettili con spine cutanee. Tali spine hanno una funzione che riguarda la dimensione intraspecifica o quella interspecifica?
@@ -2709,7 +2778,197 @@ Si hanno due gruppi ma nessun modo di appaiare il valore relativo ad un caso di 
     Dunque, anche in questo caso si possono usare gli IC, anche se il $t$ test è più potente e preciso.
 \end{example}
 
-\section{Test \texorpdfstring{t}{Lg} per due gruppi indipendenti con varianze non omogenee}
+\subsection{Per due gruppi indipendenti con varianze non omogenee}
+
+Un'assunzione importante del test $t$ per due campioni è che le deviazioni standard delle due popolazioni siano uguali. Se questa assunzione non è soddisfatta, allora si dovrebbe usare il \textbf{test $t$ approssimato di Welch}. Il test di Welch è simile al test t per due campioni, ad eccezione del fatto che l'errore standard e i gradi di libertà vengono calcolati in modo diverso.
+\\
+Il test di Welch può essere usato anche quando le varianze nei due gruppi sono diverse.
+\\
+La distribuzione della $t$ di Welch sotto l'ipotesi nulla corrisponde con la distribuzione $t$, ma il numero di gradi di libertà è minore, rispetto a quello del test $t$ per due campioni:
+\begin{equation}
+    df = \frac{(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1-1}+\frac{(\frac{s_2^2}{n_2})^2}{n_2-1}}
+\end{equation}
+La $t$ approssimata di Welch è pari a:
+\begin{equation}
+    t = \frac{(\overline{Y_1}-\overline{Y_2})-(\mu_1-\mu_2)_0}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}
+\end{equation}
+\begin{example}[specie alloctone]\label{essalmoni}
+In uno studio è stata analizzata la sopravvivenza di una specie autoctona, il salmone reale, in una serie di corsi d'acqua, in alcuni dei quali era stato introdotto il salmerino di Fonte, una specie alloctona, con l'obiettivo di determinare se la presenza di quest'ultimo potesse influenzare la sopravvivenza del salmone.
+\\
+I dati sono riassunti nella tabella \ref{tabsalmoni}:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c|c}
+    \hline
+    \textbf{Salmerino} & \textbf{\makecell{Numero di salmoni\\liberati}} & \textbf{\makecell{Numero di salmoni\\sopravvissuti}} & \textbf{\makecell{Proporzione di salmoni\\sopravvissuti}}\\ 
+    \hline
+    presente & 820 & 166 & 0.202\\
+    \hline
+    presente & 960 & 136 & 0.142\\
+    \hline
+    presente & 700 & 153 & 0.219\\
+    \hline
+    presente & 545 & 103 & 0.189\\
+    \hline
+    presente & 769 & 173 & 0.225\\
+    \hline
+    presente & 1001 & 188 & 0.188\\
+    \hline
+    assente & 467 & 180 & 0.385\\
+    \hline
+    assente & 959 & 178 & 0.186\\
+    \hline
+    assente & 1029 & 326 & 0.317\\
+    \hline
+    assente & 27 & 7 & 0.259\\
+    \hline
+    assente & 998 & 120 & 0.120\\
+    \hline
+    assente & 936 & 135 & 0.120\\
+    \hline
+    \textbf{Totale} & 9211 & 1865 & \\
+    \hline
+    \end{tabular}
+    \caption{\small{}}
+    \label{tabsalmoni}
+\end{table}\noindent
+Il conteggio dei pesci per trattamento è riportato nella tabella 2x2 \ref{tabsalmoni2}:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c}
+    \hline
+    & \textbf{\makecell{Salmierino assente}} & \textbf{\makecell{Salmierino presente}}\\ 
+    \hline
+    \textbf{Sopravvissuti} & 0.194 & 0.0297\\
+    \hline
+    \textbf{Non sopravvissuti} & 0.235 & 0.1036\\
+    \hline
+    \end{tabular}
+    \caption{\small{}}
+    \label{tabsalmoni2}
+\end{table}\noindent
+Per raggiungere l'obiettivo si potrebbe pensare di utilizzare un test $\chi^2$ di contingenza per valutare l'associazione fra trattamento e sopravvivenza; tuttavia, i salmoni analizzati non sono un campione casuale; infatti, questi sono divisi in gruppi corrispondenti ai corsi d'acqua in cui sono stati liberati. se esiste qualche differenza intrinseca tra i corsi d'acqua per quanto riguarda la sopravvivenza dei salmoni, anche senza considerare gli eventuali effetti della presenza del salmerino, allora due salmoni immessi nello stesso corso d'acqua avranno una probabilità di sopravvivenza simile rispetto a due salmoni presi a caso. considerare tutti i salmoni e condurre l'analisi con una tabella di contingenza porterebbe a commettere un errore di pseudoreplicazione.
+\\
+Ciò si evita considerando che le unità campionarie indipendenti non sono i salmoni, ma i fiumi; le unità campionarie sono quindi i 12 corsi d'acqua, sei per ogni trattamento. Quindi, i destini di tutti i salmoni in un corso d'acqua vengono riassunti in un'unica misura, la frazione di salmoni sopravvissuti.
+\\
+Non si confrontano più frequenze assolute in categorie, ma differenze tra le medie di una variabile numerica. Bisogna dunque utilizzare un test per due campioni sulla differenza tra le medie.
+\\
+I corsi d'acqua in cui sono presenti i salmerini vengono chiama ti gruppo 1, mentre quelli in cui sono assenti vengono chiamati gruppo 2.
+\\
+Le ipotesi sono:
+\begin{itemize}
+\item $H_0$: la proporzione media di salmoni sopravvissuti è la stessa nei corsi d'acqua con e senza salmerini ($\mu_1 = \mu_2$);
+\item $H_A$: la proporzione media di salmoni sopravvissuti è diversa nei corsi d'acqua con e senza salmerini ($\mu_1 \neq \mu_2$)
+\end{itemize}
+le medie campionarie e le deviazioni standard sono riportate nella tabella \ref{tabsalmoni3}:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c|c}
+    \hline
+    \textbf{Gruppo} & \textbf{\makecell{Media campionaria}} & \textbf{\makecell{Deviazione standard\\campionaria ($s_i$)}} & \textbf{\makecell{Dimensione\\campionaria ($n_i$)}}\\ 
+    \hline
+    salmierini presenti & 0.194 & 0.0297 & 6\\
+    \hline
+    salmierini assenti & 0.235 & 0.1036 & 6\\
+    \hline
+    \end{tabular}
+    \caption{\small{}}
+    \label{tabsalmoni3}
+\end{table}\noindent
+Gli intervalli di confidenza al 95\% sono presentati accanto ai dati nella figura \ref{fig12.4-1}:
+\begin{figure}[H]\label{fig12.4-1}
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig12.4-1}
+    \caption{\small{}}
+\end{figure}
+Tale figura, assieme alle statistiche descrittive riportate nella tabella precedente, mostrano che i corsi d'acqua senza salmerini hanno una deviazione standard circa 3 volte maggiore di quella dei corsi d'acqua con salmerini. Questo è un caso in cui è appropriato utilizzare il test $t$ approssimato di Welch, attraverso il quale, con l'ausilio di un computer, si può calcolare un $P-value$ pari a 0.40. Quindi, dato che $P>0.05$, non si può rifiutare l'ipotesi nulla, il che significa che i dati non dimostrano che i salmerini riducono la sopravvivenza dei salmoni.
+\\
+L'analisi appropriata, in cui i dati sui salmoni nei corsi d'acqua sono ridotti a un unica misura per ogni corso d'acqua, potrebbe sembrare uno spreco di dati raccolti; tuttavia, riunendo in un'unica misura riassuntiva, come una proporzione, parecchi dati correlati, si ottiene comunque una stima più affidabile del valore vero di tale misura in una data unità campionaria, in questo caso un corso d'acqua.
+\end{example}
+
+\section{Errore del confronto diretto}
+
+Un errore che si può commettere quando si confrontano due gruppi e di confrontare la media di ciascun gruppo separatamente con uno stesso valore specificato dalle ipotesi nulla, invece di confrontare direttamente le due medie tra loro punto l'errore potrebbe portare ad una conclusione del tipo "dato che il gruppo uno è significativamente diverso da zero, ma il gruppo 2 non lo è, allora i due gruppi devono essere diversi tra loro". Tale errore è detto \textbf{errore del confronto indiretto}.
+
+\section{Confrontare le varianze}
+
+Spesso è necessario verificare se due popolazioni differiscono nel grado di dispersione delle misure. Due tecniche utili a tale scopo sono il test $F$ ed il test di Levene.
+
+\subsection{Test \texorpdfstring{F}{Lg} per l'uguaglianza delle varianze}
+
+Il \textbf{test $F$} valuta se le varianze di due popolazioni siano uguali; verifica cioè l'ipotesi nulla che $\sigma_1^2 = \sigma_2^2$, contro l'ipotesi che le due varianze siano differenti.
+\\
+La statistica test $F$ si calcola come rapporto tra le due varianze campionarie:
+\begin{equation}
+    F = \frac{\sigma_1^2}{\sigma_2^2}
+\end{equation}
+Se l'ipotesi nulla fosse vera, allora $F$ dovrebbe essere vicino ad 1, discostandosi da 1 soltanto per effetto del caso. Se è vera l'ipotesi nulla, la statistica $F$ ha una distribuzione $F$ con la coppia di gradi di libertà $n_1-1$ ed $n_2-1$. La distribuzione $F$ ha quindi due parametri che specificano i gradi di libertà; il primo numero si riferisce a quelli del numeratore ed il secondo a quelli del denominatore.
+\\
+Il test $F$ per il confronto tra due varianze assume che la variabile abbia una distribuzione normale in entrambe le popolazioni. Il test è molto sensibile a tale assunzione e dunque non è robusto quando si verifica uno scostamento dei dati dalla condizione di normalità; infatti capita spesso che il test rifiuti erroneamente l'ipotesi nulla di uguaglianza delle varianze quando la distribuzione della variabile in una delle due popolazioni non è normale.
+
+\subsection{Test di Levene per l'omogeneità delle varianze}
+
+Il \textbf{test di Levene} assume che la distribuzione di frequenza delle misure sia circa simmetrica in tutti i gruppi, e funziona molto meglio del test $F$ quando l'assunzione di normalità è violata. Il test di Levene ho anche il vantaggio di poter essere applicato a più di due gruppi, infatti, è in grado di verificare l'ipotesi nulla secondo cui più gruppi hanno tutti la stessa varianza.
+\\
+Nel test di Levenesi calcola prima il valore assoluto della differenza tra ogni misura è la media campionaria del gruppo. Tali grandezze sono chiamate scarti assoluti. il metodo testa Poi la differenza tra gruppi rispetto alle medie di questi scarti assoluti. La statistica test, $W$, ha anch'essa una distribuzione $F$ sotto l'ipotesi nulla di uguaglianza delle varianze, con la coppia di gradi di libertà $k-1$ per il numeratore e $N-k$ per il denominatore, in cui $k$ è il numero di gruppi (2, nei test a due campioni), ed N è la dimensione campionaria totale ($n_1+n_2$ nel caso di due gruppi).
+\\
+L'ipotesi nulla viene rifiutata se:
+\begin{equation}
+    W > F_{\alpha(1),k-1,N-k}
+\end{equation}
+In cui $F_{\alpha(1),k-1,N-k}$ rappresenta il valore critico della distribuzione $F$.
+La statistica test $W$ è pari a:
+\begin{equation}
+    W = \dfrac{(N-k)\sum_{i=1}^k{n_i(\overline{Z_i}-\overline{Z})^2}}{(k-1)\sum_{i=1}^k\sum_{j=1}^{n_1}{(Z_{ij}-\overline{Z_i})^2}}
+\end{equation}
+In cui:
+\begin{itemize}
+    \item $Z_{ij} = \abs{Y_{ij}-\overline{Y_i}}$ è il valore assoluto dello scarto tra la singola osservazione $Y_{ij}$ (la j-esima unità dell'i-esimo gruppo) e la media campionaria per il suo gruppo $\overline{Y}_i$ (media campionaria per il gruppo i);
+    \item $\overline{Z_i}$ è la media di tutti gli $Z_ij$ per l'i-esimo gruppo;
+    \item $\overline{Z}$ è la media generale per tutti gli $Z_ij$, calcolata come media di tutti gli $Z_ij$ raggruppati indipendentemente;
+    \item $n_i$ è il numero di osservazioni nell'i-esimo gruppo;
+    \item $k$ è il numero di gruppi (2 nel caso dei test a 2 campioni).
+\end{itemize} 
+
+\chapter{Violazioni delle assunzioni delle analisi statistiche}
+
+\section{Identificare le violazioni della normalità}
+
+\subsection{Test di Shapiro-Wilk}
+
+\subsection{Test di Kolmogorov-Smirnoff}
+
+\section{Tipi di violazione e come affrontarli}
+
+\section{Trasformazione dei dati}
+
+\subsection{Logaritmica}
+
+\subsection{Reciproca}
+
+\subsection{Potenza}
+
+\subsection{Antilogaritmica}
+
+\subsection{Arcoseno}
+
+\subsection{Radice quadrata}
+
+\subsection{Tukey's ladder of transformations}
+
+\section{Alternative non parametriche}
+
+\section{Test dei segni}
+
+\section{Test dei segni per rnghi di Wilcoxon}
+
+\section{Confronto tra due gruppi: test \texorpdfstring{$U$}{Lg} di Mann-Whitney}
+\begin{example}[cannibalismo sessuale nei grilli]\label{esgrilli}
+    
+\end{example}
 
 \part{Associazioni}
 
@@ -2737,10 +2996,48 @@ Si hanno due gruppi ma nessun modo di appaiare il valore relativo ad un caso di 
     \label{tabpvalue}
 \end{table}\noindent
 
+\section{Assunzioni del \texorpdfstring{$t$}{Lg} test}\footnote{la spiegazione della tabella si trova nella lezione 20211206, min 00:20:00}
+Una sintesi delle assunzioni del $t$ test in base al tipo di campione che si ha a disposizione:
+\begin{table}[H]
+    \centering
+    \renewcommand\arraystretch{1.2}
+    \begin{tabular}{c|c|c|c}
+    \hline
+    & \textbf{1 campione} & \textbf{\makecell{2 campioni\\dati appaiati}} & \textbf{\makecell{2 campioni\\dati indipendenti}}\\
+    \hline
+    \makecell[l]{\textbf{Indipendenza dei dati}} & X & X & X\\
+    \hline
+    \makecell[l]{\textbf{Campione rapresentativo}} & X & X & X\\
+    \hline
+    \makecell[l]{\textbf{Distribuzione normale}} & X & X & X\\
+    \hline
+    \makecell{Variabili originali} & x & - & x\\
+    \hline
+    \makecell{Differenze} & - & x & -\\
+    \hline
+    \makecell[l]{\textbf{Omogeneità varianze}} & -- & -- & \\
+    \hline
+    \end{tabular}
+    \caption{\small{}}
+    \label{tabpvalue}
+\end{table}\noindent
+
+\section{Interpretazione degli intervalli di confidenza}
+
+Se gli intervalli di confidenza al 95\% di due stime non sono sovrapposti (come nel caso a in figura \ref{fig12.6-1}), allora l'ipotesi nulla di medie uguali e da rifiutare con $\alpha = 0.05$; dunque, se si svolgesse il test $t$ per confrontare i due campioni, l'ipotesi nulla verrebbe rifiutata con $P < 0.05$.
+\\
+Se, invece, il valore di almeno una delle due medie campionarie è compreso nell'intervallo di confidenza al 95\% dell'altra media (come nel caso b in figura \ref{fig12.6-1}), allora l'ipotesi nulla di medie uguali non è da rifiutare con $\alpha = 0.05$.
+\\
+In una situazione intermedia, quando cioè gli intervalli di confidenza si sovrappongono parzialmente ma nessuno dei due comprende la media campionaria dell'altro gruppo (come nel caso c in figura \ref{fig12.6-1}), non si può essere certi di quale sarebbe il risultato della verifica di ipotesi in base a un semplice esame degli intervalli di confidenza.
+\begin{figure}[H]\label{fig12.6-1}
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig12.6-1}
+    \caption{\small{}}
+\end{figure}
+
+
 \section{Tavola statistica A: valori critici per \texorpdfstring{$\chi^2$}{Lg}}
 
 \section{Tavola statistica C: valori critici per \texorpdfstring{$t$}{Lg}}
 
 \end{document}
-
-

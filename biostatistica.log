@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.12)  4 DEC 2021 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.12)  8 DEC 2021 18:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1229,7 +1229,11 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 LaTeX Font Info:    Trying to load font information for T1+jkp on input line 73.
  (/usr/share/texmf-dist/tex/latex/kpfonts/t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
-) (/home/gaiahah/latex/biostatistica/biostatistica.aux)
+) (/home/gaiahah/latex/biostatistica/biostatistica.aux
+
+LaTeX Warning: Label `tabpvalue' multiply defined.
+
+)
 \openout1 = `biostatistica.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 73.
@@ -1365,7 +1369,37 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 
-] (/home/gaiahah/latex/biostatistica/biostatistica.toc [3] [4])
+] (/home/gaiahah/latex/biostatistica/biostatistica.toc [3] [4]
+Overfull \hbox (0.84996pt too wide) detected at line 118
+ []\T1/jkp/m/n/10 103|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 120
+ []\T1/jkp/m/n/10 105|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 121
+ []\T1/jkp/m/n/10 105|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 122
+ []\T1/jkp/m/n/10 105|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 123
+ []\T1/jkp/m/n/10 106|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 124
+ []\T1/jkp/m/n/10 106|
+ []
+
+)
 \tf@toc=\write6
 \openout6 = `biostatistica.toc'.
 
@@ -2035,56 +2069,76 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [86] [87] [88]
 Capitolo 12.
 
-Underfull \vbox (badness 1902) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [89
 
 
 ]
-<./figs//fig12.1-1.png, id=374, 651.18282pt x 245.41687pt>
-<./figs//fig12.2-1.png, id=375, 228.10219pt x 224.33812pt>
+<./figs//fig12.2-1.png, id=374, 228.10219pt x 224.33812pt>
 
-Underfull \vbox (badness 4582) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [90]
+
+LaTeX Warning: Reference `tavC' on page 91 undefined on input line 2705.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91]
-<./figs//fig12.3-1.png, id=383, 249.18094pt x 338.76563pt>
+ [91] [92]
+<./figs//fig12.3-1.png, id=385, 249.18094pt x 338.76563pt>
+
+Underfull \vbox (badness 1783) has occurred while \output is active []
+
+ [93] [94]
+<./figs//fig12.4-1.png, id=392, 303.38344pt x 217.5628pt>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [92] [93] [94] [95
+ [95] [96]
+Underfull \vbox (badness 1308) has occurred while \output is active []
 
-
-] [96]
+ [97] [98]
 Capitolo 13.
-[97
+[99
 
 
-] [98
+] [100
+
+
+] [101] [102]
+Capitolo 14.
+[103
+
+
+] [104
 
 
 ]
-Capitolo 14.
-[99] (/home/gaiahah/latex/biostatistica/biostatistica.aux)
+Capitolo 15.
+<./figs//fig12.6-1.png, id=426, 795.72281pt x 249.93375pt>
+[105] [106] (/home/gaiahah/latex/biostatistica/biostatistica.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 30655 strings out of 478994
- 576211 string characters out of 5864750
- 954949 words of memory out of 5000000
- 47531 multiletter control sequences out of 15000+600000
+ 30675 strings out of 478994
+ 576538 string characters out of 5864750
+ 955264 words of memory out of 5000000
+ 47551 multiletter control sequences out of 15000+600000
  546015 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 111i,18n,116p,1207b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,19n,116p,1207b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert-tt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmne.pfb>
-Output written on /home/gaiahah/latex/biostatistica/biostatistica.pdf (99 pages, 320155 bytes).
+Output written on /home/gaiahah/latex/biostatistica/biostatistica.pdf (106 pages, 340697 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
+ 481 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 

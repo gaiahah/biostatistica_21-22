@@ -87,14 +87,38 @@
 \contentsline {section}{\numberline {11.3}Intervalli di confidenza e $t$}{84}{section.11.3}%
 \contentsline {subsection}{\numberline {11.3.1}$t$ test per un campione}{84}{subsection.11.3.1}%
 \contentsline {chapter}{\numberline {12}Confronto tra due medie}{89}{chapter.12}%
-\contentsline {section}{\numberline {12.1}}{89}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Disegno sperimentale per dati appaiati o indipendenti}{90}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Test t per due gruppi indipendenti con varianze omogenee}{92}{section.12.3}%
-\contentsline {section}{\numberline {12.4}Test t per due gruppi indipendenti con varianze non omogenee}{94}{section.12.4}%
-\contentsline {part}{III\hspace {1em}Associazioni}{95}{part.3}%
-\contentsline {chapter}{\numberline {13}}{97}{chapter.13}%
-\contentsline {section}{\numberline {13.1}}{97}{section.13.1}%
-\contentsline {chapter}{\numberline {14}Appendici}{99}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Come riportare il P-value}{99}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Tavola statistica A: valori critici per $\chi ^2$}{99}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Tavola statistica C: valori critici per $t$}{99}{section.14.3}%
+\contentsline {section}{\numberline {12.1}Disegno sperimentale per dati appaiati o indipendenti}{90}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Confronto appaiato di medie}{90}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Confronto tra medie di dati indipendenti}{93}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Per due gruppi indipendenti con varianze omogenee}{93}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Per due gruppi indipendenti con varianze non omogenee}{95}{subsection.12.3.2}%
+\contentsline {section}{\numberline {12.4}Errore del confronto diretto}{97}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Confrontare le varianze}{97}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Test F per l'uguaglianza delle varianze}{98}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Test di Levene per l'omogeneità delle varianze}{98}{subsection.12.5.2}%
+\contentsline {chapter}{\numberline {13}Violazioni delle assunzioni delle analisi statistiche}{99}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Identificare le violazioni della normalità}{99}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Test di Shapiro-Wilk}{99}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Test di Kolmogorov-Smirnoff}{99}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}Tipi di violazione e come affrontarli}{99}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Trasformazione dei dati}{99}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Logaritmica}{99}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Reciproca}{99}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Potenza}{99}{subsection.13.3.3}%
+\contentsline {subsection}{\numberline {13.3.4}Antilogaritmica}{99}{subsection.13.3.4}%
+\contentsline {subsection}{\numberline {13.3.5}Arcoseno}{99}{subsection.13.3.5}%
+\contentsline {subsection}{\numberline {13.3.6}Radice quadrata}{99}{subsection.13.3.6}%
+\contentsline {subsection}{\numberline {13.3.7}Tukey's ladder of transformations}{99}{subsection.13.3.7}%
+\contentsline {section}{\numberline {13.4}Alternative non parametriche}{99}{section.13.4}%
+\contentsline {section}{\numberline {13.5}Test dei segni}{99}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Test dei segni per rnghi di Wilcoxon}{99}{section.13.6}%
+\contentsline {section}{\numberline {13.7}Confronto tra due gruppi: test $U$ di Mann-Whitney}{99}{section.13.7}%
+\contentsline {part}{III\hspace {1em}Associazioni}{101}{part.3}%
+\contentsline {chapter}{\numberline {14}}{103}{chapter.14}%
+\contentsline {section}{\numberline {14.1}}{103}{section.14.1}%
+\contentsline {chapter}{\numberline {15}Appendici}{105}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Come riportare il P-value}{105}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Assunzioni del $t$ test}{105}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Interpretazione degli intervalli di confidenza}{105}{section.15.3}%
+\contentsline {section}{\numberline {15.4}Tavola statistica A: valori critici per $\chi ^2$}{106}{section.15.4}%
+\contentsline {section}{\numberline {15.5}Tavola statistica C: valori critici per $t$}{106}{section.15.5}%
