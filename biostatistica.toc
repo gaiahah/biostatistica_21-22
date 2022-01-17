@@ -1,5 +1,5 @@
-\babel@toc {italian}{}
-\babel@toc {italian}{}
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
 \contentsline {part}{I\hspace {1em}Principi, descrizione ed inferenza}{7}{part.1}%
 \contentsline {chapter}{\numberline {1}Introduzione alla statistica (B1)}{9}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Statistica}{9}{section.1.1}%
@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {3.3}Distribuzione di frequenza cumulativa}{20}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Associazioni tra variabili categoriche}{21}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Confrontare variabili numeriche tra gruppi}{22}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Visualizzare la relazione tra una coppia di variabili numeriche}{22}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Visualizzare la relazione tra una coppia di variabili numeriche}{24}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Statistiche descrittive (B2)}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Misure di tendenza centrale}{27}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Misure di dispersione}{28}{section.4.2}%
@@ -28,97 +28,154 @@
 \contentsline {section}{\numberline {4.6}Mode lasche}{30}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Distribuzione campionaria}{30}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Errore standard }{30}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Distribuzione normale (B2)}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Teorema del limite centrale}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Intervallo di confidenza}{34}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Probabilità (B3)}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Istogrammi di frequenza}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Eventi indipendenti}{37}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Eventi incompatibili}{37}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Somma delle probabilità}{38}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Diagrammi di Venn}{38}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Prodotto di probabilità}{39}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Alberi di probabilità}{41}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Probabilità condizionata e teorema della probabilità totale}{41}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Teorema della probabilità composta}{41}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Teorema di Bayes}{42}{section.6.10}%
-\contentsline {chapter}{\numberline {7}Test delle ipotesi}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Ragionamento logico}{45}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Metodo scientifico galileiano}{45}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Formulazione delle ipotesi}{46}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Verifica delle ipotesi}{46}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Statistica test}{47}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Livello di significatività di P}{48}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Errori nella verifica delle ipotesi}{49}{section.7.7}%
-\contentsline {part}{II\hspace {1em}Confronti tra gruppi}{53}{part.2}%
-\contentsline {chapter}{\numberline {8}Analisi delle proporzioni (B5)}{55}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Distribuzione binomiale}{55}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Distribuzione campionaria di una proporzione}{56}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}Studio di una proporzione: il test binomiale}{56}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Approssimazioni del test binomiale}{58}{subsection.8.2.1}%
-\contentsline {section}{\numberline {8.3}Stima delle proporzioni}{58}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Stima dell'errore standard per una proporzione}{58}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Intervallo di confidenza di una proporzione: metodo Agresti-Coull}{59}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Intervallo di confidenza di una proporzione: metodo Wald}{59}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Ricavare la distribuzione binomiale}{60}{section.8.4}%
-\contentsline {chapter}{\numberline {9}Modelli probabilistici per dati di frequenza (B5)}{61}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Modello proporzionale}{61}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Test del $\chi ^2$ di bontà dell'adattamento}{62}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Calcolo del P-value}{63}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Assunzioni del test $\chi ^2$ di bontà dell'adattamento}{64}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Test del $\chi ^2$ con due sole categorie}{64}{subsection.9.2.3}%
-\contentsline {section}{\numberline {9.3}Adattamento della distribuzione binomiale}{65}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Test binomiale per \textit {n} grandi}{67}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Distribuzione di Poisson}{67}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Verifica della casualità con la distribuzione di Poisson}{69}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Indice di dispersione per descrivere il discostamento dalla distribuzione di Poisson}{71}{subsection.9.4.2}%
-\contentsline {chapter}{\numberline {10}Analisi dell'associazione tra variabili categoriche (B5)}{73}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Associazione tra due variabili categoriche}{73}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Stima dell'associazione in tabelle $2 x 2$: odds ratio}{74}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Errore associato all'odds ratio}{74}{subsection.10.2.1}%
-\contentsline {section}{\numberline {10.3}Test del $\chi ^2$ per stabilire la significatività dell'associazione tra due variabili categoriche}{76}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Calcolo del $\chi ^2$}{77}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}P-value}{78}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Assunzioni del test $\chi ^2$ per l'analisi delle tabelle di contingenza}{78}{subsection.10.3.3}%
-\contentsline {section}{\numberline {10.4}Test esatto di Fisher}{78}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Inferenza in una popolazione con distribuzione normale}{81}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Riepilogo sulle relazioni tra variabili e statistiche}{81}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Distribuzione $t$ di Student}{81}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Intervalli di confidenza e $t$}{84}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}$t$ test per un campione}{84}{subsection.11.3.1}%
-\contentsline {chapter}{\numberline {12}Confronto tra due medie}{89}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Disegno sperimentale per dati appaiati o indipendenti}{90}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Confronto appaiato di medie}{90}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Confronto tra medie di dati indipendenti}{93}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Per due gruppi indipendenti con varianze omogenee}{93}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Per due gruppi indipendenti con varianze non omogenee}{95}{subsection.12.3.2}%
-\contentsline {section}{\numberline {12.4}Errore del confronto diretto}{97}{section.12.4}%
-\contentsline {section}{\numberline {12.5}Confrontare le varianze}{97}{section.12.5}%
-\contentsline {subsection}{\numberline {12.5.1}Test F per l'uguaglianza delle varianze}{98}{subsection.12.5.1}%
-\contentsline {subsection}{\numberline {12.5.2}Test di Levene per l'omogeneità delle varianze}{98}{subsection.12.5.2}%
-\contentsline {chapter}{\numberline {13}Violazioni delle assunzioni delle analisi statistiche}{99}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Identificare le violazioni della normalità}{99}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}Test di Shapiro-Wilk}{99}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}Test di Kolmogorov-Smirnoff}{99}{subsection.13.1.2}%
-\contentsline {section}{\numberline {13.2}Tipi di violazione e come affrontarli}{99}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Trasformazione dei dati}{99}{section.13.3}%
-\contentsline {subsection}{\numberline {13.3.1}Logaritmica}{99}{subsection.13.3.1}%
-\contentsline {subsection}{\numberline {13.3.2}Reciproca}{99}{subsection.13.3.2}%
-\contentsline {subsection}{\numberline {13.3.3}Potenza}{99}{subsection.13.3.3}%
-\contentsline {subsection}{\numberline {13.3.4}Antilogaritmica}{99}{subsection.13.3.4}%
-\contentsline {subsection}{\numberline {13.3.5}Arcoseno}{99}{subsection.13.3.5}%
-\contentsline {subsection}{\numberline {13.3.6}Radice quadrata}{99}{subsection.13.3.6}%
-\contentsline {subsection}{\numberline {13.3.7}Tukey's ladder of transformations}{99}{subsection.13.3.7}%
-\contentsline {section}{\numberline {13.4}Alternative non parametriche}{99}{section.13.4}%
-\contentsline {section}{\numberline {13.5}Test dei segni}{99}{section.13.5}%
-\contentsline {section}{\numberline {13.6}Test dei segni per rnghi di Wilcoxon}{99}{section.13.6}%
-\contentsline {section}{\numberline {13.7}Confronto tra due gruppi: test $U$ di Mann-Whitney}{99}{section.13.7}%
-\contentsline {part}{III\hspace {1em}Associazioni}{101}{part.3}%
-\contentsline {chapter}{\numberline {14}}{103}{chapter.14}%
-\contentsline {section}{\numberline {14.1}}{103}{section.14.1}%
-\contentsline {chapter}{\numberline {15}Appendici}{105}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Come riportare il P-value}{105}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Assunzioni del $t$ test}{105}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Interpretazione degli intervalli di confidenza}{105}{section.15.3}%
-\contentsline {section}{\numberline {15.4}Tavola statistica A: valori critici per $\chi ^2$}{106}{section.15.4}%
-\contentsline {section}{\numberline {15.5}Tavola statistica C: valori critici per $t$}{106}{section.15.5}%
+\contentsline {chapter}{\numberline {5}Distribuzione normale (B2)}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Teorema del limite centrale}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Intervallo di confidenza}{33}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Probabilità (B3)}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Istogrammi di frequenza}{35}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Eventi indipendenti}{36}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Eventi incompatibili}{36}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Somma delle probabilità}{36}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Diagrammi di Venn}{37}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Prodotto di probabilità}{38}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Alberi di probabilità}{38}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Probabilità condizionata e teorema della probabilità totale}{39}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Teorema della probabilità composta}{39}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Teorema di Bayes}{40}{section.6.10}%
+\contentsline {chapter}{\numberline {7}Test delle ipotesi}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ragionamento logico}{44}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Metodo scientifico galileiano}{44}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Formulazione delle ipotesi}{44}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Verifica delle ipotesi}{44}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Statistica test}{46}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Livello di significatività di P}{46}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Errori nella verifica delle ipotesi}{47}{section.7.7}%
+\contentsline {part}{II\hspace {1em}Confronti tra gruppi}{51}{part.2}%
+\contentsline {chapter}{\numberline {8}Analisi delle proporzioni (B5)}{53}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Distribuzione binomiale}{53}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Distribuzione campionaria di una proporzione}{54}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Studio di una proporzione: il test binomiale}{55}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Approssimazioni del test binomiale}{56}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Stima delle proporzioni}{57}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Stima dell'errore standard per una proporzione}{57}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Intervallo di confidenza di una proporzione: metodo Agresti-Coull}{57}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Intervallo di confidenza di una proporzione: metodo Wald}{58}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Ricavare la distribuzione binomiale}{58}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Modelli probabilistici per dati di frequenza (B5)}{59}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Modello proporzionale}{59}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Test del $\chi ^2$ di bontà dell'adattamento}{60}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Calcolo del P-value}{61}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Assunzioni del test $\chi ^2$ di bontà dell'adattamento}{62}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Test del $\chi ^2$ con due sole categorie}{63}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Adattamento della distribuzione binomiale}{63}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Test binomiale per \textit {n} grandi}{65}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Distribuzione di Poisson}{66}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Verifica della casualità con la distribuzione di Poisson}{67}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Indice di dispersione per descrivere il discostamento dalla distribuzione di Poisson}{70}{subsection.9.4.2}%
+\contentsline {chapter}{\numberline {10}Analisi dell'associazione tra variabili categoriche (B5)}{71}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Associazione tra due variabili categoriche}{71}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Stima dell'associazione in tabelle $2 x 2$: odds ratio}{72}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Errore associato all'odds ratio}{72}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}Test del $\chi ^2$ per stabilire la significatività dell'associazione tra due variabili categoriche}{74}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Calcolo del $\chi ^2$}{75}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}P-value}{75}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Assunzioni del test $\chi ^2$ per l'analisi delle tabelle di contingenza}{76}{subsection.10.3.3}%
+\contentsline {section}{\numberline {10.4}Test esatto di Fisher}{76}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Inferenza in una popolazione con distribuzione normale}{79}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Riepilogo sulle relazioni tra variabili e statistiche}{79}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Distribuzione $t$ di Student}{79}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Intervalli di confidenza e $t$}{82}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}$t$ test per un campione}{82}{subsection.11.3.1}%
+\contentsline {chapter}{\numberline {12}Confronto tra due medie}{87}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Disegno sperimentale per dati appaiati o indipendenti}{88}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Confronto appaiato di medie}{88}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Confronto tra medie di dati indipendenti}{91}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Per due gruppi indipendenti con varianze omogenee}{91}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Per due gruppi indipendenti con varianze non omogenee}{93}{subsection.12.3.2}%
+\contentsline {section}{\numberline {12.4}Errore del confronto diretto}{95}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Confrontare le varianze}{95}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Test F per l'uguaglianza delle varianze}{96}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Test di Levene per l'omogeneità delle varianze}{96}{subsection.12.5.2}%
+\contentsline {chapter}{\numberline {13}Violazioni delle assunzioni delle analisi statistiche}{97}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Identificare le violazioni della normalità}{97}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Test statistici di normalità}{97}{subsection.13.1.1}%
+\contentsline {subsubsection}{Test di Shapiro-Wilk}{97}{section*.2}%
+\contentsline {subsubsection}{Test di Kolmogorov-Smirnoff}{97}{section*.3}%
+\contentsline {subsection}{\numberline {13.1.2}Metodi grafici}{97}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}Metodi per correggere la violazione della normalità}{98}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Trasformazione dei dati}{98}{subsection.13.2.1}%
+\contentsline {subsubsection}{Logaritmica}{99}{section*.4}%
+\contentsline {subsubsection}{Reciproca}{99}{section*.5}%
+\contentsline {subsubsection}{Potenza}{99}{section*.6}%
+\contentsline {subsubsection}{Antilogaritmica}{100}{section*.7}%
+\contentsline {subsubsection}{Arcoseno}{100}{section*.8}%
+\contentsline {subsubsection}{Radice quadrata}{100}{section*.9}%
+\contentsline {subsubsection}{Tukey's ladder of transformations per la correzione delle simmetrie}{100}{section*.10}%
+\contentsline {subsection}{\numberline {13.2.2}Alternative non parametriche}{101}{subsection.13.2.2}%
+\contentsline {subsubsection}{Test dei segni}{101}{section*.11}%
+\contentsline {subsubsection}{Test dei segni per ranghi di Wilcoxon}{102}{section*.12}%
+\contentsline {subsubsection}{Confronto tra due gruppi: test $U$ di Mann-Whitney}{102}{section*.13}%
+\contentsline {subsubsection}{Assunzioni dei test non parametrici}{105}{section*.14}%
+\contentsline {chapter}{\numberline {14}Disegni sperimentali}{107}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Riduzione della distorsione}{108}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Gruppo di controllo}{108}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Randomizzazione}{108}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}Cecità}{108}{subsection.14.1.3}%
+\contentsline {section}{\numberline {14.2}Riduzione dell'errore di campionamento}{108}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Replicazione}{108}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Bilanciamento}{109}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Raggruppamento in blocchi}{109}{subsection.14.2.3}%
+\contentsline {section}{\numberline {14.3}Disegno sperimentale fattoriale}{109}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Impossibilità di condurre esperimenti}{110}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Dimensione di un campione}{110}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Pianificare la precisione}{110}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Pianificare la potenza}{111}{subsection.14.5.2}%
+\contentsline {subsubsection}{Per il $t$ test}{112}{section*.15}%
+\contentsline {subsection}{\numberline {14.5.3}Pianificare per compensare la perdita di dati}{112}{subsection.14.5.3}%
+\contentsline {chapter}{\numberline {15}Confronto tra le medie di più di due gruppi}{113}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Analisi della varianza}{113}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Calcolo delle medie dei quadrati}{115}{subsection.15.1.1}%
+\contentsline {subsubsection}{Media dei quadrati entro gruppi}{115}{section*.16}%
+\contentsline {subsubsection}{Media dei quadrati tra gruppi}{115}{section*.17}%
+\contentsline {subsection}{\numberline {15.1.2}Rapporto tra varianze}{116}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}Valore $R^2$}{116}{subsection.15.1.3}%
+\contentsline {subsection}{\numberline {15.1.4}Assunzioni dell'ANOVA}{117}{subsection.15.1.4}%
+\contentsline {section}{\numberline {15.2}Alternative non parametriche all'ANOVA: test di Kruskal-Wallis}{117}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Confronti pianificati e non pianificati}{118}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Confronti pianificati}{118}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Confronti non pianificati}{119}{subsection.15.3.2}%
+\contentsline {section}{\numberline {15.4}Effetti fissi e casuali}{121}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}ANOVA per gruppi casuali}{121}{subsection.15.4.1}%
+\contentsline {part}{III\hspace {1em}Associazioni}{125}{part.3}%
+\contentsline {chapter}{\numberline {16}Correlazione tra variabili numeriche}{127}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Coefficiente di correlazione}{127}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Intervallo di confidenza}{128}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}Verificare l'ipotesi nulla di assenza di correlazione}{128}{subsection.16.1.2}%
+\contentsline {subsection}{\numberline {16.1.3}Assunzioni dell'analisi di correlazione}{129}{subsection.16.1.3}%
+\contentsline {section}{\numberline {16.2}Correlazione per ranghi di Spearman}{130}{section.16.2}%
+\contentsline {chapter}{\numberline {17}Regressione}{133}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Regressione lineare}{133}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Metodo dei minimi quadrati}{134}{subsection.17.1.1}%
+\contentsline {subsection}{\numberline {17.1.2}Popolazione e campione}{135}{subsection.17.1.2}%
+\contentsline {subsection}{\numberline {17.1.3}Previsione dei valori di Y}{135}{subsection.17.1.3}%
+\contentsline {subsection}{\numberline {17.1.4}Residui}{135}{subsection.17.1.4}%
+\contentsline {subsection}{\numberline {17.1.5}Errore standard della pendenza}{135}{subsection.17.1.5}%
+\contentsline {subsection}{\numberline {17.1.6}Intervallo di confidenza della pendenza}{135}{subsection.17.1.6}%
+\contentsline {section}{\numberline {17.2}Qualità delle previsioni}{136}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Intervalli di confidenza delle previsioni}{136}{subsection.17.2.1}%
+\contentsline {section}{\numberline {17.3}Verifica delle ipotesi sulla pendenza}{136}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}$R^2$ per misurare l'adattamento della retta di regressione ai dati}{137}{subsection.17.3.1}%
+\contentsline {section}{\numberline {17.4}Assunzioni della regressione}{137}{section.17.4}%
+\contentsline {subsection}{\numberline {17.4.1}Outliers}{138}{subsection.17.4.1}%
+\contentsline {subsection}{\numberline {17.4.2}Identificazione della non normalità e di varianze disuguali}{138}{subsection.17.4.2}%
+\contentsline {section}{\numberline {17.5}Trasformazioni}{139}{section.17.5}%
+\contentsline {section}{\numberline {17.6}Range di analisi}{140}{section.17.6}%
+\contentsline {chapter}{\numberline {18}Appendici}{143}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Come riportare il P-value}{143}{section.18.1}%
+\contentsline {section}{\numberline {18.2}Assunzioni del $t$ test}{143}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Interpretazione degli intervalli di confidenza}{143}{section.18.3}%
+\contentsline {section}{\numberline {18.4}Tavola statistica A: valori critici per $\chi ^2$}{144}{section.18.4}%
+\contentsline {section}{\numberline {18.5}Tavola statistica C: valori critici per $t$}{144}{section.18.5}%
+\contentsline {section}{\numberline {18.6}Tavola statistica D: valori critici per distribuzione $F$}{144}{section.18.6}%
+\contentsline {section}{\numberline {18.7}Tavola statistica E: valori critici per $U$ di Mann-Whitney}{144}{section.18.7}%
+\contentsline {section}{\numberline {18.8}Tavola statistica F: valori critici per $q$ di Tukey-Kramer}{144}{section.18.8}%

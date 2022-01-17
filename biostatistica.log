@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.12)  8 DEC 2021 18:20
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.12.29)  16 JAN 2022 23:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/gaiahah/latex/biostatistica/biostatistica.tex
+**/home/gaiahah/latex/biostatistica/biostatistica
 (/home/gaiahah/latex/biostatistica/biostatistica.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/usr/share/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+File: bk10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@chapter=\count180
@@ -24,25 +24,25 @@ File: bk10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks16
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 ) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
- (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
 ) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
  (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
@@ -54,7 +54,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 ) (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -74,11 +74,9 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@linkcounter=\count188
 \Hy@pagecounter=\count189
  (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 ) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
 ) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
@@ -86,9 +84,7 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count190
  (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `draft' set `true' on input line 4073.
 Package hyperref Info: Hyper figures OFF on input line 4192.
@@ -113,106 +109,116 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 \Fld@menulength=\count192
 \Field@Width=\dimen143
 \Fld@charsize=\dimen144
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring OFF on input line 6095.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
  (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
-with kernel methods
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
 )
 \Hy@abspage=\count193
 \c@Item=\count194
 \c@Hfootnote=\count195
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
- (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
-with kernel methods
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
+ (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\Fld@listcount=\count196
-\c@bookmark@seq@number=\count197
+\pdfm@box=\box50
+\c@Hy@AnnotLevel=\count196
+\HyField@AnnotCount=\count197
+\Fld@listcount=\count198
+\c@bookmark@seq@number=\count199
  (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
- (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip49
 ) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (/usr/share/texmf-dist/tex/latex/kpfonts/kpfonts.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+ (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/share/texmf-dist/tex/latex/kpfonts/kpfonts.sty
 Package: kpfonts  2010/08/20 v3.31
  (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 75.
+LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 78.
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/09/23 v2.17i AMS math features
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \ex@=\dimen145
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen146
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count198
+\inf@bad=\count266
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count199
-\leftroot@=\count266
+\uproot@=\count267
+\leftroot@=\count268
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count267
-\DOTSCASE@=\count268
+\classnum@=\count269
+\DOTSCASE@=\count270
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
+\Mathstrutbox@=\box51
+\strutbox@=\box52
 \big@size=\dimen147
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
 \dotsspace@=\muskip17
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
-\tag@help=\toks17
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
-\andhelp@=\toks18
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
+\tag@help=\toks18
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
+\andhelp@=\toks19
 \eqnshift@=\dimen148
 \alignsep@=\dimen149
 \tagshift@=\dimen150
 \tagwidth@=\dimen151
 \totwidth@=\dimen152
 \lineht@=\dimen153
-\@envbody=\toks19
+\@envbody=\toks20
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
 )
-\c@mv@rm=\count276
-\c@mv@boldrm=\count277
-\c@mv@sf=\count278
-\c@mv@boldsf=\count279
+Invalid UTF-8 byte or sequence at line 157 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 157 replaced by U+FFFD.
+\c@mv@rm=\count278
+\c@mv@boldrm=\count279
+\c@mv@sf=\count280
+\c@mv@boldsf=\count281
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 354.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/jkp/m/n on input line 354.
@@ -480,9 +486,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count280
-\Gm@cntv=\count281
-\c@Gm@tempcnt=\count282
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
 \Gm@bindingoffset=\dimen154
 \Gm@wd@mp=\dimen155
 \Gm@odd@mp=\dimen156
@@ -491,141 +497,64 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen159
 \Gm@layouthoffset=\dimen160
 \Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks21
+\Gm@dimlist=\toks22
 ) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2021/03/24 3.56 The Babel package
- (/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2021/03/24 3.56 Babel common definitions
-\babel@savecnt=\count283
+Package: babel 2021/11/29 3.67 The Babel package
+\babel@savecnt=\count285
 \U@D=\dimen162
-\l@babelnohyphens=\language87
- (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\l@unhyphenated=\language87
+ (/usr/share/texmf-dist/tex/generic/babel/xebabel.def (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def))
 \bbl@readstream=\read2
-)
-\bbl@dirlevel=\count284
+\bbl@dirlevel=\count286
  (/usr/share/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count285
-\it@doublequoteactive=\count286
-\it@ISOcompliance=\count287
+\it@lettering=\count287
+\it@doublequoteactive=\count288
+\it@ISOcompliance=\count289
 )) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count288
+\etb@tempcnta=\count290
 ) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks22
-\inpenc@posthook=\toks23
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
-Package: scrextend 2021/03/17 v3.33 KOMA-Script package (extend other classes with features of KOMA-Script classes)
+Package: scrextend 2021/11/13 v3.35 KOMA-Script package (extend other classes with features of KOMA-Script classes)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
-
-LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
-
-
-LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
-
-
-LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
-
-
-LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
-
-
-LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
-
-
-LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
-(LaTeX3)     93.
-
-
-LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
-(LaTeX3)     173.
-
-
-LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
-
-
-LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
-(LaTeX3)     191.
-
-
-LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
-
-
-LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
-
-
-LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
-
-
-LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
-
-
-LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
-
-
-LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
-
-
-LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
-
-
-LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
-(LaTeX3)     line 234.
-
-
-LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
-(LaTeX3)     line 242.
-
-
-LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
-(LaTeX3)     line 247.
-
-
-LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
-(LaTeX3)     line 261.
-
-
-LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
-(LaTeX3)     274.
-
-
-LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
-
-
-LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
-(LaTeX3)     line 298.
-
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty
-Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
 )))
-Skipping: [2021/05/01] Usage of raw option list on input line 252.
-Applying: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 337.
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
 ))
 
 LaTeX Warning: Command \@footnotemark  has changed.
                Check if current package is valid.
 
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count289
-\calc@Bcount=\count290
+\calc@Acount=\count291
+\calc@Bcount=\count292
 \calc@Adimen=\dimen163
 \calc@Bdimen=\dimen164
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count291
+\calc@Ccount=\count293
 \calc@Cskip=\skip55
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
@@ -634,7 +563,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count292
+\g_MT_multlinerow_int=\count294
 \l_MT_multwidth_dim=\dimen165
 \origjot=\skip56
 \l_MT_shortvdotswithinadjustabove_dim=\dimen166
@@ -643,7 +572,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_intertext_sep=\dimen169
 \l_MT_above_shortintertext_sep=\dimen170
 \l_MT_below_shortintertext_sep=\dimen171
-\xmathstrut@box=\box49
+\xmathstrut@box=\box53
 \xmathstrut@dim=\dimen172
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -882,41 +811,41 @@ LaTeX Font Info:    Redeclaring math symbol \backepsilon on input line 265.
 ) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
  (/usr/share/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen173
-\ar@mcellbox=\box50
+\ar@mcellbox=\box54
 \extrarowheight=\dimen174
-\NC@list=\toks24
+\NC@list=\toks25
 \extratabsurround=\skip57
 \backup@length=\skip58
-\ar@cellbox=\box51
+\ar@cellbox=\box55
 )
 \TX@col@width=\dimen175
 \TX@old@table=\dimen176
 \TX@old@col=\dimen177
 \TX@target=\dimen178
 \TX@delta=\dimen179
-\TX@cols=\count293
-\TX@ftn=\toks25
+\TX@cols=\count295
+\TX@ftn=\toks26
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2020/10/09 version 4.42 text color boxes
+Package: tcolorbox 2021/12/20 version 5.0.1 text color boxes
  (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks26
+\pgfutil@everybye=\toks27
 \pgfutil@tempdima=\dimen180
 \pgfutil@tempdimb=\dimen181
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box52
+\pgfutil@abb=\box56
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks29
+\pgfkeys@tmptoks=\toks30
 ))
 \pgf@x=\dimen182
 \pgf@y=\dimen183
@@ -930,56 +859,59 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@yd=\dimen191
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count294
-\c@pgf@countb=\count295
-\c@pgf@countc=\count296
-\c@pgf@countd=\count297
-\t@pgf@toka=\toks30
-\t@pgf@tokb=\toks31
-\t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count298
+\c@pgf@counta=\count296
+\c@pgf@countb=\count297
+\c@pgf@countc=\count298
+\c@pgf@countd=\count299
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count300
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
-Driver file for pgf: pgfsys-pdftex.def
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+Driver file for pgf: pgfsys-xetex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)
+\pgfsys@objnum=\count301
 ))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count299
-\pgfsyssoftpath@bigbuffer@items=\count300
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count302
+\pgfsyssoftpath@bigbuffer@items=\count303
 ) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Driver file: xetex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen192
-\pgfmath@count=\count301
-\pgfmath@box=\box53
-\pgfmath@toks=\toks33
-\pgfmath@stack@operand=\toks34
-\pgfmath@stack@operation=\toks35
+\pgfmath@count=\count304
+\pgfmath@box=\box57
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 ) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count302
+\c@pgfmathroundto@lastzeros=\count305
 )) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen193
 \pgf@picmaxx=\dimen194
 \pgf@picminy=\dimen195
@@ -995,107 +927,106 @@ File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@zx=\dimen261
 \pgf@zy=\dimen262
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen263
 \pgf@path@lasty=\dimen264
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen265
 \pgf@shorten@start@additional=\dimen266
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfpic=\box54
-\pgf@hbox=\box55
-\pgf@layerbox@main=\box56
-\pgf@picture@serial@count=\count303
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count306
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen267
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen268
 \pgf@pt@y=\dimen269
 \pgf@pt@temp=\dimen270
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen271
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen272
-\pgf@sys@shading@range@num=\count304
-\pgf@shadingcount=\count305
+\pgf@sys@shading@range@num=\count307
+\pgf@shadingcount=\count308
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfexternal@startupbox=\box57
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box61
 )) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box58
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box62
 ) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen273
 \pgf@nodesepend=\dimen274
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
+\every@verbatim=\toks37
+\verbatim@line=\toks38
 \verbatim@in@stream=\read4
 ) (/usr/share/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box59
-\tcb@upperbox=\box60
-\tcb@lowerbox=\box61
-\tcb@phantombox=\box62
-\c@tcbbreakpart=\count306
-\c@tcblayer=\count307
-\c@tcolorbox@number=\count308
-\tcb@temp=\box63
-\tcb@temp=\box64
-\tcb@temp=\box65
-\tcb@temp=\box66
-\tcb@out=\write4
-\tcb@record@out=\write5
+\tcb@titlebox=\box63
+\tcb@upperbox=\box64
+\tcb@lowerbox=\box65
+\tcb@phantombox=\box66
+\c@tcbbreakpart=\count309
+\c@tcblayer=\count310
+\c@tcolorbox@number=\count311
+\tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
+\tcb@temp=\box70
  (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '4.42'
-\c@tcbrastercolumn=\count309
-\c@tcbrasterrow=\count310
-\c@tcbraster=\count311
+Library (tcolorbox): 'tcbraster.code.tex' version '5.0.1'
+\c@tcbrastercolumn=\count312
+\c@tcbrasterrow=\count313
+\c@tcbrasternum=\count314
+\c@tcbraster=\count315
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '4.42'
+Library (tcolorbox): 'tcbskins.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen275
 \pgffor@skip=\dimen276
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 )) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count312
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count316
 \pgfplotmarksize=\dimen277
 )
 \tikz@lastx=\dimen278
@@ -1106,193 +1037,189 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@lastmovetoy=\dimen283
 \tikzleveldistance=\dimen284
 \tikzsiblingdistance=\dimen285
-\tikz@figbox=\box67
-\tikz@figbox@bg=\box68
-\tikz@tempbox=\box69
-\tikz@tempbox@bg=\box70
-\tikztreelevel=\count313
-\tikznumberofchildren=\count314
-\tikznumberofcurrentchild=\count315
-\tikz@fig@count=\count316
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count317
+\tikznumberofchildren=\count318
+\tikznumberofcurrentchild=\count319
+\tikz@fig@count=\count320
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count317
-\pgfmatrixcurrentcolumn=\count318
-\pgf@matrix@numberofcolumns=\count319
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count321
+\pgfmatrixcurrentcolumn=\count322
+\pgf@matrix@numberofcolumns=\count323
 )
-\tikz@expandcount=\count320
+\tikz@expandcount=\count324
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-\tcb@waterbox=\box71
+\tcb@waterbox=\box75
  (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.42'
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.0.1'
 )) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '4.42'
+Library (tcolorbox): 'tcbbreakable.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
-Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box72
-\tcb@totalupperbox=\box73
-\tcb@totallowerbox=\box74
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box76
+\tcb@totalupperbox=\box77
+\tcb@totallowerbox=\box78
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
-Library (tcolorbox): 'tcbhooks.code.tex' version '4.42'
+Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.1'
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
-Library (tcolorbox): 'tcbtheorems.code.tex' version '4.42'
+Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.1'
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
-Library (tcolorbox): 'tcbfitting.code.tex' version '4.42'
+Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.1'
 \tcbfitdim=\dimen286
 \tcb@lowerfitdim=\dimen287
 \tcb@upperfitdim=\dimen288
-\tcb@cur@hbadness=\count321
+\tcb@cur@hbadness=\count325
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
-Library (tcolorbox): 'tcbxparse.code.tex' version '4.42'
+Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
- (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
-\l__pdf_internal_box=\box75
-)) (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
-Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.42'
+Package: expl3 2021-11-22 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2021-12-14 L3 backend support: XeTeX
+ (|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count326
+\l__color_backend_stack_int=\count327
+\g__color_backend_stack_int=\count328
+\g__graphics_track_int=\count329
+\l__pdf_internal_box=\box79
+\g__pdf_backend_object_int=\count330
+\g__pdf_backend_annotation_int=\count331
+\g__pdf_backend_link_int=\count332
+))
+Package: xparse 2021-11-12 L3 Experimental document command parser
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
-Library (tcolorbox): 'tcblistings.code.tex' version '4.42'
+Library (tcolorbox): 'tcblistings.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count323
-\lst@gtempboxa=\box76
-\lst@token=\toks40
-\lst@length=\count324
+\lst@mode=\count333
+\lst@gtempboxa=\box80
+\lst@token=\toks41
+\lst@length=\count334
 \lst@currlwidth=\dimen289
-\lst@column=\count325
-\lst@pos=\count326
+\lst@column=\count335
+\lst@pos=\count336
 \lst@lostspace=\dimen290
 \lst@width=\dimen291
-\lst@newlines=\count327
-\lst@lineno=\count328
+\lst@newlines=\count337
+\lst@lineno=\count338
 \lst@maxwidth=\dimen292
  (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count329
-\lst@skipnumbers=\count330
-\lst@framebox=\box77
+\c@lstnumber=\count339
+\lst@skipnumbers=\count340
+\lst@framebox=\box81
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
  (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
-Library (tcolorbox): 'tcblistingscore.code.tex' version '4.42'
+Library (tcolorbox): 'tcblistingscore.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '4.42'
+Library (tcolorbox): 'tcbprocessing.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
-\c@tcblisting=\count331
-)) (/usr/share/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
-Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
- (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
-))) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
-Library (tcolorbox): 'tcbexternal.code.tex' version '4.42'
+\c@tcblisting=\count341
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. Library `listings` is loaded instead. on input line 29.
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '5.0.1'
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
-Library (tcolorbox): 'tcbmagazine.code.tex' version '4.42'
+Library (tcolorbox): 'tcbmagazine.code.tex' version '5.0.1'
 ) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
-Library (tcolorbox): 'tcbvignette.code.tex' version '4.42'
+Library (tcolorbox): 'tcbvignette.code.tex' version '5.0.1'
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
-File: pgflibraryfadings.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
-Library (tcolorbox): 'tcbposter.code.tex' version '4.42'
+Library (tcolorbox): 'tcbposter.code.tex' version '5.0.1'
 )) (/usr/share/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip59
 \L@UnitsRaiseTextstyle=\skip60
 \L@UnitsRaiseScriptstyle=\skip61
  (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count332
-\float@exts=\toks41
-\float@box=\box78
-\@float@everytoks=\toks42
-\@floatcapt=\box79
+\c@float@type=\count342
+\float@exts=\toks42
+\float@box=\box82
+\@float@everytoks=\toks43
+\@floatcapt=\box83
 ) (/usr/share/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen293
-\c@nlinenum=\count333
-\TeXr@lab=\toks43
+\c@nlinenum=\count343
+\TeXr@lab=\toks44
 )
-\c@example=\count334
-LaTeX Font Info:    Trying to load font information for T1+jkp on input line 73.
+\c@example=\count344
+LaTeX Font Info:    Trying to load font information for T1+jkp on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
-) (/home/gaiahah/latex/biostatistica/biostatistica.aux
+) (./biostatistica.aux
 
 LaTeX Warning: Label `tabpvalue' multiply defined.
 
 )
 \openout1 = `biostatistica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 73.
-LaTeX Font Info:    Trying to load font information for OML+jkp on input line 73.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 76.
+LaTeX Font Info:    Trying to load font information for OML+jkp on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 73.
-LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 73.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 76.
+LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 73.
-LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 73.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 76.
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 76.
+LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 73.
-LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 73.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 76.
+LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
-\scratchdimen=\dimen294
-\scratchbox=\box80
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count338
-\MPscratchDim=\dimen295
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks45
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring OFF on input line 73.
+Package hyperref Info: Link coloring OFF on input line 76.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1300,16 +1227,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count341
+\c@section@level=\count345
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1340,86 +1267,331 @@ LaTeX Info: Redefining \nameref on input line 73.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 73.
-LaTeX Info: Redefining \it@ccap on input line 73.
-\c@lstlisting=\count342
-LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 75.
+LaTeX Info: Redefining \it@ocap on input line 76.
+LaTeX Info: Redefining \it@ccap on input line 76.
+\c@lstlisting=\count346
+LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 78.
 (/usr/share/texmf-dist/tex/latex/kpfonts/ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-LaTeX Font Info:    Trying to load font information for U+jkpmia on input line 75.
+LaTeX Font Info:    Trying to load font information for U+jkpmia on input line 78.
  (/usr/share/texmf-dist/tex/latex/kpfonts/ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 75.
+LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 78.
  (/usr/share/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 ) [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+] [2
 
 
-] (/home/gaiahah/latex/biostatistica/biostatistica.toc [3] [4]
-Overfull \hbox (0.84996pt too wide) detected at line 118
- []\T1/jkp/m/n/10 103|
+] (./biostatistica.toc [3] [4]
+Overfull \hbox (0.84996pt too wide) detected at line 114
+ []\T1/jkp/m/n/10 101|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 120
- []\T1/jkp/m/n/10 105|
+ []\T1/jkp/m/n/10 108|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 121
- []\T1/jkp/m/n/10 105|
+ []\T1/jkp/m/n/10 108|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 122
- []\T1/jkp/m/n/10 105|
+ []\T1/jkp/m/n/10 108|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 123
- []\T1/jkp/m/n/10 106|
+ []\T1/jkp/m/n/10 108|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 124
- []\T1/jkp/m/n/10 106|
+ []\T1/jkp/m/n/10 108|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 125
+ []\T1/jkp/m/n/10 108|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 126
+ []\T1/jkp/m/n/10 109|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 127
+ []\T1/jkp/m/n/10 109|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 128
+ []\T1/jkp/m/n/10 109|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 129
+ []\T1/jkp/m/n/10 110|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 130
+ []\T1/jkp/m/n/10 110|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 131
+ []\T1/jkp/m/n/10 110|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 132
+ []\T1/jkp/m/n/10 111|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 134
+ []\T1/jkp/m/n/10 112|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 136
+ []\T1/jkp/m/n/10 113|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 137
+ []\T1/jkp/m/n/10 115|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 140
+ []\T1/jkp/m/n/10 116|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 141
+ []\T1/jkp/m/n/10 116|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 142
+ []\T1/jkp/m/n/10 117|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 143
+ []\T1/jkp/m/n/10 117|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 144
+ []\T1/jkp/m/n/10 118|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 145
+ []\T1/jkp/m/n/10 118|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 146
+ []\T1/jkp/m/n/10 119|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 147
+ []\T1/jkp/m/n/10 121|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 148
+ []\T1/jkp/m/n/10 121|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 151
+ []\T1/jkp/m/n/10 127|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 152
+ []\T1/jkp/m/n/10 128|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 153
+ []\T1/jkp/m/n/10 128|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 154
+ []\T1/jkp/m/n/10 129|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 155
+ []\T1/jkp/m/n/10 130|
+ []
+
+[5]
+Overfull \hbox (0.84996pt too wide) detected at line 157
+ []\T1/jkp/m/n/10 133|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 158
+ []\T1/jkp/m/n/10 134|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 159
+ []\T1/jkp/m/n/10 135|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 160
+ []\T1/jkp/m/n/10 135|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 161
+ []\T1/jkp/m/n/10 135|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 162
+ []\T1/jkp/m/n/10 135|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 163
+ []\T1/jkp/m/n/10 135|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 164
+ []\T1/jkp/m/n/10 136|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 165
+ []\T1/jkp/m/n/10 136|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 166
+ []\T1/jkp/m/n/10 136|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 167
+ []\T1/jkp/m/n/10 137|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 168
+ []\T1/jkp/m/n/10 137|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 169
+ []\T1/jkp/m/n/10 138|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 170
+ []\T1/jkp/m/n/10 138|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 171
+ []\T1/jkp/m/n/10 139|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 172
+ []\T1/jkp/m/n/10 140|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 174
+ []\T1/jkp/m/n/10 143|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 175
+ []\T1/jkp/m/n/10 143|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 176
+ []\T1/jkp/m/n/10 143|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 177
+ []\T1/jkp/m/n/10 144|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 178
+ []\T1/jkp/m/n/10 144|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 179
+ []\T1/jkp/m/n/10 144|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 180
+ []\T1/jkp/m/n/10 144|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 181
+ []\T1/jkp/m/n/10 144|
  []
 
 )
-\tf@toc=\write6
-\openout6 = `biostatistica.toc'.
+\tf@toc=\write4
+\openout4 = `biostatistica.toc'.
 
- [5] [6
+ [6] [7
 
 
-] [7] [8]
+] [8]
 Capitolo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--97
+Underfull \hbox (badness 10000) in paragraph at lines 86--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--97
+Underfull \hbox (badness 10000) in paragraph at lines 86--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--97
+Underfull \hbox (badness 10000) in paragraph at lines 86--100
 
  []
 
@@ -1430,87 +1602,91 @@ Underfull \vbox (badness 3291) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 108--123
+Underfull \hbox (badness 10000) in paragraph at lines 111--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--123
+Underfull \hbox (badness 10000) in paragraph at lines 111--126
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 124.
+LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 127.
 (/usr/share/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 ) [10]
-Underfull \hbox (badness 10000) in paragraph at lines 139--159
+Underfull \hbox (badness 10000) in paragraph at lines 142--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--159
+Underfull \hbox (badness 10000) in paragraph at lines 142--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--159
+Underfull \hbox (badness 10000) in paragraph at lines 142--162
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--167
-
- []
-
-[11]
-<./figs//fig1.2-2.png, id=82, 417.81094pt x 348.55219pt>
-LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 175.
- (/usr/share/texmf-dist/tex/latex/kpfonts/t1jkptt.fd
+LaTeX Font Info:    Trying to load font information for T1+jkptt on input line 177.
+(/usr/share/texmf-dist/tex/latex/kpfonts/t1jkptt.fd
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 189--205
+) [11]
+Underfull \hbox (badness 10000) in paragraph at lines 191--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--205
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--205
+Underfull \hbox (badness 10000) in paragraph at lines 191--204
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 228--238
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+[13
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 229--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--238
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
+Underfull \hbox (badness 10000) in paragraph at lines 229--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
+Underfull \hbox (badness 10000) in paragraph at lines 240--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--251
+Underfull \hbox (badness 10000) in paragraph at lines 240--252
 
  []
 
-[14]
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--252
+
+ []
+
+[14
+
+]
 Capitolo 2.
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+Missing character: There is no “ ("201C) in font jkpmn8t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--270
+Underfull \hbox (badness 10000) in paragraph at lines 255--271
 
  []
 
@@ -1523,148 +1699,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--270
 ]
 Capitolo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--287
+Underfull \hbox (badness 10000) in paragraph at lines 282--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--318
+Underfull \hbox (badness 10000) in paragraph at lines 307--319
 
  []
 
 [17]
-<./figs//fig2.1-2.png, id=103, 436.63126pt x 315.42844pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--352
+Underfull \hbox (badness 10000) in paragraph at lines 329--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--352
+Underfull \hbox (badness 10000) in paragraph at lines 339--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--352
+Underfull \hbox (badness 10000) in paragraph at lines 339--354
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 358--368
+Underfull \hbox (badness 10000) in paragraph at lines 360--370
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 380--388
+Underfull \hbox (badness 10000) in paragraph at lines 382--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--400
-
- []
-
-<./figs//fig2.2-1.png, id=111, 427.5975pt x 316.93407pt>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//fig2.3-2.png, id=112, 395.22656pt x 272.51813pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--444
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--444
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--444
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--444
+Underfull \hbox (badness 10000) in paragraph at lines 398--402
 
  []
 
 [20]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21]
-<./figs//fig2.4-1.png, id=120, 450.9347pt x 574.39594pt>
-<./figs//fig2.4-2.png, id=121, 380.17032pt x 347.04657pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
+Underfull \hbox (badness 10000) in paragraph at lines 413--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
+Underfull \hbox (badness 10000) in paragraph at lines 413--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--471
+Underfull \hbox (badness 10000) in paragraph at lines 413--447
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[21
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//fig2.5-1.png, id=122, 462.97969pt x 309.40594pt>
-<./figs//fig2.5-2.png, id=123, 486.31688pt x 299.61937pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
+]
+Underfull \hbox (badness 10000) in paragraph at lines 449--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
+Underfull \hbox (badness 10000) in paragraph at lines 449--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--510
+Underfull \hbox (badness 10000) in paragraph at lines 449--464
 
  []
 
 [22]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 525--533
+Underfull \hbox (badness 10000) in paragraph at lines 479--490
 
  []
 
-[25] [26]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 507--519
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--519
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--519
+
+ []
+
+[25
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 534--542
+
+ []
+
+[26]
 Capitolo 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--555
 
  []
 
@@ -1672,453 +1826,628 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--546
 
 
 ]
-<./figs//fig3.2-2.png, id=143, 364.36125pt x 250.68657pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 572--600
+Underfull \hbox (badness 10000) in paragraph at lines 581--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--600
+Underfull \hbox (badness 10000) in paragraph at lines 581--602
 
  []
 
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--606
+Underfull \hbox (badness 10000) in paragraph at lines 612--616
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 638--642
+Underfull \hbox (badness 10000) in paragraph at lines 648--652
 
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 649--656
+Missing character: There is no “ ("201C) in font jkpmn8t!
+Missing character: There is no ” ("201D) in font jkpmn8t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 659--666
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--656
+Underfull \hbox (badness 10000) in paragraph at lines 659--666
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--678
+Underfull \hbox (badness 10000) in paragraph at lines 668--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--678
+Underfull \hbox (badness 10000) in paragraph at lines 668--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--678
+Underfull \hbox (badness 10000) in paragraph at lines 668--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--695
+Underfull \hbox (badness 10000) in paragraph at lines 695--705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--695
+Underfull \hbox (badness 10000) in paragraph at lines 695--705
 
  []
 
-[30] [31] [32
+[30]
+Capitolo 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--731
+
+ []
+
+[31
 
 
 ]
-Capitolo 5.
-<./figs//normalcurvetypes.png, id=162, 359.84438pt x 271.76532pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 696--720
+Underfull \hbox (badness 10000) in paragraph at lines 743--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--720
+Underfull \hbox (badness 10000) in paragraph at lines 743--752
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 760--764
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--720
+Underfull \hbox (badness 10000) in paragraph at lines 766--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--720
+Underfull \hbox (badness 10000) in paragraph at lines 766--773
 
  []
 
+[33
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--720
-
- []
-
-[33]
-<./figs//standardizednormalcurve.png, id=166, 472.01344pt x 285.31593pt>
-<./figs//standardizednormalcurve2.png, id=167, 295.1025pt x 363.60844pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 722--745
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 722--745
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 747--751
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 753--760
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 753--760
-
- []
-
-[34] [35] [36
+] [34
 
 
 ]
 Capitolo 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--782
+Underfull \hbox (badness 10000) in paragraph at lines 774--795
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--782
+Underfull \hbox (badness 10000) in paragraph at lines 774--795
 
  []
 
-<./figs//fig5.4-1.png, id=177, 258.21469pt x 170.13562pt>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 807--815
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 820--828
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--815
+Underfull \hbox (badness 10000) in paragraph at lines 820--828
 
  []
 
-<./figs//fig5.5-2.png, id=182, 322.20375pt x 131.74219pt>
+[36]
+Underfull \vbox (badness 7397) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//fig5.5-1.png, id=183, 180.675pt x 182.18062pt>
-<./figs//istogrammaperdiagramma.png, id=184, 212.29312pt x 128.73094pt>
-[38]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//fig5.6-1.png, id=188, 404.26031pt x 265.74281pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 867--867
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 881--881
 
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 867--867
+Underfull \hbox (badness 1383) in paragraph at lines 881--881
 \T1/jkp/m/n/10 Nel ca-so di even-ti in-di-pen-den-ti non mu-tual-men-te esclu-si-vi si cal-co-la il pro-dot-to dei
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 852--878
+Underfull \hbox (badness 10000) in paragraph at lines 866--892
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
-<./figs//fig5.8-1.png, id=195, 258.21469pt x 310.15875pt>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./figs//alberoprobabilità.png, id=196, 618.05907pt x 243.15843pt>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 950--961
+[38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 965--976
 
  []
 
-[42] [43] [44
+[40
+
+] [41] [42
 
 
 ]
 Capitolo 7.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1066
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1081
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1072--1081
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1081
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1081
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1081
+
+ []
+
+[44
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1098
+
+ []
+
+
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+ [45]
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1115
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1069--1083
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1117--1140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1100
+Underfull \hbox (badness 10000) in paragraph at lines 1143--1159
 
  []
 
+[47] [48] [49] [50
 
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1125
-
- []
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1128--1144
-
- []
-
-[49]
-<./figs//erroriverificaipotesi.png, id=230, 509.65407pt x 252.19218pt>
-<./figs//fig6.4-1.png, id=231, 249.93375pt x 208.52907pt>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
-<./figs//fig6.5-1.png, id=235, 256.70906pt x 209.28188pt>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51] [52] [53
+] [51
 
 
-] [54]
+] [52]
 Capitolo 8.
-<./figs//fig7.1-1.png, id=248, 247.67531pt x 177.66376pt>
-[55
+[53
 
 
 ]
-<./figs//fig7.1-2.png, id=253, 179.92218pt x 264.99pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1262
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (3.31657pt too wide) in paragraph at lines 1255--1262
+\T1/jkp/m/n/10 Quando n è gran-de, la di-stri-bu-zio-ne cam-pio-na-ria è stret-ta. Que-sto ef-fet-to è quan-ti-fi-ca-to dall'\T1/jkp/b/n/10 errore|
+ []
 
-[56] [57] [58] [59] [60]
+[54] [55
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56] [57] [58]
 Capitolo 9.
-[61
+[59
 
 
-]
-<./figs//fig8.2-1.png, id=273, 231.11343pt x 172.39406pt>
+] [60] [61
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62]
-<./figs//fig8.2-2.png, id=277, 567.11874pt x 403.5075pt>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `tavA' on page 63 undefined on input line 1516.
-
-[63] [64]
-<./figs//fig8.5-1.png, id=284, 249.18094pt x 177.66376pt>
- [65] [66] [67]
-<./figs//fig8.6-1.png, id=295, 406.51875pt x 141.52875pt>
- [68]
-<./figs//fig8.6-2.png, id=299, 240.9pt x 174.6525pt>
- [69] [70] [71] [72
-
+] [62
 
 ]
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+ [63] [64] [65] [66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67] [68] [69] [70]
 Capitolo 10.
-<./figs//fig9.1-1.png, id=312, 404.26031pt x 149.8097pt>
 
 Underfull \vbox (badness 5475) has occurred while \output is active []
 
- [73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 1961--1964
+ [71
+
+
+] [72]
+Underfull \hbox (badness 10000) in paragraph at lines 1981--1984
 
  []
 
-<./figs//fig9.2-1.png, id=320, 706.64pt x 468.75125pt>
-[75]
-<./figs//fig9.3-1.png, id=324, 235.63031pt x 182.93344pt>
- [76]
+[73] [74]
 Overfull \hbox (120.72078pt too wide) has occurred while \output is active
-\T1/jkp/m/sl/10 10.3.  TEST DEL $\OML/jkp/m/it/10 ^^_[]$ \T1/jkp/m/sl/10 PER STABILIRE LA SIGNIFICATIVIT� DELL'ASSOCIAZIONE TRA DUE VARIABILI CATEGORICHE \T1/jkp/m/n/10 77|
+\T1/jkp/m/sl/10 10.3.  TEST DEL $\OML/jkp/m/it/10 ^^_[]$ \T1/jkp/m/sl/10 PER STABILIRE LA SIGNIFICATIVITÀ DELL'ASSOCIAZIONE TRA DUE VARIABILI CATEGORICHE \T1/jkp/m/n/10 75|
  []
 
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 2100--2107
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 2120--2127
 
  []
 
-[78] [79] [80
+[76
+
+] [77] [78
 
 
 ]
 Capitolo 11.
 
-LaTeX Warning: Reference `sec' on page 81 undefined on input line 2210.
+LaTeX Warning: Reference `sec' on page 79 undefined on input line 2230.
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 2241--2252
+
+ []
+
+[80]
+
+LaTeX Warning: Reference `tavC' on page 81 undefined on input line 2283.
 
 [81]
-Underfull \hbox (badness 10000) in paragraph at lines 2221--2232
-
- []
-
-<./figs//figdistribuzionit.png, id=344, 445.665pt x 434.37282pt>
-<./figs//fig11.1-1.png, id=345, 294.34969pt x 208.52907pt>
-[82]
-<./figs//fig11.1-2.png, id=349, 296.60812pt x 216.81pt>
-
-
-LaTeX Warning: Reference `tavC' on page 83 undefined on input line 2263.
-
-[83]
-Underfull \hbox (badness 10000) in paragraph at lines 2269--2276
-
- []
-
-<./figs//fig11.3-1.png, id=353, 383.93437pt x 250.68657pt>
-
-LaTeX Warning: Reference `tavC' on page 84 undefined on input line 2325.
-
-<./figs//fig11.3-2.png, id=354, 299.61937pt x 227.34938pt>
-
-Underfull \hbox (badness 10000) in paragraph at lines 2322--2335
+Underfull \hbox (badness 10000) in paragraph at lines 2289--2296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2345--2358
+LaTeX Warning: Reference `tavC' on page 82 undefined on input line 2345.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2342--2355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2360--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2365--2378
 
  []
 
-[84] [85]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2380--2385
+
+ []
+
+
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [82] [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86] [87] [88]
+ [84] [85] [86]
 Capitolo 12.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89
+ [87
 
 
 ]
-<./figs//fig12.2-1.png, id=374, 228.10219pt x 224.33812pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88] [89]
+
+LaTeX Warning: Reference `tavC' on page 90 undefined on input line 2726.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90]
+ [90
 
-LaTeX Warning: Reference `tavC' on page 91 undefined on input line 2705.
-
-
+] [91]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [91] [92]
-<./figs//fig12.3-1.png, id=385, 249.18094pt x 338.76563pt>
-
-Underfull \vbox (badness 1783) has occurred while \output is active []
-
- [93] [94]
-<./figs//fig12.4-1.png, id=392, 303.38344pt x 217.5628pt>
-
+ [92]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [95] [96]
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
- [97] [98]
+ [93] [94] [95] [96]
 Capitolo 13.
-[99
+
+Underfull \hbox (badness 10000) in paragraph at lines 2976--2982
+
+ []
 
 
-] [100
+Underfull \vbox (badness 1478) has occurred while \output is active []
 
-
-] [101] [102]
-Capitolo 14.
-[103
-
-
-] [104
+ [97
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 2987--2993
+
+ []
+
+[98]
+Underfull \hbox (badness 10000) in paragraph at lines 3027--3033
+
+ []
+
+[99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100] [101]
+Underfull \hbox (badness 10000) in paragraph at lines 3121--3123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3179--3185
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102] [103] [104] [105] [106
+
+
+]
+Capitolo 14.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3273--3277
+
+ []
+
+[107] [108]
+Underfull \hbox (badness 10000) in paragraph at lines 3361--3368
+
+ []
+
+[109]
+
+LaTeX Warning: Reference `????????' on page 110 undefined on input line 3398.
+
+[110]
+Underfull \hbox (badness 10000) in paragraph at lines 3407--3408
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3424--3427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3431--3433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3434--3435
+
+ []
+
+[111]
+Underfull \hbox (badness 10000) in paragraph at lines 3436--3438
+
+ []
+
+[112]
 Capitolo 15.
-<./figs//fig12.6-1.png, id=426, 795.72281pt x 249.93375pt>
-[105] [106] (/home/gaiahah/latex/biostatistica/biostatistica.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 3468--3488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3510--3511
+
+ []
+
+[113
+
+
+] [114]
+
+LaTeX Warning: Reference `??????' on page 115 undefined on input line 3531.
+
+[115]
+Underfull \hbox (badness 10000) in paragraph at lines 3568--3577
+
+ []
+
+
+Overfull \hbox (21.38031pt too wide) in paragraph at lines 3579--3582
+\T1/jkp/m/n/10 Il va-lo-re cri-ti-co cor-ri-spon-den-te al-l'a-rea di 0.05 nel-la co-da de-stra del-la di-stri-bu-zio-ne ($\OML/jkp/m/it/10 F[]$\T1/jkp/m/n/10 ,|
+ []
+
+[116]
+Underfull \hbox (badness 10000) in paragraph at lines 3609--3610
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3611--3613
+
+ []
+
+
+LaTeX Warning: Reference `?????' on page 117 undefined on input line 3614.
+
+[117] [118]
+Underfull \hbox (badness 10000) in paragraph at lines 3749--3750
+
+ []
+
+[119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [120]
+Underfull \hbox (badness 10000) in paragraph at lines 3768--3776
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3777--3782
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121] [122] [123] [124
+
+
+] [125] [126]
+Capitolo 16.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3807--3809
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3821--3828
+
+ []
+
+
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [127
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 3836--3837
+
+ []
+
+
+LaTeX Warning: Reference `tavC' on page 128 undefined on input line 3888.
+
+[128]
+
+LaTeX Warning: Reference `fig16.3-1' on page 129 undefined on input line 3896.
+
+
+LaTeX Warning: Reference `fig16.3-1' on page 129 undefined on input line 3906.
+
+[129] [130] [131] [132
+
+
+]
+Capitolo 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4011--4017
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4035--4042
+
+ []
+
+[133]
+Underfull \hbox (badness 10000) in paragraph at lines 4050--4051
+
+ []
+
+[134] [135]
+Underfull \hbox (badness 10000) in paragraph at lines 4116--4122
+
+ []
+
+[136]
+Underfull \hbox (badness 10000) in paragraph at lines 4165--4167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4177--4183
+
+ []
+
+
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+ [137]
+Underfull \hbox (badness 10000) in paragraph at lines 4195--4202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4208--4215
+
+ []
+
+[138]
+Underfull \hbox (badness 10000) in paragraph at lines 4226--4233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4235--4241
+
+ []
+
+[139]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [140] [141] [142
+
+
+]
+Capitolo 18.
+[143] [144] (./biostatistica.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2127,18 +2456,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30675 strings out of 478994
- 576538 string characters out of 5864750
- 955264 words of memory out of 5000000
- 47551 multiletter control sequences out of 15000+600000
- 546015 words of font info for 167 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 111i,19n,116p,1207b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert-tt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb></usr/share/texmf-dist/fonts/type1/public/kpfonts/jkpttmne.pfb>
-Output written on /home/gaiahah/latex/biostatistica/biostatistica.pdf (106 pages, 340697 bytes).
-PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
- 0 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 32511 strings out of 476257
+ 636119 string characters out of 5816918
+ 983011 words of memory out of 5000000
+ 52601 multiletter control sequences out of 15000+600000
+ 543574 words of font info for 134 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 108i,19n,106p,1189b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on biostatistica.pdf (144 pages).
