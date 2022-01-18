@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.12.29)  16 JAN 2022 23:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.12.29)  17 JAN 2022 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1168,11 +1168,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 LaTeX Font Info:    Trying to load font information for T1+jkp on input line 76.
  (/usr/share/texmf-dist/tex/latex/kpfonts/t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
-) (./biostatistica.aux
-
-LaTeX Warning: Label `tabpvalue' multiply defined.
-
-)
+) (./biostatistica.aux)
 \openout1 = `biostatistica.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 76.
@@ -1547,28 +1543,43 @@ Overfull \hbox (0.84996pt too wide) detected at line 176
  []
 
 
-Overfull \hbox (0.84996pt too wide) detected at line 177
- []\T1/jkp/m/n/10 144|
- []
-
-
 Overfull \hbox (0.84996pt too wide) detected at line 178
- []\T1/jkp/m/n/10 144|
+ []\T1/jkp/m/n/10 145|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 179
- []\T1/jkp/m/n/10 144|
+ []\T1/jkp/m/n/10 145|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 180
- []\T1/jkp/m/n/10 144|
+ []\T1/jkp/m/n/10 145|
  []
 
 
 Overfull \hbox (0.84996pt too wide) detected at line 181
- []\T1/jkp/m/n/10 144|
+ []\T1/jkp/m/n/10 146|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 182
+ []\T1/jkp/m/n/10 146|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 183
+ []\T1/jkp/m/n/10 146|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 184
+ []\T1/jkp/m/n/10 146|
+ []
+
+
+Overfull \hbox (0.84996pt too wide) detected at line 185
+ []\T1/jkp/m/n/10 146|
  []
 
 )
@@ -2132,25 +2143,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 2120--2127
 
 ]
 Capitolo 11.
-
-LaTeX Warning: Reference `sec' on page 79 undefined on input line 2230.
-
 [79]
 Underfull \hbox (badness 10000) in paragraph at lines 2241--2252
 
  []
 
-[80]
-
-LaTeX Warning: Reference `tavC' on page 81 undefined on input line 2283.
-
-[81]
+[80] [81]
 Underfull \hbox (badness 10000) in paragraph at lines 2289--2296
 
  []
-
-
-LaTeX Warning: Reference `tavC' on page 82 undefined on input line 2345.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2342--2355
@@ -2185,10 +2186,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [88] [89]
-
-LaTeX Warning: Reference `tavC' on page 90 undefined on input line 2726.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [90
@@ -2253,11 +2250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3361--3368
 
  []
 
-[109]
-
-LaTeX Warning: Reference `????????' on page 110 undefined on input line 3398.
-
-[110]
+[109] [110]
 Underfull \hbox (badness 10000) in paragraph at lines 3407--3408
 
  []
@@ -2297,11 +2290,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3510--3511
 [113
 
 
-] [114]
-
-LaTeX Warning: Reference `??????' on page 115 undefined on input line 3531.
-
-[115]
+] [114] [115]
 Underfull \hbox (badness 10000) in paragraph at lines 3568--3577
 
  []
@@ -2320,9 +2309,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3609--3610
 Underfull \hbox (badness 10000) in paragraph at lines 3611--3613
 
  []
-
-
-LaTeX Warning: Reference `?????' on page 117 undefined on input line 3614.
 
 [117] [118]
 Underfull \hbox (badness 10000) in paragraph at lines 3749--3750
@@ -2371,48 +2357,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 3836--3837
 
  []
 
+[128] [129]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `tavC' on page 128 undefined on input line 3888.
-
-[128]
-
-LaTeX Warning: Reference `fig16.3-1' on page 129 undefined on input line 3896.
-
-
-LaTeX Warning: Reference `fig16.3-1' on page 129 undefined on input line 3906.
-
-[129] [130] [131] [132
+ [130] [131] [132
 
 
 ]
 Capitolo 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4011--4017
+Underfull \hbox (badness 10000) in paragraph at lines 4017--4023
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4035--4042
+Underfull \hbox (badness 10000) in paragraph at lines 4041--4048
 
  []
 
 [133]
-Underfull \hbox (badness 10000) in paragraph at lines 4050--4051
+Underfull \hbox (badness 10000) in paragraph at lines 4056--4057
 
  []
 
 [134] [135]
-Underfull \hbox (badness 10000) in paragraph at lines 4116--4122
+Underfull \hbox (badness 10000) in paragraph at lines 4122--4128
 
  []
 
 [136]
-Underfull \hbox (badness 10000) in paragraph at lines 4165--4167
+Underfull \hbox (badness 10000) in paragraph at lines 4171--4173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4177--4183
+Underfull \hbox (badness 10000) in paragraph at lines 4183--4189
 
  []
 
@@ -2420,22 +2399,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 4177--4183
 Underfull \vbox (badness 1939) has occurred while \output is active []
 
  [137]
-Underfull \hbox (badness 10000) in paragraph at lines 4195--4202
+Underfull \hbox (badness 10000) in paragraph at lines 4201--4208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4208--4215
+Underfull \hbox (badness 10000) in paragraph at lines 4214--4221
 
  []
 
 [138]
-Underfull \hbox (badness 10000) in paragraph at lines 4226--4233
+Underfull \hbox (badness 10000) in paragraph at lines 4232--4239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4235--4241
+Underfull \hbox (badness 10000) in paragraph at lines 4241--4247
 
  []
 
@@ -2449,17 +2428,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Capitolo 18.
 [143] [144] (./biostatistica.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 32511 strings out of 476257
- 636119 string characters out of 5816918
- 983011 words of memory out of 5000000
- 52601 multiletter control sequences out of 15000+600000
+ 32526 strings out of 476257
+ 636501 string characters out of 5816918
+ 983146 words of memory out of 5000000
+ 52616 multiletter control sequences out of 15000+600000
  543574 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,19n,106p,1189b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s

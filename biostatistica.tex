@@ -2227,7 +2227,7 @@ Nella tabella sono riportati i test utilizzabili per fare ciò, in base al tipo 
 \section{Distribuzione \texorpdfstring{$t$}{Lg} di Student}
 Per fare affermazioni riguardo la precisione di una stima della media di deve descrivere la distribuzione di probabilità campionaria (di $\overline{Y}$), che è la distribuzione di probabilità di tutti i valori di una stima che si potrebbero ottenere campionando più volte la popolazione.
 \\
-Come visto nella sezione \ref{sec}, la distribuzione campionaria di $\overline{Y}$ è normale se $Y$ è distribuita normalmente; in tal caso, si può usare la variabile standardizzata $Z$ per calcolare le probabilità di $\overline{Y}$:
+Come già visto, la distribuzione campionaria di $\overline{Y}$ è normale se $Y$ è distribuita normalmente; in tal caso, si può usare la variabile standardizzata $Z$ per calcolare le probabilità di $\overline{Y}$:
 \begin{equation}
     Z = \frac{\overline{Y}-\mu}{\sigma_{\overline{Y}}}
 \end{equation}
@@ -2498,7 +2498,7 @@ Si può poi calcolare il P-value per il test confrontando la $t$ osservata con l
     Nel caso in cui $n$ \colorbox{lyellow}{fosse 20}
 \end{example}
 
-\chapter{Confronto tra due medie}
+\chapter{Confronto tra due medie}\label{capconfrontoduemedie}
 Si riprende l'esempio \ref{esguida}. Se entrambi i test (cellulare e birra) venissero svolti da una stessa persona (ovvero se ciascun ID facesse riferimento ad un unico individuo, che ha svolto il test di guida in entrambe le condizioni), ci si potrebbe chiedere se, nonostante le medie osservate non differiscano significativamente dalla media teorica, ciascun individuo mostri una differenza significativa tra le performance rispettive alle due diverse condizioni.
 \\
 Alle due tabelle precedenti si aggiunge il campo "Delta" (tabella \ref{tabguida3}):
@@ -3000,7 +3000,7 @@ Stessa cosa quando si hanno variabili ordinali o quando, avendo due gruppi, uno 
 
 \section{Metodi per correggere la violazione della normalità}
 
-\subsection{Trasformazione dei dati}
+\subsection{Trasformazione dei dati}\label{trasformazioni}
 
 Le trasformazioni possono essere applicate per migliorare l'adattamento  della distribuzione normale ai dati o, nei casi dei metodi per due campioni (in cui l'assunzione è l'uguaglianza delle deviazioni standard), per rendere le deviazioni standard più simili in gruppi diversi.\\
 Quando si applica una trasformazione ad un valore, la stessa deve essere applicata allo stesso modo a tutti i valori di tutti i campioni per quella variabile, per rendere possibile il confronto dei dati (questo è il motivo per cui i casi con due gruppi con asimmetrie opposte sono problematici: applicando una trasformazione si risolvono solo casi con stessa asimmetria).\\
@@ -3395,7 +3395,7 @@ In cui ``incertezza'' e metà dell'ampiezza dell'intervallo di confidenza. per p
 \begin{equation}
     n = 8 \left(\frac{\sigma}{incertezza}\right)^2   
 \end{equation}
-Formula dedotta dalla regola dei 2ES (\ref{????????}). Secondo questa relazione, è necessaria una dimensione campionaria Maggiore quando la deviazione standard nei gruppi e grande anziché piccola. Inoltre per ottenere un'elevata precisione, e quindi una ridotta incertezza, è necessaria una dimensione campionaria grande.\\
+Formula dedotta dalla regola dei 2ES\footnote{libro, p. 56}. Secondo questa relazione, è necessaria una dimensione campionaria Maggiore quando la deviazione standard nei gruppi e grande anziché piccola. Inoltre per ottenere un'elevata precisione, e quindi una ridotta incertezza, è necessaria una dimensione campionaria grande.\\
 Un problema rilevante consiste nel fatto che parametri come la deviazione standard non sono noti; generalmente, questi si stabiliscono sulla base di studi pilota.\\
 La Figura \ref{fig14.7-1} mostra la precisione attesa dell'intervallo di confidenza al 95\% della differenza tra le medie di due trattamenti in funzione dela dimensione compionaria $n$ in ciascun trattamento, relativamente ad un esempio.
 \begin{figure}[H]
@@ -3528,7 +3528,7 @@ quindi uguali, le due medie dei quadrati dovrebbero essere circa uguali, e la va
 \subsubsection{Media dei quadrati entro gruppi}
 
 La media dei quadrati entro gruppi ($MS_{entro}$, o $MS_{errore}$, Mean Square dell'errore, Quadrato Medio, QM in italiano) misura la varianza nei gruppi.\\
-L'ANOVA assume che la varianza ($\sigma^2$) sia la stessa in ogni popolazione. La migliore stima di tale varianza entro gruppi è la varianza campionaria comune, come nel $t$ test per due campioni (\ref{??????}).\\
+L'ANOVA assume che la varianza ($\sigma^2$) sia la stessa in ogni popolazione. La migliore stima di tale varianza entro gruppi è la varianza campionaria comune, come nel $t$ test per due campioni (\ref{capconfrontoduemedie}).\\
 Nell'ANOVA:
 \begin{equation}
     MS_{entro} = \frac{\sum{s_i^2(n_i-1)}}{N-k}
@@ -3611,7 +3611,7 @@ Esistono delle formulazioni modificate per calcolare le varianze che resistono a
 L'ANOVA è robusta rispetto alle deviazioni dall'assunzione di normalità, soprattutto per grandi dimensioni campionarie. Tale robustezza deriva da una proprietà delle medie campionarie che è descritta dal teorema del limite centrale: entro ogni gruppo la distribuzione campionaria delle medie è approssimativamente normale quando la dimensione del campione è grande, anche se la variabile stessa non ha distribuzione normale.\\
 L'ANOVA è robusta anche rispetto agli scostamenti dall'assunzione di uguale varianza nelle $k$ popolazioni, ma solo se i campioni hanno tutti circa la stessa dimensione.\\
 
-Se i dati non sono conformi alle assunzioni dell'ANOVA, essi possono essere trasformati mediante tutte le trasformazioni viste nel capitolo \ref{?????}.
+Se i dati non sono conformi alle assunzioni dell'ANOVA, essi possono essere trasformati mediante tutte le trasformazioni viste \ref{trasformazioni}.
 
 \section{Alternative non parametriche all'ANOVA: test di Kruskal-Wallis}
 
@@ -3895,6 +3895,12 @@ Le assunzioni dei metodi che si usano per stimare e valutare un coefficiente di 
     \item il campione è casuale;
     \item le misure hanno una \textbf{distribuzione normale bivariata} nella popolazione, una distribuzione di probabiltà a campana a tre dimensioni (Fig. \ref{fig16.3-1}).
 \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig16.3-1}
+    \caption{\small{}}
+    \label{fig16.3-1}
+\end{figure}
 
 In una distribuzione normale bivariata:
     \begin{itemize}\tightlist
@@ -4258,6 +4264,36 @@ In alcuni casi, inoltre, i risultati ottenuti dall'estrapolazione fatta a partir
     \label{fig17.2-2}
 \end{figure}
 
+% \chapter{Analisi critica di un articolo scientifico}
+
+% \section{Cos'è un lavoro scientifico}
+
+% Strutturato in maniera tale da poter rispondere ad una serie di domande:
+% \begin{itemize}
+%     \tightlist
+%     \item Qual è il problema? La risposta si trova nell'Introduzione.
+%     \item Come è stato affrontato il problema? La risposta si trova nei Materiali e metodi.
+%     \item Quali risultati sono stati ottenuti? La risposta si trova nei Risultati.
+%     \item Cosa significa ciò che si è trovato? La risposta si trova nella Discussione.
+% \end{itemize}
+
+% % Esprimere gli obiettivi del lavoro in forma di ipotesi da verificare.
+
+% \section{Disegno sperimentale, rappresentazione dei dati e analisi statistica}
+
+% \begin{itemize}
+%     \tightlist
+%     \item sono state fatte delle ipotesi? la loro assenza non inficia la qualità del lavoro, ma certi tipi di lavoro necessitano di ipotesi
+%     \item qualità delle figure? essenzialità, leggibilità, etichette, didascalie
+%     \item qualità delle tabelle? valori riportati bene? leggibili? quando si riporta una stima si deve riportare anche una misura della sua precisione (diretta, quindi ES, o DS, varianza)
+%     \item disegno dello studio è sensato, coerente con le ipotesi? presenza di bias, distorsioni?
+%     \item test statistici usati? sono verificate le loro assunzioni? non solo IC, ma anche punti o box blot, o che si dica almeno che la normalità è stata verificata
+%     \item risultati riportati adeguatamente? con figure, tabelle? se ci sono ipotesi formulate, i risultati le hanno verificate?
+% \end{itemize}
+
+% \section{Criteri generali per l'analisi}
+
+% Vedi file excel.
 \chapter{Appendici}
 
 \section{Come riportare il P-value}
@@ -4301,7 +4337,7 @@ Una sintesi delle assunzioni del $t$ test in base al tipo di campione che si ha 
     \hline
     \end{tabular}
     \caption{\small{}}
-    \label{tabpvalue}
+    \label{tabassunzionit}
 \end{table}\noindent
 
 \section{Interpretazione degli intervalli di confidenza}
@@ -4320,7 +4356,7 @@ In una situazione intermedia, quando cioè gli intervalli di confidenza si sovra
 
 \section{Tavola statistica A: valori critici per \texorpdfstring{$\chi^2$}{Lg}} \label{tavA}
 
-\section{Tavola statistica C: valori critici per \texorpdfstring{$t$}{Lg}} \label{tavB}
+\section{Tavola statistica C: valori critici per \texorpdfstring{$t$}{Lg}} \label{tavC}
 
 \section{Tavola statistica D: valori critici per distribuzione \texorpdfstring{$F$}{Lg}} \label{tavD}
 
